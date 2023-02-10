@@ -1,0 +1,29 @@
+.pillow-latest {
+  height: calc(100vh - 65px);
+  width: 100%;
+  margin-left: 200px;
+
+  &__content {
+    padding: 20px;
+
+    &-item {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .pillow-latest {
+    overflow: hidden;
+    margin-left: 60px;
+    max-width: calc(100% - 60px);
+
+    &__content {
+      transition: all 0.2s ease-in-out;
+    }
+
+    &__content.open {
+      transform: translateX(140px);
+    }
+  }
+}

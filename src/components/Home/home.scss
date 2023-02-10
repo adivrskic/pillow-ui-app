@@ -95,11 +95,16 @@
       border: 1px solid $border;
       border-radius: 3px;
 
+      &:hover svg {
+        color: $highlight;
+      }
+
       svg {
         height: 40px;
         width: 40px;
-        color: $highlight;
+        color: darken($background-darker, 10%);
         margin-bottom: 20px;
+        transition: all 0.2s ease-in-out;
       }
     }
   }

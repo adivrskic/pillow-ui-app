@@ -1,3 +1,5 @@
+@import "../../styles/colors";
+
 .pillow-sidebar {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,43 @@
   top: 65px;
   left: 0;
   width: 200px;
-  height: calc(100% - 65px);
+  min-height: calc(100vh - 65px);
   padding: 20px;
   border-right: 1px solid #f0f0f0;
+  background-color: $background;
+
+  &__header {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  svg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .pillow-sidebar {
+    transform: translateX(-140px);
+    transition: all 0.2s ease-in-out;
+
+    svg {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 40px;
+      height: 40px;
+      color: $highlight;
+    }
+  }
+
+  .pillow-sidebar.open {
+    transform: translateX(0);
+  }
 }

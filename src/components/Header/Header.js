@@ -66,7 +66,7 @@ const Header = () => {
                 selected === "overview" ? "active" : ""
               }`}
             >
-              <Link to="/overview">Overview</Link>
+              <Link to="/overview/installation">Overview</Link>
             </li>
             <li
               className={`pillow-nav__mobile-link ${

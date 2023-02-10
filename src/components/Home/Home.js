@@ -76,7 +76,7 @@ const Home = () => {
             <div className="pillow-home__getting-started-item">
               <h4>Latest Updates</h4>
               <p>View recent component updates and changes</p>
-              <Link to="/overview/updates">View Updates Page</Link>
+              <Link to="/overview/latest-updates">View Updates Page</Link>
               <IoCalendarOutline />
             </div>
           </div>
@@ -86,9 +86,15 @@ const Home = () => {
       <div className="pillow-home__external-links">
         <div>
           <h3>Resources and External Links</h3>
-          <p>Check out these resources to learn more about the library</p>
+          <p>
+            Check out these resources to view the code and learn more about the
+            library
+          </p>
           <div className="pillow-home__external-links-items">
-            <Link to="/tbd" className="pillow-home__external-links-item">
+            <Link
+              to="https://github.com/adivrskic/pillow-ui-app"
+              className="pillow-home__external-links-item"
+            >
               <h4>View Github Repository</h4>
               <IoLogoGithub />
             </Link>

@@ -1,0 +1,61 @@
+@import "../../styles/colors";
+
+.pillow-installation {
+  height: calc(100vh - 65px);
+  width: 100%;
+  margin-left: 200px;
+  max-width: calc(100% - 220px);
+
+  &__content {
+    padding: 20px;
+
+    &-item {
+      margin-bottom: 40px;
+
+      p {
+        max-width: 600px;
+      }
+
+      p:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .pillow-installation {
+    overflow: hidden;
+    margin-left: 60px;
+    max-width: calc(100% - 60px);
+
+    &__content {
+      transition: all 0.2s ease-in-out;
+    }
+
+    &__content.open {
+      transform: translateX(140px);
+    }
+  }
+}
+
+.highlight {
+  background-color: lighten($highlight, 25%);
+  padding: 0 2px;
+  border-radius: 3px;
+  margin: 0 2px;
+  border: 1px solid $highlight;
+}
+
+code {
+  background-color: $text;
+  color: $background;
+  padding: 20px;
+  display: flex;
+  border-radius: 3px;
+  max-width: 600px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
