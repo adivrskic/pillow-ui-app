@@ -1,0 +1,11 @@
+.pillow-sidebar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 200px;
+  height: calc(100% - 65px);
+  padding: 20px;
+  border-right: 1px solid #f0f0f0;
+}
