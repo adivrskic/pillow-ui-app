@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar.js";
 import "./latestupdates.scss";
 import { StateContext } from "../../context/StateProvider";

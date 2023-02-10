@@ -31,7 +31,7 @@ const Home = () => {
           </div>
         </div>
 
-        <img src="/images/hero-image.jpg" />
+        <img src="/images/hero-image.jpg" alt="Neumorphic planet" />
       </div>
 
       <div className="pillow-home__overview">

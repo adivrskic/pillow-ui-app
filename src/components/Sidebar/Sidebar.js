@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { StateContext } from "../../context/StateProvider";
 
 const Sidebar = ({ header, page, items }) => {
-  const [active, setActive] = useState("");
+  const [active] = useState("");
   const [{ sidebarOpen }, dispatch] = React.useContext(StateContext);
 
   const toKebabCase = (string) => {
