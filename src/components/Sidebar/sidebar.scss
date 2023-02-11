@@ -3,7 +3,7 @@
 .pillow-sidebar {
   display: flex;
   flex-direction: column;
-  position: sticky;
+  position: fixed;
   top: 65px;
   left: 0;
   width: 200px;
