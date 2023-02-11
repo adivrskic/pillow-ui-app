@@ -1,6 +1,7 @@
 .pillow-latest {
-  height: calc(100vh - 65px);
+  height: 100vh;
   width: 100%;
+  max-width: calc(100% - 220px);
   margin-left: 200px;
 
   &__content {

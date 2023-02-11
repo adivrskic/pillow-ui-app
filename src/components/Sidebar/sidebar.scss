@@ -22,7 +22,7 @@
     margin-bottom: 10px;
   }
 
-  svg {
+  &__toggle {
     display: none;
   }
 }
@@ -32,11 +32,18 @@
     transform: translateX(-140px);
     transition: all 0.2s ease-in-out;
 
-    svg {
+    &__toggle {
       display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
-      top: 50%;
-      right: 10px;
+      top: 0;
+      right: 0;
+      height: calc(100vh - 65px);
+      width: 60px;
+    }
+
+    &__toggle svg {
       width: 40px;
       height: 40px;
       color: $highlight;

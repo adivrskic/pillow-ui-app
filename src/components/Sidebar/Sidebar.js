@@ -32,13 +32,19 @@ const Sidebar = ({ header, page, items }) => {
       ))}
 
       {sidebarOpen ? (
-        <IoArrowBackCircleOutline
+        <div
+          className="pillow-sidebar__toggle"
           onClick={() => dispatch({ type: "TOGGLE_SIDEBAR" })}
-        />
+        >
+          <IoArrowBackCircleOutline />
+        </div>
       ) : (
-        <IoArrowForwardCircleOutline
+        <div
+          className="pillow-sidebar__toggle"
           onClick={() => dispatch({ type: "TOGGLE_SIDEBAR" })}
-        />
+        >
+          <IoArrowForwardCircleOutline />
+        </div>
       )}
     </div>
   );
