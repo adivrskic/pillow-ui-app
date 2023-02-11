@@ -91,10 +91,7 @@ const Home = () => {
             library
           </p>
           <div className="pillow-home__external-links-items">
-            <Link
-              to="https://github.com/adivrskic/pillow-ui-app"
-              className="pillow-home__external-links-item"
-            >
+            <Link to="" className="pillow-home__external-links-item">
               <h4>View Github Repository</h4>
               <IoLogoGithub />
             </Link>
