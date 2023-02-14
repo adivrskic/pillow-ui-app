@@ -73,6 +73,10 @@
   &__overview {
     padding: 100px 100px 0 100px;
 
+    &--alt {
+      padding: 0 100px 100px 100px;
+    }
+
     & > div {
       width: 1400px;
       max-width: 100%;
@@ -241,6 +245,10 @@
 
   .pillow-home__overview {
     padding: 60px 20px 0 20px;
+
+    &--alt {
+      padding: 0 20px 20px 20px;
+    }
   }
 
   .pillow-home__overview-items {

@@ -83,6 +83,23 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="pillow-home__overview pillow-home__overview--alt">
+        <div>
+          <h3>Recently Added</h3>
+          <div className="pillow-home__overview-items">
+            <div className="pillow-home__overview-item">
+              <h4>Button</h4>
+            </div>
+            <div className="pillow-home__overview-item">
+              <h4>Alert</h4>
+            </div>
+            <div className="pillow-home__overview-item">
+              <h4>Card</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="pillow-home__external-links">
         <div>
           <h3>Resources and External Links</h3>
