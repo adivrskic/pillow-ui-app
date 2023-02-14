@@ -40,11 +40,11 @@
 }
 
 .highlight {
-  background-color: lighten($highlight, 25%);
-  padding: 0 2px;
+  background-color: $background-darker;
+  padding: 0 3px;
   border-radius: 3px;
   margin: 0 2px;
-  border: 1px solid $highlight;
+  border: 1px solid darken($background-darker, 25%);
 }
 
 code {
