@@ -75,6 +75,12 @@
 
     &--alt {
       padding: 0 100px 100px 100px;
+
+      .pillow-home__overview-item {
+        text-align: center;
+        display: block;
+        background-color: $background-darker;
+      }
     }
 
     & > div {
@@ -110,6 +116,12 @@
         margin-bottom: 20px;
         transition: all 0.2s ease-in-out;
       }
+    }
+
+    &-divider {
+      margin: 1rem 0;
+      height: 1px;
+      width: 100%;
     }
   }
 

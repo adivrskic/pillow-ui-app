@@ -10,6 +10,7 @@ import {
   IoAppsOutline,
   IoLogoReact,
 } from "react-icons/io5";
+import { Alert, Button } from "@adivrskic/pillow-ui";
 
 const Home = () => {
   return (
@@ -88,9 +89,23 @@ const Home = () => {
           <h3>Recently Added</h3>
           <div className="pillow-home__overview-items">
             <div className="pillow-home__overview-item">
+              <Button
+                label="Pillow UI Button"
+                variant="flat"
+                size="small"
+                role="button"
+              />
+              <div className="pillow-home__overview-divider"></div>
               <h4>Button</h4>
             </div>
             <div className="pillow-home__overview-item">
+              {/* <Alert
+                severity="info"
+                label="Pillow UI Alert"
+                variant="flat"
+                size="small"
+                role="button"
+              /> */}
               <h4>Alert</h4>
             </div>
             <div className="pillow-home__overview-item">
