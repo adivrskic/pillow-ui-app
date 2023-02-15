@@ -1,5 +1,8 @@
 {
   "name": "pillow-ui-app",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@adivrskic"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
