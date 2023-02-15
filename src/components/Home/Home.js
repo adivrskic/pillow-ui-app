@@ -10,7 +10,7 @@ import {
   IoAppsOutline,
   IoLogoReact,
 } from "react-icons/io5";
-import { Alert, Button } from "@adivrskic/pillow-ui";
+import { Button } from "@adivrskic/pillow-ui";
 
 const Home = () => {
   return (
