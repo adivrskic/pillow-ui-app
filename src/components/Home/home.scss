@@ -235,6 +235,7 @@
         background: none;
         text-decoration: underline;
         cursor: pointer;
+        color: $text;
 
         &:not(:last-child) {
           margin-right: 10px;
