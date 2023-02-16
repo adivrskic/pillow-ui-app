@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="pillow-footer">
       <p>© Adi Vrskic, 2023</p>
-      <p>Made with ❤ by Adi with React </p>
+      <p>Made with ❤ by Adi using React </p>
     </div>
   );
 };
