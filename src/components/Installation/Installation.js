@@ -38,7 +38,7 @@ const Installation = () => {
             <span className="highlight">react-dom@16.8.0</span> or higher
             versions.
           </p>
-          <code>$ npm i pillow-ui</code>
+          <code>$ npm i @adivrskic/pillow</code>
         </div>
 
         <div className="pillow-installation__content-item">
@@ -47,7 +47,7 @@ const Installation = () => {
             Once installed as a dependency in your project, import by doing:
           </p>
 
-          <code>{`import { Button } from 'pillow-ui'`}</code>
+          <code>{`import { Button } from '@adivrskic/pillow'`}</code>
 
           <p>Once imported, use the components in your code by doing: </p>
 

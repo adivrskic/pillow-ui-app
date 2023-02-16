@@ -3,18 +3,12 @@ import "./componentlist.scss";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import { StateContext } from "../../context/StateProvider";
+import { Alert, Button } from "@adivrskic/pillow";
 
 const ComponentList = () => {
   const [{ sidebarOpen }] = React.useContext(StateContext);
 
-  const components = [
-    "Alert",
-    "Button",
-    "Checkbox",
-    "Navbar",
-    "Pagination",
-    "Select",
-  ];
+  const components = ["Alert", "Button"];
   const toKebabCase = (string) => {
     return string
       .replace(/([a-z])([A-Z])/g, "$1-$2")

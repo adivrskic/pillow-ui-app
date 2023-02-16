@@ -3,14 +3,7 @@ import "./example.scss";
 import Sidebar from "../Sidebar/Sidebar";
 
 const Example = () => {
-  const components = [
-    "Alert",
-    "Button",
-    "Checkbox",
-    "Navbar",
-    "Pagination",
-    "Select",
-  ];
+  const components = ["Alert", "Button"];
 
   return (
     <div>

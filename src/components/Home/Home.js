@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.scss";
 import { Link } from "react-router-dom";
 import {
@@ -10,9 +10,12 @@ import {
   IoAppsOutline,
   IoLogoReact,
 } from "react-icons/io5";
-import { Button } from "@adivrskic/pillow";
+import { Alert, Button } from "@adivrskic/pillow";
 
 const Home = () => {
+  const [buttonSize, setButtonSize] = useState("small");
+  const [alertSeverity, setAlertSeverity] = useState("info");
+
   return (
     <div className="pillow-home">
       <div className="pillow-home__hero">
@@ -84,32 +87,62 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="pillow-home__overview pillow-home__overview--alt">
+      <div className="pillow-home__recents">
         <div>
           <h3>Recently Added</h3>
-          <div className="pillow-home__overview-items">
-            <div className="pillow-home__overview-item">
-              <Button
-                label="Pillow UI Button"
-                variant="flat"
-                size="small"
-                role="button"
-              />
-              <div className="pillow-home__overview-divider"></div>
+          <div className="pillow-home__recents-items">
+            <div className="pillow-home__recents-item">
               <h4>Button</h4>
+              <div className="pillow-home__recents-body">
+                <Button
+                  label="Pillow UI Button"
+                  variant="flat"
+                  size={buttonSize}
+                  role="button"
+                />
+              </div>
+              <div className="pillow-home__recents-options">
+                <button onClick={() => setButtonSize("small")}>Small</button>
+                <button onClick={() => setButtonSize("medium")}>Medium</button>
+                <button onClick={() => setButtonSize("large")}>Large</button>
+              </div>
             </div>
-            <div className="pillow-home__overview-item">
-              {/* <Alert
-                severity="info"
-                label="Pillow UI Alert"
-                variant="flat"
-                size="small"
-                role="button"
-              /> */}
+            <div className="pillow-home__recents-item">
               <h4>Alert</h4>
+              <div className="pillow-home__recents-body">
+                <Alert
+                  heading="Header"
+                  severity={alertSeverity}
+                  label="Pillow UI Alert Body"
+                  variant="flat"
+                  role="button"
+                />
+              </div>
+              <div className="pillow-home__recents-options">
+                <button onClick={() => setAlertSeverity("info")}>Info</button>
+                <button onClick={() => setAlertSeverity("warning")}>
+                  Warning
+                </button>
+                <button onClick={() => setAlertSeverity("success")}>
+                  Success
+                </button>
+              </div>
             </div>
-            <div className="pillow-home__overview-item">
-              <h4>Card</h4>
+            <div className="pillow-home__recents-item">
+              <h4>Button</h4>
+              <div className="pillow-home__recents-body">
+                <Button
+                  label="Pillow UI Button"
+                  variant="flat"
+                  size={buttonSize}
+                  role="button"
+                />
+              </div>
+              <div className="pillow-home__recents-options">
+                <button onClick={() => setButtonSize("small")}>Small</button>
+                <button onClick={() => setButtonSize("medium")}>Medium</button>
+                <button onClick={() => setButtonSize("large")}>Large</button>
+              </div>
             </div>
           </div>
         </div>
