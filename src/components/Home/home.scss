@@ -190,11 +190,41 @@
     }
 
     &-body {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       background-color: $background-darker;
       height: 100%;
       padding: 20px;
+
+      span {
+        display: flex;
+        position: relative;
+
+        svg {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      cursor: pointer;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      background-color: $highlight;
+      padding: 5px 12px;
+      transition: all 0.2s ease-in-out;
+      max-width: 140px;
+      text-align: center;
+      margin: 0 0 20px 20px;
+
+      &:hover {
+        background-color: darken($highlight, 5%);
+      }
     }
 
     &-options {

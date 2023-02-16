@@ -9,12 +9,14 @@ import {
   IoBulbOutline,
   IoAppsOutline,
   IoLogoReact,
+  IoCartOutline,
 } from "react-icons/io5";
-import { Alert, Button } from "@adivrskic/pillow";
+import { Alert, Badge, Button } from "@adivrskic/pillow";
 
 const Home = () => {
   const [buttonSize, setButtonSize] = useState("small");
   const [alertSeverity, setAlertSeverity] = useState("info");
+  const [badgeVariant, setBadgeVariant] = useState("flat");
 
   return (
     <div className="pillow-home">
@@ -92,22 +94,6 @@ const Home = () => {
           <h3>Recently Added</h3>
           <div className="pillow-home__recents-items">
             <div className="pillow-home__recents-item">
-              <h4>Button</h4>
-              <div className="pillow-home__recents-body">
-                <Button
-                  label="Pillow UI Button"
-                  variant="flat"
-                  size={buttonSize}
-                  role="button"
-                />
-              </div>
-              <div className="pillow-home__recents-options">
-                <button onClick={() => setButtonSize("small")}>Small</button>
-                <button onClick={() => setButtonSize("medium")}>Medium</button>
-                <button onClick={() => setButtonSize("large")}>Large</button>
-              </div>
-            </div>
-            <div className="pillow-home__recents-item">
               <h4>Alert</h4>
               <div className="pillow-home__recents-body">
                 <Alert
@@ -127,6 +113,23 @@ const Home = () => {
                   Success
                 </button>
               </div>
+              <Link to="/components/alert">View Component</Link>
+            </div>
+            <div className="pillow-home__recents-item">
+              <h4>Badge</h4>
+              <div className="pillow-home__recents-body">
+                <span>
+                  <IoCartOutline />
+                  <Badge content="9" variant={badgeVariant} />
+                </span>
+              </div>
+              <div className="pillow-home__recents-options">
+                <button onClick={() => setBadgeVariant("flat")}>Flat</button>
+                <button onClick={() => setBadgeVariant("pressed")}>
+                  Pressed
+                </button>
+              </div>
+              <Link to="/components/badge">View Component</Link>
             </div>
             <div className="pillow-home__recents-item">
               <h4>Button</h4>
@@ -143,6 +146,7 @@ const Home = () => {
                 <button onClick={() => setButtonSize("medium")}>Medium</button>
                 <button onClick={() => setButtonSize("large")}>Large</button>
               </div>
+              <Link to="/components/button">View Component</Link>
             </div>
           </div>
         </div>
