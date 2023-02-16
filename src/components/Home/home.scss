@@ -311,8 +311,7 @@
   }
   .pillow-home__hero,
   .pillow-home__getting-started,
-  .pillow-home__external-links,
-  .pillow-home__recents {
+  .pillow-home__external-links {
     padding: 60px 20px;
   }
 
@@ -322,6 +321,10 @@
 
   .pillow-home__overview {
     padding: 60px 20px 0 20px;
+  }
+
+  .pillow-home__recents {
+    padding: 0 20px 60px 20px;
   }
 
   .pillow-home__overview-items,
