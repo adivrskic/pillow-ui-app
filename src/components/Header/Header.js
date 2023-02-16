@@ -42,7 +42,12 @@ const Header = () => {
         </li>
       </ul>
 
-      <a className="pillow-nav__link pillow-nav__link--gh" href="/">
+      <a
+        className="pillow-nav__link pillow-nav__link--gh"
+        href="https://github.com/adivrskic/pillow"
+        target="_blank"
+        rel="noreferrer"
+      >
         <IoLogoGithub />
         Github
       </a>
