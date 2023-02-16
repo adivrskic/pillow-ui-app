@@ -79,7 +79,11 @@ const Header = () => {
             >
               <Link to="/components">Components</Link>
             </li>
-            <a className="pillow-nav__mobile-link" href="/">
+            <a
+              className="pillow-nav__mobile-link"
+              href="https://github.com/adivrskic/pillow"
+              target="_blank"
+            >
               Github
             </a>
           </ul>

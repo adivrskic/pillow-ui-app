@@ -123,12 +123,18 @@ const Home = () => {
             library
           </p>
           <div className="pillow-home__external-links-items">
-            <Link to="" className="pillow-home__external-links-item">
+            <Link
+              to="https://github.com/adivrskic/pillow"
+              className="pillow-home__external-links-item"
+            >
               <h4>View Github Repository</h4>
               <IoLogoGithub />
             </Link>
 
-            <Link to="/tbd" className="pillow-home__external-links-item">
+            <Link
+              to="https://www.npmjs.com/package/@adivrskic/pillow"
+              className="pillow-home__external-links-item"
+            >
               <h4>View Npm Package</h4>
               <IoLogoNpm />
             </Link>
