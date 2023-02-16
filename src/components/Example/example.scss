@@ -1,0 +1,72 @@
+@import "../../styles/colors";
+
+.pillow-example {
+  min-height: calc(100vh - 65px);
+  width: 100%;
+  margin-left: 200px;
+  max-width: calc(100% - 220px);
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    padding: 20px;
+
+    &-items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      grid-auto-rows: 1fr;
+    }
+
+    &-item {
+      border: 1px solid $border;
+      border-radius: 3px;
+
+      h4 {
+        padding: 20px;
+      }
+    }
+
+    &-item-body {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background-color: $background-darker;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .pillow-example {
+    overflow: hidden;
+    margin-left: 60px;
+    max-width: calc(100% - 60px);
+
+    &__content {
+      transition: all 0.2s ease-in-out;
+
+      &-items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    &__content.open {
+      transform: translateX(140px);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pillow-example {
+    &__content {
+      &-items {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
