@@ -71,7 +71,45 @@ const AlertComponent = () => {
       </div>
 
       <div className="component-container">
-        <h3>Properties</h3>
+        <div className="component-container__api">
+          <h3>Severity API</h3>
+          <p>
+            The Alert component implements the severity prop. The severity has
+            the following options:
+          </p>
+          <ul>
+            <li>
+              error: <code>severity="error"</code>
+            </li>
+            <li>
+              warning: <code>severity="warning"</code>
+            </li>
+            <li>
+              info: <code>severity="info"</code>
+            </li>
+            <li>
+              success: <code>severity="success"</code>
+            </li>
+          </ul>
+        </div>
+
+        <div className="component-container__api">
+          <h3>Variant API</h3>
+          <p>
+            The Alert component implements the variant prop. The variant is a
+            global prop and has the following options:
+          </p>
+          <ul>
+            <li>
+              flat: <code>variant="flat"</code>
+            </li>
+            <li>
+              pressed: <code>variant="pressed"</code>
+            </li>
+          </ul>
+        </div>
+
+        <h3>All Properties</h3>
         <table>
           <tr>
             <th>Property</th>
