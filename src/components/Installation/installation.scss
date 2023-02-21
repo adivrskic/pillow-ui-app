@@ -44,16 +44,17 @@
   padding: 0 3px;
   border-radius: 3px;
   margin: 0 2px;
-  border: 1px solid darken($background-darker, 25%);
+  border: 1px solid darken($background-darker, 15%);
 }
 
 code {
-  background-color: $text;
-  color: $background;
+  background-color: $background-darker;
+  color: $text;
   padding: 20px;
   display: flex;
   border-radius: 3px;
   max-width: 600px;
+  border: 1px solid darken($background-darker, 15%);
 
   &:not(:last-of-type) {
     margin-bottom: 20px;

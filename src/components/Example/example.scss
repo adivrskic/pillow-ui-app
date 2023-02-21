@@ -4,7 +4,7 @@
   min-height: calc(100vh - 65px);
   width: 100%;
   margin-left: 200px;
-  max-width: calc(100% - 220px);
+  max-width: calc(100% - 200px);
 
   h2 {
     margin-bottom: 20px;
@@ -37,6 +37,51 @@
       height: 100%;
       width: 100%;
       background-color: $background-darker;
+    }
+  }
+}
+
+.component-container {
+  &__example {
+    margin-bottom: 20px;
+    background-color: $background-darker;
+    padding: 20px;
+    border-radius: 3px;
+
+    > div:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  h3,
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid $border;
+    border-radius: 3px;
+    border-collapse: collapse;
+
+    th {
+      text-align: left;
+      padding: 20px;
+    }
+
+    td {
+      padding: 20px;
+
+      code {
+        padding: 3px;
+        display: inline;
+        border: 1px solid darken($background-darker, 15%);
+      }
+    }
+
+    tr {
+      padding: 20px;
+      border-top: 1px solid $border;
     }
   }
 }
