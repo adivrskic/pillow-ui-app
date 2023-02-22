@@ -23,6 +23,7 @@ const Sidebar = ({ header, page, items }) => {
       <h3 className="pillow-sidebar__header">{header}</h3>
       {items?.map((item) => (
         <Link
+          key={item}
           className={`pillow-sidebar__item ${active ? "active" : ""}`}
           to={`/${page}/${toKebabCase(item)}`}
           onClick={() => dispatch({ type: "TOGGLE_SIDEBAR" })}

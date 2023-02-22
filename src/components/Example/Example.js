@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import AlertComponent from "./Subcomponents/AlertComponent";
 import BadgeComponent from "./Subcomponents/BadgeComponent";
 import ButtonComponent from "./Subcomponents/ButtonComponent";
+import { StateContext } from "../../context/StateProvider";
 
 const Example = () => {
   const components = ["Alert", "Badge", "Button"];
@@ -13,13 +14,13 @@ const Example = () => {
     location.pathname.split("/").pop()[0].toUpperCase() +
     location.pathname.split("/").pop().slice(1);
 
-  console.log(Component);
+  const [{ sidebarOpen }] = React.useContext(StateContext);
 
   return (
     <div>
       <Sidebar header={"Components"} page={"components"} items={components} />
       <div className="pillow-example">
-        <div className="pillow-example__content">
+        <div className={`pillow-example__content ${sidebarOpen ? "open" : ""}`}>
           <h2>{Component}</h2>
           {Component === "Alert" && <AlertComponent />}
           {Component === "Badge" && <BadgeComponent />}
