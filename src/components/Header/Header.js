@@ -22,12 +22,18 @@ const Header = () => {
 
   return (
     <div className="pillow-nav">
+      <svg width="0" height="0">
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="50%">
+          <stop stopColor={"#7f00ff"} offset="0%" />
+          <stop stopColor={"#e100ff"} offset="100%" />
+        </linearGradient>
+      </svg>
       <Link
         className="pillow-nav__header"
         to="/"
         onClick={() => setSelected("")}
       >
-        <IoPlanet />
+        <IoPlanet style={{ fill: "url(#gradient)" }} />
         <h2>PILLOW UI</h2>
       </Link>
 
@@ -56,7 +62,7 @@ const Header = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <IoLogoGithub />
+        <IoLogoGithub style={{ fill: "url(#gradient)" }} />
         Github
       </a>
 

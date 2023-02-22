@@ -3,7 +3,7 @@ import "./componentlist.scss";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import { StateContext } from "../../context/StateProvider";
-import { Alert, Badge, Button, Card, Chip, Container } from "@adivrskic/pillow";
+import { Alert, Badge, Button } from "@adivrskic/pillow";
 
 const ComponentList = () => {
   const [{ sidebarOpen }] = React.useContext(StateContext);

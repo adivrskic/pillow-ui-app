@@ -36,7 +36,6 @@
   & svg {
     width: 24px;
     height: 24px;
-    color: $highlight;
   }
 
   &__links {
@@ -53,7 +52,9 @@
     }
 
     &.active a {
-      color: $highlight;
+      background: $highlight;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     &:not(:last-child) {

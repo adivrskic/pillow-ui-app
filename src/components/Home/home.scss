@@ -50,12 +50,12 @@
       border: none;
       border-radius: 3px;
       color: #fff;
-      background-color: $highlight;
+      background: $highlight;
       padding: 5px 12px;
       transition: all 0.2s ease-in-out;
 
       &:hover {
-        background-color: darken($highlight, 5%);
+        // background-color: darken($highlight, 5%);
       }
     }
 
@@ -96,14 +96,9 @@
       border: 1px solid $border;
       border-radius: 3px;
 
-      &:hover svg {
-        color: $highlight;
-      }
-
       svg {
         height: 40px;
         width: 40px;
-        color: darken($background-darker, 10%);
         margin-bottom: 20px;
         transition: all 0.2s ease-in-out;
       }
@@ -221,16 +216,16 @@
       border: none;
       border-radius: 3px;
       color: #fff;
-      background-color: $highlight;
+      background: $highlight;
       padding: 5px 12px;
       transition: all 0.2s ease-in-out;
       width: fit-content;
       text-align: center;
       margin: 0 0 20px 20px;
-      letter-spacing: 0.8px;
+      // letter-spacing: 0.8px;
 
       &:hover {
-        background-color: darken($highlight, 5%);
+        // background-color: darken($highlight, 5%);
       }
     }
 
