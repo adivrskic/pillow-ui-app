@@ -118,5 +118,9 @@ h6 {
 
 a {
   text-decoration: none;
-  color: #17252a;
+  color: $text;
+}
+
+button {
+  letter-spacing: 0.8px;
 }

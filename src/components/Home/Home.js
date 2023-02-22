@@ -162,6 +162,8 @@ const Home = () => {
           <div className="pillow-home__external-links-items">
             <Link
               to="https://github.com/adivrskic/pillow"
+              target="_blank"
+              rel="noopener noreferrer"
               className="pillow-home__external-links-item"
             >
               <h4>View Github Repository</h4>
@@ -170,6 +172,8 @@ const Home = () => {
 
             <Link
               to="https://www.npmjs.com/package/@adivrskic/pillow"
+              target="_blank"
+              rel="noopener noreferrer"
               className="pillow-home__external-links-item"
             >
               <h4>View Npm Package</h4>

@@ -3,7 +3,7 @@ import "./componentlist.scss";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import { StateContext } from "../../context/StateProvider";
-import { Alert, Badge, Button } from "@adivrskic/pillow";
+import { Alert, Badge, Button, Card, Chip, Container } from "@adivrskic/pillow";
 
 const ComponentList = () => {
   const [{ sidebarOpen }] = React.useContext(StateContext);
@@ -52,7 +52,7 @@ const ComponentList = () => {
                     role="button"
                   />
                 )}
-                {component === "Badge" && <Badge content="9" variant="flat" />}
+                {component === "Badge" && <Badge label="9+" variant="flat" />}
                 {component === "Button" && (
                   <Button
                     label="Pillow UI Button"
@@ -61,6 +61,15 @@ const ComponentList = () => {
                     role="button"
                   />
                 )}
+                {/* {component === "Card" && (
+                  <Card
+                    heading
+                    imageAlt
+                    imageSrc
+                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                    variant="flat"
+                  />
+                )} */}
               </div>
             </Link>
           ))}

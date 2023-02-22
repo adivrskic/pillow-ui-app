@@ -168,6 +168,12 @@
   &__recents {
     padding: 0 100px 100px 100px;
 
+    & > div {
+      width: 1400px;
+      max-width: 100%;
+      margin: auto;
+    }
+
     h3 {
       margin-bottom: 20px;
     }
@@ -218,9 +224,10 @@
       background-color: $highlight;
       padding: 5px 12px;
       transition: all 0.2s ease-in-out;
-      max-width: 140px;
+      width: fit-content;
       text-align: center;
       margin: 0 0 20px 20px;
+      letter-spacing: 0.8px;
 
       &:hover {
         background-color: darken($highlight, 5%);

@@ -94,7 +94,7 @@ const Header = () => {
               className="pillow-nav__mobile-link"
               href="https://github.com/adivrskic/pillow"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Github
             </a>
