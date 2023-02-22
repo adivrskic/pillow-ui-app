@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <div className="pillow-nav">
-      <svg width="0" height="0">
+      <svg id="display-none">
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="50%">
           <stop stopColor={"#7f00ff"} offset="0%" />
           <stop stopColor={"#e100ff"} offset="100%" />
