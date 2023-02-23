@@ -3,15 +3,31 @@ import "./componentlist.scss";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import { StateContext } from "../../context/StateProvider";
-import { Alert, Badge, Button } from "@adivrskic/pillow";
+import {
+  Alert,
+  Badge,
+  Button,
+  Card,
+  Chip,
+  Container,
+  List,
+  Spinner,
+  TextField,
+} from "@adivrskic/pillow";
 
 const ComponentList = () => {
   const [{ sidebarOpen }] = React.useContext(StateContext);
 
   const components = {
-    Alert: Alert,
-    Badge: Badge,
-    Button: Button,
+    Alert,
+    Badge,
+    Button,
+    Card,
+    Chip,
+    Container,
+    List,
+    Spinner,
+    TextField,
   };
 
   const toKebabCase = (string) => {
@@ -61,15 +77,57 @@ const ComponentList = () => {
                     role="button"
                   />
                 )}
-                {/* {component === "Card" && (
+                {component === "Card" && (
                   <Card
-                    heading
-                    imageAlt
-                    imageSrc
+                    heading="Card Example"
+                    imageAlt="Planet neumorphic image"
+                    imageSrc="/images/hero-image.jpg"
                     text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
                     variant="flat"
                   />
-                )} */}
+                )}
+                {component === "Chip" && (
+                  <Chip
+                    deletable={true}
+                    icon={null}
+                    label="Pillow Chip"
+                    variant="flat"
+                  />
+                )}
+                {component === "Container" && (
+                  <Container variant="flat">
+                    <div>Container content</div>
+                    <ul>
+                      <li>List item 1</li>
+                      <li>List item 2</li>
+                      <li>List item 3</li>
+                    </ul>
+                    <button>Container button</button>
+                  </Container>
+                )}
+                {component === "List" && (
+                  <List
+                    header="List"
+                    label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                    listItems={[
+                      <p>List item 1</p>,
+                      <p>List item 2</p>,
+                      <p>List item 3</p>,
+                    ]}
+                    variant="flat"
+                  />
+                )}
+                {component === "Spinner" && (
+                  <Spinner complete={false} variant="flat" />
+                )}
+                {component === "TextField" && (
+                  <TextField
+                    title="Text Field Example"
+                    content=""
+                    onTextChange={() => console.log("change")}
+                    variant="flat"
+                  />
+                )}
               </div>
             </Link>
           ))}

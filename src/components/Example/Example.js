@@ -8,7 +8,17 @@ import ButtonComponent from "./Subcomponents/ButtonComponent";
 import { StateContext } from "../../context/StateProvider";
 
 const Example = () => {
-  const components = ["Alert", "Badge", "Button"];
+  const components = [
+    "Alert",
+    "Badge",
+    "Button",
+    "Card",
+    "Chip",
+    "Container",
+    "List",
+    "Spinner",
+    "TextField",
+  ];
   const location = useLocation();
   const Component =
     location.pathname.split("/").pop()[0].toUpperCase() +

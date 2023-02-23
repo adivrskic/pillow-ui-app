@@ -23,6 +23,13 @@ const LatestUpdates = () => {
           <h2>February 2023</h2>
           <p>v1.0.0 launched</p>
         </div>
+        <div className="pillow-latest__content-item">
+          <h2>
+            February 23<sup>rd</sup>, 2023
+          </h2>
+          <p>v1.3.0 launched</p>
+          <p>Contains initial release versions of 9 components</p>
+        </div>
       </div>
     </div>
   );
