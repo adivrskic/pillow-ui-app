@@ -1,6 +1,6 @@
 import React from "react";
 import { Chip } from "@adivrskic/pillow";
-import { IoCar, IoCartOutline } from "react-icons/io5";
+import { IoCartOutline } from "react-icons/io5";
 
 const ChipComponent = () => {
   return (
