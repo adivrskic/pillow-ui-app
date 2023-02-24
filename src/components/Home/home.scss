@@ -51,7 +51,7 @@
       border-radius: 3px;
       color: #fff;
       background: $highlight;
-      filter: opacity(0.5);
+      filter: opacity(0.67);
       padding: 5px 12px;
       transition: all 0.2s ease-in-out;
 
@@ -98,10 +98,10 @@
       border-radius: 3px;
 
       svg {
-        height: 40px;
-        width: 40px;
+        height: 50px;
+        width: 50px;
         margin-bottom: 20px;
-        filter: opacity(0.5);
+        filter: opacity(0.67);
         transition: all 0.2s ease-in-out;
       }
     }
@@ -138,7 +138,7 @@
       &:hover {
         svg {
           color: $highlight;
-          filter: opacity(0.5);
+          filter: opacity(0.67);
         }
       }
 
@@ -152,13 +152,13 @@
 
       svg {
         position: absolute;
-        top: 50%;
+        top: 20px;
         right: 20px;
-        transform: translate(0, -50%);
-        height: 90px;
-        width: 90px;
+        // transform: translate(0, -50%);
+        height: 50px;
+        width: 50px;
         color: darken($background-darker, 10%);
-        filter: opacity(0.5);
+        filter: opacity(0.67);
         transition: all 0.2s ease-in-out;
       }
     }
@@ -221,7 +221,7 @@
       border-radius: 3px;
       color: #fff;
       background: $highlight;
-      filter: opacity(0.5);
+      filter: opacity(0.67);
       padding: 5px 12px;
       transition: all 0.2s ease-in-out;
       width: fit-content;
@@ -287,10 +287,10 @@
         top: 50%;
         right: 20px;
         transform: translate(0, -50%);
-        height: 40px;
-        width: 40px;
+        height: 50px;
+        width: 50px;
         color: darken($background-darker, 10%);
-        filter: opacity(0.5);
+        filter: opacity(0.67);
         transition: all 0.2s ease-in-out;
       }
     }

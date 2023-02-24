@@ -5,6 +5,12 @@ import Sidebar from "../Sidebar/Sidebar";
 import AlertComponent from "./Subcomponents/AlertComponent";
 import BadgeComponent from "./Subcomponents/BadgeComponent";
 import ButtonComponent from "./Subcomponents/ButtonComponent";
+import CardComponent from "./Subcomponents/CardComponent";
+import ChipComponent from "./Subcomponents/ChipComponent";
+import ContainerComponent from "./Subcomponents/ContainerComponent";
+import ListComponent from "./Subcomponents/ListComponent";
+import SpinnerComponent from "./Subcomponents/SpinnerComponent";
+import TextFieldComponent from "./Subcomponents/TextFieldComponent";
 import { StateContext } from "../../context/StateProvider";
 
 const Example = () => {
@@ -20,9 +26,10 @@ const Example = () => {
     "TextField",
   ];
   const location = useLocation();
-  const Component =
+  const Component = (
     location.pathname.split("/").pop()[0].toUpperCase() +
-    location.pathname.split("/").pop().slice(1);
+    location.pathname.split("/").pop().slice(1)
+  ).replace("-", " ");
 
   const [{ sidebarOpen }] = React.useContext(StateContext);
 
@@ -35,6 +42,12 @@ const Example = () => {
           {Component === "Alert" && <AlertComponent />}
           {Component === "Badge" && <BadgeComponent />}
           {Component === "Button" && <ButtonComponent />}
+          {Component === "Card" && <CardComponent />}
+          {Component === "Chip" && <ChipComponent />}
+          {Component === "Container" && <ContainerComponent />}
+          {Component === "List" && <ListComponent />}
+          {Component === "Spinner" && <SpinnerComponent />}
+          {Component === "Text field" && <TextFieldComponent />}
         </div>
       </div>
     </div>

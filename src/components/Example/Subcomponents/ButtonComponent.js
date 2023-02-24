@@ -62,7 +62,7 @@ const ButtonComponent = () => {
         <div className="component-container__api">
           <h3>Variant API</h3>
           <p>
-            The Alert component implements the variant prop. The variant is a
+            The Button component implements the variant prop. The variant is a
             global prop and has the following options:
           </p>
           <ul>

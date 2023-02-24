@@ -55,14 +55,14 @@ const Home = () => {
             <div className="pillow-home__overview-item">
               <IoAppsOutline style={{ stroke: "url(#gradient)" }} />
               <h4>Multiple Components</h4>
-              <p>
-                More than a dozen lightweight composable components ready to use
-              </p>
+              <p>Easy to install, easy to import and easy to use</p>
             </div>
             <div className="pillow-home__overview-item">
               <IoLogoReact style={{ fill: "url(#gradient)" }} />
               <h4>Created with React</h4>
-              <p>Built with and for use with the React framework</p>
+              <p>
+                Lightweight, built with and for use with the React framework
+              </p>
             </div>
           </div>
         </div>
