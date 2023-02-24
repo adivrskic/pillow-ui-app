@@ -70,7 +70,11 @@ const Header = () => {
         className="pillow-nav__mobile"
         onClick={() => setMobileHeaderOpen(!mobileHeaderOpen)}
       >
-        {mobileHeaderOpen ? <IoCloseOutline /> : <IoMenuOutline />}
+        {mobileHeaderOpen ? (
+          <IoCloseOutline style={{ stroke: "url(#gradient)" }} />
+        ) : (
+          <IoMenuOutline style={{ stroke: "url(#gradient)" }} />
+        )}
       </div>
 
       {mobileHeaderOpen && (
