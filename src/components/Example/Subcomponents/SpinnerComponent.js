@@ -7,7 +7,7 @@ const SpinnerComponent = () => {
       <div className="component-container">
         <h3>Examples</h3>
         <div className="component-container__example">
-          <h4>Chip Variants</h4>
+          <h4>Spinner Variants</h4>
           <Spinner complete={false} variant="flat" />
           <Spinner complete={false} variant="pressed" />
         </div>
