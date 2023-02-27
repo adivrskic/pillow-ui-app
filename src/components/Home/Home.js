@@ -9,14 +9,13 @@ import {
   IoBulbOutline,
   IoAppsOutline,
   IoLogoReact,
-  IoCartOutline,
 } from "react-icons/io5";
-import { Alert, Badge, Button } from "@adivrskic/pillow";
+import { Alert, Button, Spinner } from "@adivrskic/pillow";
 
 const Home = () => {
   const [buttonSize, setButtonSize] = useState("small");
   const [alertSeverity, setAlertSeverity] = useState("info");
-  const [badgeVariant, setBadgeVariant] = useState("flat");
+  const [spinnerVariant, setSpinnerVariant] = useState("flat");
 
   return (
     <div className="pillow-home">
@@ -120,22 +119,6 @@ const Home = () => {
               <Link to="/components/alert">View Component</Link>
             </div>
             <div className="pillow-home__recents-item">
-              <h4>Badge</h4>
-              <div className="pillow-home__recents-body">
-                <span>
-                  <IoCartOutline />
-                  <Badge content="9" variant={badgeVariant} />
-                </span>
-              </div>
-              <div className="pillow-home__recents-options">
-                <button onClick={() => setBadgeVariant("flat")}>Flat</button>
-                <button onClick={() => setBadgeVariant("pressed")}>
-                  Pressed
-                </button>
-              </div>
-              <Link to="/components/badge">View Component</Link>
-            </div>
-            <div className="pillow-home__recents-item">
               <h4>Button</h4>
               <div className="pillow-home__recents-body">
                 <Button
@@ -151,6 +134,21 @@ const Home = () => {
                 <button onClick={() => setButtonSize("large")}>Large</button>
               </div>
               <Link to="/components/button">View Component</Link>
+            </div>
+            <div className="pillow-home__recents-item">
+              <h4>Spinner</h4>
+              <div className="pillow-home__recents-body">
+                <span>
+                  <Spinner variant={spinnerVariant} />
+                </span>
+              </div>
+              <div className="pillow-home__recents-options">
+                <button onClick={() => setSpinnerVariant("flat")}>Flat</button>
+                <button onClick={() => setSpinnerVariant("pressed")}>
+                  Pressed
+                </button>
+              </div>
+              <Link to="/components/spinner">View Component</Link>
             </div>
           </div>
         </div>
