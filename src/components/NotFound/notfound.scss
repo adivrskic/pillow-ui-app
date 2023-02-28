@@ -31,7 +31,8 @@
     border: none;
     border-radius: 3px;
     color: #fff;
-    background-color: $highlight;
+    background: $highlight;
+    filter: opacity(0.67);
     padding: 5px 12px;
     transition: all 0.2s ease-in-out;
 

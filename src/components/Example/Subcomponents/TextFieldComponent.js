@@ -77,7 +77,7 @@ const TextFieldComponent = () => {
             <td>
               <code>string</code>
             </td>
-            <td>The neumorphic variant of the badge.</td>
+            <td>The neumorphic variant of the text field.</td>
           </tr>
         </table>
       </div>

@@ -44,7 +44,7 @@ const SpinnerComponent = () => {
             <td>
               <code>bool</code>
             </td>
-            <td>If false, the spinner is removed.</td>
+            <td>If true, the spinner is removed.</td>
           </tr>
           <tr>
             <td>
@@ -53,7 +53,7 @@ const SpinnerComponent = () => {
             <td>
               <code>string</code>
             </td>
-            <td>The neumorphic variant of the badge.</td>
+            <td>The neumorphic variant of the spinner.</td>
           </tr>
         </table>
       </div>

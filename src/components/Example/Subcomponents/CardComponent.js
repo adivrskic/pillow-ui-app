@@ -93,7 +93,7 @@ const CardComponent = () => {
             <td>
               <code>string</code>
             </td>
-            <td>The neumorphic variant of the button.</td>
+            <td>The neumorphic variant of the card.</td>
           </tr>
         </table>
       </div>

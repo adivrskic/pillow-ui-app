@@ -68,7 +68,7 @@ const ChipComponent = () => {
             <td>
               <code>string</code>
             </td>
-            <td>The neumorphic variant of the badge.</td>
+            <td>The neumorphic variant of the chip.</td>
           </tr>
         </table>
       </div>

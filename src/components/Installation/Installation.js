@@ -51,7 +51,7 @@ const Installation = () => {
 
           <p>Once imported, use the components in your code by doing: </p>
 
-          <code>{`<Button>Click me!</Button>`}</code>
+          <code>{`<Button role="button" label="Click me!" size="medium" variant="flat" />`}</code>
         </div>
       </div>
     </div>

@@ -89,7 +89,7 @@ const ListComponent = () => {
             <td>
               <code>string</code>
             </td>
-            <td>The neumorphic variant of the badge.</td>
+            <td>The neumorphic variant of the list.</td>
           </tr>
         </table>
       </div>
