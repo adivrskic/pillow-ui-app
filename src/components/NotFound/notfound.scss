@@ -1,7 +1,7 @@
 @import "../../styles/colors";
 
 .pillow-notfound {
-  height: calc(100vh - 65px);
+  height: calc(100vh - 56px);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@
   h2 {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   &__divider {
@@ -23,7 +23,7 @@
   }
 
   h2 span {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   button {
@@ -32,12 +32,8 @@
     border-radius: 3px;
     color: #fff;
     background: $highlight;
-    filter: opacity(0.67);
-    padding: 5px 12px;
+    filter: opacity(0.75);
+    padding: 5px 15px;
     transition: all 0.2s ease-in-out;
-
-    &:hover {
-      // background-color: darken($highlight, 5%);
-    }
   }
 }

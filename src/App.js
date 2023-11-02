@@ -1,4 +1,3 @@
-import "./styles/App.scss";
 import Header from "./components/Header/Header.js";
 import MainLayout from "./layouts/MainLayout/MainLayout.js";
 import ComponentList from "./components/ComponentList/ComponentList.js";

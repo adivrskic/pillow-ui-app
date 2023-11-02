@@ -4,12 +4,6 @@
   display: flex;
   flex-direction: column;
 
-  p,
-  button,
-  a {
-    font-size: 14px;
-  }
-
   &__hero {
     position: relative;
     width: 100%;
@@ -31,33 +25,29 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      width: 500px;
+      width: 600px;
       height: 100%;
       z-index: 2;
     }
 
     h1 {
-      font-size: 22px;
-      margin-bottom: 20px;
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
     p {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     button {
       cursor: pointer;
       border: none;
-      border-radius: 3px;
+      border-radius: 5px;
       color: #fff;
       background: $highlight;
-      filter: opacity(0.67);
-      padding: 5px 12px;
+      filter: opacity(0.75);
+      padding: 5px 15px;
       transition: all 0.2s ease-in-out;
-
-      &:hover {
-        // background-color: darken($highlight, 5%);
-      }
     }
 
     img {
@@ -81,27 +71,27 @@
     }
 
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     &-items {
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
 
     &-item {
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding: 20px;
+      padding: 10px;
       border: 1px solid $border;
-      border-radius: 3px;
+      border-radius: 5px;
 
       svg {
         height: 50px;
         width: 50px;
         margin-bottom: 20px;
-        filter: opacity(0.67);
+        filter: opacity(0.75);
         transition: all 0.2s ease-in-out;
       }
     }
@@ -117,18 +107,17 @@
     }
 
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     &-items {
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
 
     &-item {
-      padding: 20px;
-      background-color: $background-darker;
-      border-radius: 3px;
+      padding: 10px;
+      border-radius: 5px;
       width: 50%;
       position: relative;
       overflow: hidden;
@@ -138,7 +127,7 @@
       &:hover {
         svg {
           color: $highlight;
-          filter: opacity(0.67);
+          filter: opacity(0.75);
         }
       }
 
@@ -147,18 +136,17 @@
       }
 
       & p {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
 
       svg {
         position: absolute;
-        top: 20px;
-        right: 20px;
-        // transform: translate(0, -50%);
+        top: 10px;
+        right: 10px;
         height: 50px;
         width: 50px;
         color: darken($background-darker, 10%);
-        filter: opacity(0.67);
+        filter: opacity(0.75);
         transition: all 0.2s ease-in-out;
       }
     }
@@ -174,12 +162,12 @@
     }
 
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     &-items {
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
 
     &-item {
@@ -187,10 +175,10 @@
       flex-direction: column;
       width: 100%;
       border: 1px solid $border;
-      border-radius: 3px;
+      border-radius: 5px;
 
       h4 {
-        padding: 20px;
+        padding: 10px;
       }
     }
 
@@ -201,7 +189,7 @@
       width: 100%;
       background-color: $background-darker;
       height: 100%;
-      padding: 20px;
+      padding: 10px;
 
       span {
         display: flex;
@@ -218,24 +206,19 @@
       display: inline-block;
       cursor: pointer;
       border: none;
-      border-radius: 3px;
+      border-radius: 5px;
       color: #fff;
       background: $highlight;
-      filter: opacity(0.67);
-      padding: 5px 12px;
+      filter: opacity(0.75);
+      padding: 5px 15px;
       transition: all 0.2s ease-in-out;
       width: fit-content;
       text-align: center;
-      margin: 0 0 20px 20px;
-      // letter-spacing: 0.8px;
-
-      &:hover {
-        // background-color: darken($highlight, 5%);
-      }
+      margin: 0 0 10px 10px;
     }
 
     &-options {
-      padding: 20px;
+      padding: 10px;
 
       button {
         border: none;
@@ -262,21 +245,20 @@
     }
 
     h3 + p {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     &-items {
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
 
     &-item {
       width: 100%;
       background-color: $background;
-      border-radius: 3px;
-      padding: 20px;
+      border-radius: 5px;
+      padding: 20px 10px;
       position: relative;
-      border: 1px solid $border;
 
       &:hover svg {
         color: $highlight;
@@ -285,12 +267,12 @@
       svg {
         position: absolute;
         top: 50%;
-        right: 20px;
+        right: 10px;
         transform: translate(0, -50%);
         height: 50px;
         width: 50px;
         color: darken($background-darker, 10%);
-        filter: opacity(0.67);
+        filter: opacity(0.75);
         transition: all 0.2s ease-in-out;
       }
     }

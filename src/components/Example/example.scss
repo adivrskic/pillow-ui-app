@@ -1,37 +1,37 @@
 @import "../../styles/colors";
 
 .pillow-example {
-  min-height: calc(100vh - 65px);
+  min-height: calc(100vh - 56px);
   width: 100%;
   margin-left: 200px;
   max-width: calc(100% - 200px);
 
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   &__content {
-    padding: 20px;
+    padding: 10px;
     max-width: 1200px;
 
     &-items {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 20px;
+      grid-gap: 10px;
       grid-auto-rows: 1fr;
     }
 
     &-item {
       border: 1px solid $border;
-      border-radius: 3px;
+      border-radius: 5px;
 
       h4 {
-        padding: 20px;
+        padding: 10px;
       }
     }
 
     &-item-body {
-      padding: 20px;
+      padding: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,49 +52,49 @@
   &__example {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: $background-darker;
-    padding: 20px;
-    border-radius: 3px;
-    gap: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 10px;
   }
 
   table {
     width: 100%;
     border: 1px solid $border;
-    border-radius: 3px;
+    border-radius: 5px;
     border-collapse: collapse;
     overflow-y: scroll;
 
     th {
       text-align: left;
-      padding: 20px;
+      padding: 10px;
     }
 
     td {
-      padding: 20px;
+      padding: 10px;
 
       code {
-        padding: 3px;
+        padding: 5px;
         display: inline;
         border: 1px solid darken($background-darker, 15%);
       }
     }
 
     tr {
-      padding: 20px;
+      padding: 10px;
       border-top: 1px solid $border;
-      border-radius: 3px;
+      border-radius: 5px;
     }
   }
 
   &__api {
     p {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     ul {
       padding: 0;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
 
       li {
         list-style: none;
@@ -102,7 +102,7 @@
       }
 
       code {
-        padding: 3px;
+        padding: 5px;
         display: inline;
         border: 1px solid darken($background-darker, 15%);
       }

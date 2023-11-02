@@ -12,10 +12,10 @@
   position: sticky;
   top: 0;
   width: 100%;
-  padding: 20px;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 10px;
   background-color: #feffff;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: bold;
   z-index: 10;
 
   &__header {
@@ -28,15 +28,15 @@
     }
 
     h2 {
-      font-size: 16px;
+      font-size: 24px;
       font-family: "roboto-medium";
     }
   }
 
   & svg {
-    width: 24px;
-    height: 24px;
-    filter: opacity(0.5);
+    width: 36px;
+    height: 36px;
+    filter: opacity(0.75);
   }
 
   &__links {
@@ -44,7 +44,7 @@
     width: calc(100% - 180px);
     list-style: none;
     display: flex;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 10px;
   }
 
   &__link {
@@ -58,8 +58,8 @@
       -webkit-text-fill-color: transparent;
     }
 
-    &:not(:last-child) {
-      margin-right: 20px;
+    &:not(&--gh):not(:last-child) {
+      margin-right: 10px;
     }
 
     &--gh {
@@ -80,10 +80,10 @@
 
   .pillow-nav__mobile-content {
     position: absolute;
-    top: 65px;
+    top: 56px;
     left: 0;
     width: 100%;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 56px);
     background-color: $background;
   }
 
