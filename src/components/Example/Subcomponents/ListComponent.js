@@ -17,6 +17,8 @@ const ListComponent = () => {
               <p>List item 3</p>,
             ]}
             variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
           <List
             header="List"
@@ -27,6 +29,8 @@ const ListComponent = () => {
               <p>List item 3</p>,
             ]}
             variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
         </div>
       </div>

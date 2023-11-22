@@ -13,12 +13,16 @@ const AlertComponent = () => {
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="error"
             variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
           <Alert
             heading="Error"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="error"
             variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
         </div>
         <div className="component-container__example">
@@ -28,12 +32,16 @@ const AlertComponent = () => {
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="warning"
             variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
           <Alert
             heading="Warning"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="warning"
             variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
         </div>
 
@@ -44,12 +52,16 @@ const AlertComponent = () => {
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="info"
             variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
           <Alert
             heading="Info"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="info"
             variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
         </div>
 
@@ -60,12 +72,16 @@ const AlertComponent = () => {
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="success"
             variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
           <Alert
             heading="Success"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="success"
             variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
         </div>
       </div>

@@ -9,13 +9,35 @@ const ChipComponent = () => {
         <h3>Examples</h3>
         <div className="component-container__example">
           <h4>Chip Variants</h4>
-          <Chip label="Example" variant="flat" />
-          <Chip label="Example" variant="pressed" />
+          <Chip
+            label="Example"
+            variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
+          <Chip
+            label="Example"
+            variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
         </div>
         <div className="component-container__example">
           <h4>Chip w/ Icon</h4>
-          <Chip icon={<IoCartOutline />} label="Example" variant="flat" />
-          <Chip icon={<IoCartOutline />} label="Example" variant="pressed" />
+          <Chip
+            icon={<IoCartOutline />}
+            label="Example"
+            variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
+          <Chip
+            icon={<IoCartOutline />}
+            label="Example"
+            variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
         </div>
       </div>
 

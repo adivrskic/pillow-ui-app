@@ -66,15 +66,26 @@ const ComponentList = () => {
                     label="Pillow UI Alert Body"
                     variant="flat"
                     role="button"
+                    bgColor="#f2f3f7"
+                    textColor="#323232"
                   />
                 )}
-                {component === "Badge" && <Badge label="9+" variant="flat" />}
+                {component === "Badge" && (
+                  <Badge
+                    label="9+"
+                    variant="flat"
+                    bgColor="#f2f3f7"
+                    textColor="#323232"
+                  />
+                )}
                 {component === "Button" && (
                   <Button
                     label="Pillow UI Button"
                     variant="flat"
                     size="small"
                     role="button"
+                    bgColor="#f2f3f7"
+                    textColor="#323232"
                   />
                 )}
                 {component === "Card" && (
@@ -84,6 +95,8 @@ const ComponentList = () => {
                     imageSrc="/images/hero-image.jpg"
                     text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
                     variant="flat"
+                    bgColor="#f2f3f7"
+                    textColor="#323232"
                   />
                 )}
                 {component === "Chip" && (
@@ -92,10 +105,16 @@ const ComponentList = () => {
                     icon={null}
                     label="Pillow Chip"
                     variant="flat"
+                    bgColor="#f2f3f7"
+                    textColor="#323232"
                   />
                 )}
                 {component === "Container" && (
-                  <Container variant="flat">
+                  <Container
+                    variant="flat"
+                    bgColor="#f2f3f7"
+                    textColor="#323232"
+                  >
                     <div>Container content</div>
                     <ul>
                       <li>List item 1</li>
@@ -115,10 +134,12 @@ const ComponentList = () => {
                       <p>List item 3</p>,
                     ]}
                     variant="flat"
+                    bgColor="#f2f3f7"
+                    textColor="#323232"
                   />
                 )}
                 {component === "Spinner" && (
-                  <Spinner complete={false} variant="flat" />
+                  <Spinner complete={false} variant="flat" bgColor="#f2f3f7" />
                 )}
                 {component === "TextField" && (
                   <TextField
@@ -126,6 +147,8 @@ const ComponentList = () => {
                     content=""
                     onTextChange={() => console.log("change")}
                     variant="flat"
+                    bgColor="#f2f3f7"
+                    textColor="#323232"
                   />
                 )}
               </div>

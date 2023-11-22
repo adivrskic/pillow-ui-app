@@ -14,6 +14,8 @@ const CardComponent = () => {
             imageSrc="/images/hero-image.jpg"
             text="lorem ipsum dolor sit amet, consectetur adipiscing elit"
             variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
 
           <Card
@@ -22,6 +24,8 @@ const CardComponent = () => {
             imageSrc="/images/hero-image.jpg"
             text="lorem ipsum dolor sit amet, consectetur adipiscing elit"
             variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
         </div>
       </div>

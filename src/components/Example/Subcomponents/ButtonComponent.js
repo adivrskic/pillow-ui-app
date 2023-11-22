@@ -8,20 +8,48 @@ const ButtonComponent = () => {
         <h3>Examples</h3>
         <div className="component-container__example">
           <h4>Button Variants</h4>
-          <Button role="button" label="Click me!" variant="flat" />
-          <Button role="button" label="Click me!" variant="pressed" />
+          <Button
+            role="button"
+            label="Click me!"
+            variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
+          <Button
+            role="button"
+            label="Click me!"
+            variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
         </div>
 
         <div className="component-container__example">
           <h4>Button Sizes</h4>
-          <Button role="button" label="Click me!" size="small" variant="flat" />
+          <Button
+            role="button"
+            label="Click me!"
+            size="small"
+            variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
           <Button
             role="button"
             label="Click me!"
             size="medium"
             variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
-          <Button role="button" label="Click me!" size="large" variant="flat" />
+          <Button
+            role="button"
+            label="Click me!"
+            size="large"
+            variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
         </div>
 
         <div className="component-container__example">
@@ -30,13 +58,22 @@ const ButtonComponent = () => {
             role="button"
             label="Click me!"
             variant="flat"
-            icon={<IoCartOutline />}
+            icon="info"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
         </div>
 
         <div className="component-container__example">
           <h4>Disabled Button</h4>
-          <Button role="button" label="Click me!" variant="flat" disabled />
+          <Button
+            role="button"
+            label="Click me!"
+            variant="flat"
+            disabled
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
         </div>
       </div>
 

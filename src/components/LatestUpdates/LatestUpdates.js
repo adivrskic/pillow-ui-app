@@ -27,8 +27,14 @@ const LatestUpdates = () => {
           <h2>
             February 23<sup>rd</sup>, 2023
           </h2>
-          <p>v1.3.0 launched</p>
-          <p>Contains initial release versions of 9 components</p>
+          <p>v1.3.0 launched.</p>
+          <p>Contains initial release versions of 9 components.</p>
+        </div>
+        <div className="pillow-latest__content-item">
+          <h2>November 2023</h2>
+          <p>v1.5.0 launched.</p>
+          <p>Rework of all components.</p>
+          <p>Neumorphic styles now work on any background color.</p>
         </div>
       </div>
     </div>

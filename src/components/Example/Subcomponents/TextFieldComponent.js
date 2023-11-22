@@ -12,8 +12,16 @@ const TextFieldComponent = () => {
             title="Example"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
-          <TextField title="Example" content="" variant="pressed" />
+          <TextField
+            title="Example"
+            content=""
+            variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
         </div>
       </div>
 

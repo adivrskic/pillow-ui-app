@@ -19,6 +19,8 @@ const ContainerComponent = () => {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>,
             ]}
             variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
           <Container
             children={[
@@ -31,6 +33,8 @@ const ContainerComponent = () => {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>,
             ]}
             variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
           />
         </div>
       </div>

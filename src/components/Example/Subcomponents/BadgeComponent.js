@@ -8,13 +8,33 @@ const BadgeComponent = () => {
         <h3>Examples</h3>
         <div className="component-container__example">
           <h4>Badge w/ Number</h4>
-          <Badge label="9+" variant="flat" />
-          <Badge label="9+" variant="pressed" />
+          <Badge
+            label="9+"
+            variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
+          <Badge
+            label="9+"
+            variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
         </div>
         <div className="component-container__example">
           <h4>Badge w/ Text</h4>
-          <Badge label="New!" variant="flat" />
-          <Badge label="New!" variant="pressed" />
+          <Badge
+            label="New!"
+            variant="flat"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
+          <Badge
+            label="New!"
+            variant="pressed"
+            bgColor="#f2f3f7"
+            textColor="#323232"
+          />
         </div>
       </div>
 

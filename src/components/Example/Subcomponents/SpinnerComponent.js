@@ -8,8 +8,8 @@ const SpinnerComponent = () => {
         <h3>Examples</h3>
         <div className="component-container__example">
           <h4>Spinner Variants</h4>
-          <Spinner complete={false} variant="flat" />
-          <Spinner complete={false} variant="pressed" />
+          <Spinner complete={false} variant="flat" bgColor="#f2f3f7" />
+          <Spinner complete={false} variant="pressed" bgColor="#f2f3f7" />
         </div>
       </div>
 
