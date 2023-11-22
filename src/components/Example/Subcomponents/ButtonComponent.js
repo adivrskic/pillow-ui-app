@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "@adivrskic/pillow";
-import { IoCartOutline } from "react-icons/io5";
 const ButtonComponent = () => {
   return (
     <div className="component">
