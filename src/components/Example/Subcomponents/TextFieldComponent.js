@@ -32,62 +32,75 @@ const TextFieldComponent = () => {
             The TextField component implements the variant prop. The variant is
             a global prop and has the following options:
           </p>
-          <ul>
-            <li>
-              flat: <code>variant="flat"</code>
-            </li>
-            <li>
-              pressed: <code>variant="pressed"</code>
-            </li>
-          </ul>
+          <table>
+            <tr>
+              <th>Option</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>flat</td>
+              <td>
+                <code>variant="flat"</code>
+              </td>
+            </tr>
+            <tr>
+              <td>pressed</td>
+              <td>
+                <code>variant="pressed"</code>
+              </td>
+            </tr>
+          </table>
         </div>
 
-        <h3>All Properties</h3>
-        <table>
-          <tr>
-            <th>Property</th>
-            <th>Type</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>
-              <code>title</code>
-            </td>
-            <td>
-              <code>string</code>
-            </td>
-            <td>The title of the text field.</td>
-          </tr>
-          <tr>
-            <td>
-              <code>content</code>
-            </td>
-            <td>
-              <code>string</code>
-            </td>
-            <td>The optional content of the text field.</td>
-          </tr>
-          <tr>
-            <td>
-              <code>onTextChange</code>
-            </td>
-            <td>
-              <code>function</code>
-            </td>
-            <td>
-              Callback function that fires when text changes in the text field.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>variant</code>
-            </td>
-            <td>
-              <code>string</code>
-            </td>
-            <td>The neumorphic variant of the text field.</td>
-          </tr>
-        </table>
+        <div className="component-container__api">
+          <h3>All Properties</h3>
+          <table>
+            <tr>
+              <th>Property</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>
+                <code>title</code>
+              </td>
+              <td>
+                <code>string</code>
+              </td>
+              <td>The title of the text field.</td>
+            </tr>
+            <tr>
+              <td>
+                <code>content</code>
+              </td>
+              <td>
+                <code>string</code>
+              </td>
+              <td>The optional content of the text field.</td>
+            </tr>
+            <tr>
+              <td>
+                <code>onTextChange</code>
+              </td>
+              <td>
+                <code>function</code>
+              </td>
+              <td>
+                Callback function that fires when text changes in the text
+                field.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code>variant</code>
+              </td>
+              <td>
+                <code>string</code>
+              </td>
+              <td>The neumorphic variant of the text field.</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   );

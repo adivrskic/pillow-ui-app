@@ -105,6 +105,8 @@ const Home = () => {
                   label="Pillow UI Alert Body"
                   variant="flat"
                   role="button"
+                  bgColor="#f2f3f7"
+                  textColor="#323232"
                 />
               </div>
               <div className="pillow-home__recents-options">
@@ -126,6 +128,8 @@ const Home = () => {
                   variant="flat"
                   size={buttonSize}
                   role="button"
+                  bgColor="#f2f3f7"
+                  textColor="#323232"
                 />
               </div>
               <div className="pillow-home__recents-options">
@@ -139,7 +143,7 @@ const Home = () => {
               <h4>Spinner</h4>
               <div className="pillow-home__recents-body">
                 <span>
-                  <Spinner variant={spinnerVariant} />
+                  <Spinner variant={spinnerVariant} bgColor="#f2f3f7" />
                 </span>
               </div>
               <div className="pillow-home__recents-options">

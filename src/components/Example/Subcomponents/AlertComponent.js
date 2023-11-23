@@ -93,20 +93,36 @@ const AlertComponent = () => {
             The Alert component implements the severity prop. The severity has
             the following options:
           </p>
-          <ul>
-            <li>
-              error: <code>severity="error"</code>
-            </li>
-            <li>
-              warning: <code>severity="warning"</code>
-            </li>
-            <li>
-              info: <code>severity="info"</code>
-            </li>
-            <li>
-              success: <code>severity="success"</code>
-            </li>
-          </ul>
+          <table>
+            <tr>
+              <th>Option</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>error</td>
+              <td>
+                <code>severity="error"</code>
+              </td>
+            </tr>
+            <tr>
+              <td>warning</td>
+              <td>
+                <code>severity="warning"</code>
+              </td>
+            </tr>
+            <tr>
+              <td>info</td>
+              <td>
+                <code>severity="info"</code>
+              </td>
+            </tr>
+            <tr>
+              <td>success</td>
+              <td>
+                <code>severity="success"</code>
+              </td>
+            </tr>
+          </table>
         </div>
 
         <div className="component-container__api">
@@ -115,60 +131,72 @@ const AlertComponent = () => {
             The Alert component implements the variant prop. The variant is a
             global prop and has the following options:
           </p>
-          <ul>
-            <li>
-              flat: <code>variant="flat"</code>
-            </li>
-            <li>
-              pressed: <code>variant="pressed"</code>
-            </li>
-          </ul>
+          <table>
+            <tr>
+              <th>Option</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td>flat</td>
+              <td>
+                <code>variant="flat"</code>
+              </td>
+            </tr>
+            <tr>
+              <td>pressed</td>
+              <td>
+                <code>variant="pressed"</code>
+              </td>
+            </tr>
+          </table>
         </div>
 
-        <h3>All Properties</h3>
-        <table>
-          <tr>
-            <th>Property</th>
-            <th>Type</th>
-            <th>Description</th>
-          </tr>
-          <tr>
-            <td>
-              <code>heading</code>
-            </td>
-            <td>
-              <code>string</code>
-            </td>
-            <td>The title of the alert.</td>
-          </tr>
-          <tr>
-            <td>
-              <code>label</code>
-            </td>
-            <td>
-              <code>string</code>
-            </td>
-            <td>The label or information of the alert.</td>
-          </tr>
-          <tr>
-            <td>
-              <code>severity</code>
-            </td>
-            <td>
-              <code>string</code>
-            </td>
-            <td>The level of severity of the alert.</td>
-          </tr>
-          <tr>
-            <td>
-              <code>variant</code>
-            </td>
-            <td>
-              <code>string</code>
-            </td>
-            <td>The neumorphic variant of the alert.</td>
-          </tr>
-        </table>
+        <div className="component-container__api">
+          <h3>All Properties</h3>
+          <table>
+            <tr>
+              <th>Property</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>
+                <code>heading</code>
+              </td>
+              <td>
+                <code>string</code>
+              </td>
+              <td>The title of the alert.</td>
+            </tr>
+            <tr>
+              <td>
+                <code>label</code>
+              </td>
+              <td>
+                <code>string</code>
+              </td>
+              <td>The label or information of the alert.</td>
+            </tr>
+            <tr>
+              <td>
+                <code>severity</code>
+              </td>
+              <td>
+                <code>string</code>
+              </td>
+              <td>The level of severity of the alert.</td>
+            </tr>
+            <tr>
+              <td>
+                <code>variant</code>
+              </td>
+              <td>
+                <code>string</code>
+              </td>
+              <td>The neumorphic variant of the alert.</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   );
