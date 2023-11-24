@@ -16,8 +16,12 @@ import {
 } from "@adivrskic/pillow";
 
 const ComponentList = () => {
-  const [{ sidebarOpen }] = React.useContext(StateContext);
+  const [{ sidebarOpen, bgColor, textColor }] = React.useContext(StateContext);
 
+  const colorProps = {
+    bgColor,
+    textColor,
+  };
   const components = {
     Alert,
     Badge,
@@ -29,6 +33,8 @@ const ComponentList = () => {
     Spinner,
     TextField,
   };
+
+  console.log(colorProps);
 
   const toKebabCase = (string) => {
     return string
@@ -58,7 +64,13 @@ const ComponentList = () => {
               }}
             >
               <h4>{component}</h4>
-              <div className="pillow-components__content-item-body">
+              <div
+                style={{
+                  ["--bg-color"]: `${bgColor}`,
+                  ["--text-color"]: `${textColor}`,
+                }}
+                className="pillow-components__content-item-body"
+              >
                 {component === "Alert" && (
                   <Alert
                     heading="Header"
@@ -66,17 +78,11 @@ const ComponentList = () => {
                     label="Pillow UI Alert Body"
                     variant="flat"
                     role="button"
-                    bgColor="#f2f3f7"
-                    textColor="#323232"
+                    {...colorProps}
                   />
                 )}
                 {component === "Badge" && (
-                  <Badge
-                    label="9+"
-                    variant="flat"
-                    bgColor="#f2f3f7"
-                    textColor="#323232"
-                  />
+                  <Badge label="9+" variant="flat" {...colorProps} />
                 )}
                 {component === "Button" && (
                   <Button
@@ -84,19 +90,17 @@ const ComponentList = () => {
                     variant="flat"
                     size="small"
                     role="button"
-                    bgColor="#f2f3f7"
-                    textColor="#323232"
+                    {...colorProps}
                   />
                 )}
                 {component === "Card" && (
                   <Card
                     heading="Card Example"
-                    imageAlt="Planet neumorphic image"
-                    imageSrc="/images/hero-image.jpg"
+                    // imageAlt="Planet neumorphic image"
+                    // imageSrc="/images/hero-image.jpg"
                     text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
                     variant="flat"
-                    bgColor="#f2f3f7"
-                    textColor="#323232"
+                    {...colorProps}
                   />
                 )}
                 {component === "Chip" && (
@@ -105,16 +109,11 @@ const ComponentList = () => {
                     icon={null}
                     label="Pillow Chip"
                     variant="flat"
-                    bgColor="#f2f3f7"
-                    textColor="#323232"
+                    {...colorProps}
                   />
                 )}
                 {component === "Container" && (
-                  <Container
-                    variant="flat"
-                    bgColor="#f2f3f7"
-                    textColor="#323232"
-                  >
+                  <Container variant="flat" {...colorProps}>
                     <div>Container content</div>
                     <ul>
                       <li>List item 1</li>
@@ -134,8 +133,7 @@ const ComponentList = () => {
                       <p>List item 3</p>,
                     ]}
                     variant="flat"
-                    bgColor="#f2f3f7"
-                    textColor="#323232"
+                    {...colorProps}
                   />
                 )}
                 {component === "Spinner" && (
@@ -147,8 +145,7 @@ const ComponentList = () => {
                     content=""
                     onTextChange={() => console.log("change")}
                     variant="flat"
-                    bgColor="#f2f3f7"
-                    textColor="#323232"
+                    {...colorProps}
                   />
                 )}
               </div>

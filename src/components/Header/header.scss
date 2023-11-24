@@ -13,7 +13,7 @@
   top: 0;
   width: 100%;
   padding: 10px;
-  background-color: #feffff;
+  background: var(--gradient);
   font-size: 18px;
   font-weight: bold;
   z-index: 10;
@@ -25,18 +25,20 @@
     svg {
       margin-right: 5px;
       transform: rotate(-65deg);
+      fill: var(--text-color);
     }
 
     h2 {
       font-size: 24px;
-      font-family: "roboto-medium";
+      // font-family: "roboto-medium";
+      color: var(--text-color);
     }
   }
 
   & svg {
     width: 36px;
     height: 36px;
-    filter: opacity(0.75);
+    // filter: opacity(0.75);
   }
 
   &__links {
@@ -50,12 +52,12 @@
   &__link {
     & a {
       text-decoration: none;
+      color: var(--text-color);
+      font-weight: 100;
     }
 
     &.active a {
-      background: $highlight;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-weight: bold;
     }
 
     &:not(&--gh):not(:last-child) {
@@ -66,9 +68,12 @@
       display: flex;
       align-items: center;
       text-decoration: none;
+      margin-right: 10px;
+      color: var(--text-color);
 
       svg {
         margin-right: 5px;
+        color: var(--text-color);
       }
     }
   }

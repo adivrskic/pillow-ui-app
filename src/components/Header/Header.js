@@ -7,9 +7,14 @@ import {
   IoMenuOutline,
   IoCloseOutline,
 } from "react-icons/io5";
+import ColorPicker from "../ColorPicker/ColorPicker";
+import { StateContext } from "../../context/StateProvider";
 import { Link } from "react-router-dom";
+import { getGradientColor } from "../../helpers";
 
 const Header = () => {
+  const [{ bgColor, textColor }] = React.useContext(StateContext);
+
   const [selected, setSelected] = useState("");
   const [mobileHeaderOpen, setMobileHeaderOpen] = useState(false);
 
@@ -20,12 +25,20 @@ const Header = () => {
     if (location.pathname.indexOf("components") > -1) setSelected("components");
   }, [location]);
 
+  const gradient = getGradientColor(bgColor);
+
   return (
-    <div className="pillow-nav">
+    <div
+      style={{
+        background: `linear-gradient(to right, ${bgColor}, ${gradient})`,
+        ["--text-color"]: textColor,
+      }}
+      className="pillow-nav"
+    >
       <svg id="display-none">
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="50%">
-          <stop stopColor={"#00d2ff"} offset="0%" />
-          <stop stopColor={"#3a7bd5"} offset="100%" />
+          <stop stopColor={`${bgColor}`} offset="0%" />
+          <stop stopColor={`${gradient}`} offset="100%" />
         </linearGradient>
       </svg>
       <Link
@@ -33,7 +46,7 @@ const Header = () => {
         to="/"
         onClick={() => setSelected("")}
       >
-        <IoPlanet style={{ fill: "url(#gradient)" }} />
+        <IoPlanet />
         <h2>PILLOW UI</h2>
       </Link>
 
@@ -62,9 +75,11 @@ const Header = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <IoLogoGithub style={{ fill: "url(#gradient)" }} />
+        <IoLogoGithub />
         Github
       </a>
+
+      <ColorPicker />
 
       <div
         className="pillow-nav__mobile"

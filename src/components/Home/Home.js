@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./home.scss";
 import { Link } from "react-router-dom";
+import { StateContext } from "../../context/StateProvider";
+
 import {
   IoCalendarOutline,
   IoArrowForwardCircleOutline,
@@ -11,8 +13,12 @@ import {
   IoLogoReact,
 } from "react-icons/io5";
 import { Alert, Button, Spinner } from "@adivrskic/pillow";
+import { getGradientColor } from "../../helpers";
 
 const Home = () => {
+  const [{ bgColor }] = React.useContext(StateContext);
+  const gradient = getGradientColor(bgColor);
+
   const [buttonSize, setButtonSize] = useState("small");
   const [alertSeverity, setAlertSeverity] = useState("info");
   const [spinnerVariant, setSpinnerVariant] = useState("flat");
@@ -31,7 +37,14 @@ const Home = () => {
               creating websites and applications in soft, neumorphic design.
             </p>
             <Link to="/overview/installation">
-              <button type="button">Get Started</button>
+              <button
+                style={{
+                  background: `linear-gradient(to right, ${bgColor}, ${gradient})`,
+                }}
+                type="button"
+              >
+                Get Started
+              </button>
             </Link>
           </div>
         </div>
@@ -118,7 +131,14 @@ const Home = () => {
                   Success
                 </button>
               </div>
-              <Link to="/components/alert">View Component</Link>
+              <Link
+                to="/components/alert"
+                style={{
+                  background: `linear-gradient(to right, ${bgColor}, ${gradient})`,
+                }}
+              >
+                View Component
+              </Link>
             </div>
             <div className="pillow-home__recents-item">
               <h4>Button</h4>
@@ -137,7 +157,14 @@ const Home = () => {
                 <button onClick={() => setButtonSize("medium")}>Medium</button>
                 <button onClick={() => setButtonSize("large")}>Large</button>
               </div>
-              <Link to="/components/button">View Component</Link>
+              <Link
+                to="/components/button"
+                style={{
+                  background: `linear-gradient(to right, ${bgColor}, ${gradient})`,
+                }}
+              >
+                View Component
+              </Link>
             </div>
             <div className="pillow-home__recents-item">
               <h4>Spinner</h4>
@@ -152,7 +179,14 @@ const Home = () => {
                   Pressed
                 </button>
               </div>
-              <Link to="/components/spinner">View Component</Link>
+              <Link
+                to="/components/spinner"
+                style={{
+                  background: `linear-gradient(to right, ${bgColor}, ${gradient})`,
+                }}
+              >
+                View Component
+              </Link>
             </div>
           </div>
         </div>

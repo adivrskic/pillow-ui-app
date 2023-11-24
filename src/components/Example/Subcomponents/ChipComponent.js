@@ -1,42 +1,49 @@
 import React from "react";
 import { Chip } from "@adivrskic/pillow";
 import { IoCartOutline } from "react-icons/io5";
+import { StateContext } from "../../../context/StateProvider";
 
 const ChipComponent = () => {
+  const [{ bgColor, textColor }] = React.useContext(StateContext);
+
+  const colorProps = {
+    bgColor,
+    textColor,
+  };
   return (
     <div className="component">
       <div className="component-container">
         <h3>Examples</h3>
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>Chip Variants</h4>
-          <Chip
-            label="Example"
-            variant="flat"
-            bgColor="#f2f3f7"
-            textColor="#323232"
-          />
-          <Chip
-            label="Example"
-            variant="pressed"
-            bgColor="#f2f3f7"
-            textColor="#323232"
-          />
+          <Chip label="Example" variant="flat" {...colorProps} />
+          <Chip label="Example" variant="pressed" {...colorProps} />
         </div>
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>Chip w/ Icon</h4>
           <Chip
             icon={<IoCartOutline />}
             label="Example"
             variant="flat"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
           <Chip
             icon={<IoCartOutline />}
             label="Example"
             variant="pressed"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
         </div>
       </div>
