@@ -1,12 +1,25 @@
 import React from "react";
 import { List } from "@adivrskic/pillow";
+import { StateContext } from "../../../context/StateProvider";
 
 const ListComponent = () => {
+  const [{ bgColor, textColor }] = React.useContext(StateContext);
+
+  const colorProps = {
+    bgColor,
+    textColor,
+  };
   return (
     <div className="component">
       <div className="component-container">
         <h3>Examples</h3>
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>List Variants</h4>
           <List
             header="List"
@@ -17,8 +30,7 @@ const ListComponent = () => {
               <p>List item 3</p>,
             ]}
             variant="flat"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
           <List
             header="List"
@@ -29,8 +41,7 @@ const ListComponent = () => {
               <p>List item 3</p>,
             ]}
             variant="pressed"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
         </div>
       </div>

@@ -7,7 +7,6 @@ import Footer from "./components/Footer/Footer.js";
 import Installation from "./components/Installation/Installation.js";
 import NotFound from "./components/NotFound/NotFound";
 import LatestUpdates from "./components/LatestUpdates/LatestUpdates";
-import ScrollToTop from "./helpers/ScrollToTop";
 import { StateProvider } from "./context/StateProvider";
 import { Route, Routes } from "react-router-dom";
 
@@ -15,7 +14,6 @@ function App() {
   return (
     <StateProvider>
       <div className="pillow-ui-app">
-        <ScrollToTop />
         <Header />
 
         <Routes>

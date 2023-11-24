@@ -1,15 +1,36 @@
 import React from "react";
 import { Spinner } from "@adivrskic/pillow";
+import { StateContext } from "../../../context/StateProvider";
 
 const SpinnerComponent = () => {
+  const [{ bgColor, textColor }] = React.useContext(StateContext);
+
+  const colorProps = {
+    bgColor,
+    textColor,
+  };
   return (
     <div className="component">
       <div className="component-container">
         <h3>Examples</h3>
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>Spinner Variants</h4>
-          <Spinner complete={false} variant="flat" bgColor="#f2f3f7" />
-          <Spinner complete={false} variant="pressed" bgColor="#f2f3f7" />
+          <Spinner
+            complete={false}
+            variant="flat"
+            bgColor={colorProps.bgColor}
+          />
+          <Spinner
+            complete={false}
+            variant="pressed"
+            bgColor={colorProps.bgColor}
+          />
         </div>
       </div>
 

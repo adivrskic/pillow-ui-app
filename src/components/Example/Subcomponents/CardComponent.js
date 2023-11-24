@@ -1,12 +1,25 @@
 import React from "react";
 import { Card } from "@adivrskic/pillow";
+import { StateContext } from "../../../context/StateProvider";
 
 const CardComponent = () => {
+  const [{ bgColor, textColor }] = React.useContext(StateContext);
+
+  const colorProps = {
+    bgColor,
+    textColor,
+  };
   return (
     <div className="component">
       <div className="component-container">
         <h3>Examples</h3>
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>Card Variants</h4>
           <Card
             heading="Example"
@@ -14,8 +27,7 @@ const CardComponent = () => {
             imageSrc="/images/hero-image.jpg"
             text="lorem ipsum dolor sit amet, consectetur adipiscing elit"
             variant="flat"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
 
           <Card
@@ -24,8 +36,7 @@ const CardComponent = () => {
             imageSrc="/images/hero-image.jpg"
             text="lorem ipsum dolor sit amet, consectetur adipiscing elit"
             variant="pressed"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
         </div>
       </div>

@@ -1,40 +1,39 @@
 import React from "react";
 import { Badge } from "@adivrskic/pillow";
+import { StateContext } from "../../../context/StateProvider";
 
 const BadgeComponent = () => {
+  const [{ bgColor, textColor }] = React.useContext(StateContext);
+
+  const colorProps = {
+    bgColor,
+    textColor,
+  };
   return (
     <div className="component">
       <div className="component-container">
         <h3>Examples</h3>
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>Badge w/ Number</h4>
-          <Badge
-            label="9+"
-            variant="flat"
-            bgColor="#f2f3f7"
-            textColor="#323232"
-          />
-          <Badge
-            label="9+"
-            variant="pressed"
-            bgColor="#f2f3f7"
-            textColor="#323232"
-          />
+          <Badge label="9+" variant="flat" {...colorProps} />
+          <Badge label="9+" variant="pressed" {...colorProps} />
         </div>
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>Badge w/ Text</h4>
-          <Badge
-            label="New!"
-            variant="flat"
-            bgColor="#f2f3f7"
-            textColor="#323232"
-          />
-          <Badge
-            label="New!"
-            variant="pressed"
-            bgColor="#f2f3f7"
-            textColor="#323232"
-          />
+          <Badge label="New!" variant="flat" {...colorProps} />
+          <Badge label="New!" variant="pressed" {...colorProps} />
         </div>
       </div>
 

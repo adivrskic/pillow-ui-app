@@ -1,87 +1,110 @@
 import React from "react";
 import { Alert } from "@adivrskic/pillow";
+import { StateContext } from "../../../context/StateProvider";
 
 const AlertComponent = () => {
+  const [{ bgColor, textColor }] = React.useContext(StateContext);
+
+  const colorProps = {
+    bgColor,
+    textColor,
+  };
   return (
     <div className="component">
       <div className="component-container">
         <h3>Examples</h3>
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>Error Alert</h4>
           <Alert
             heading="Error"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="error"
             variant="flat"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
           <Alert
             heading="Error"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="error"
             variant="pressed"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
         </div>
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>Warning Alert</h4>
           <Alert
             heading="Warning"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="warning"
             variant="flat"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
           <Alert
             heading="Warning"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="warning"
             variant="pressed"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
         </div>
 
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>Info Alert</h4>
           <Alert
             heading="Info"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="info"
             variant="flat"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
           <Alert
             heading="Info"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="info"
             variant="pressed"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
         </div>
 
-        <div className="component-container__example">
+        <div
+          style={{
+            ["--bg-color"]: `${bgColor}`,
+            ["--text-color"]: `${textColor}`,
+          }}
+          className="component-container__example"
+        >
           <h4>Success Alert</h4>
           <Alert
             heading="Success"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="success"
             variant="flat"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
           <Alert
             heading="Success"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="success"
             variant="pressed"
-            bgColor="#f2f3f7"
-            textColor="#323232"
+            {...colorProps}
           />
         </div>
       </div>
