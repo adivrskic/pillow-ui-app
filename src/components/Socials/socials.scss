@@ -1,0 +1,16 @@
+@import "../../styles/globals";
+
+.pillow-socials {
+  display: flex;
+  gap: $padding-regular;
+
+  &__link {
+    background: none;
+    padding: 0;
+
+    svg {
+      width: $icon-small;
+      height: $icon-small;
+    }
+  }
+}

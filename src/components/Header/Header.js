@@ -10,27 +10,26 @@ import {
 import ColorPicker from "../ColorPicker/ColorPicker";
 import { StateContext } from "../../context/StateProvider";
 import { Link } from "react-router-dom";
-import { getGradientColor } from "../../helpers";
+import { getGradient, getGradientToColor } from "../../helpers";
 
 const Header = () => {
   const [{ bgColor, textColor }] = React.useContext(StateContext);
+  const gradient = getGradient(bgColor);
+  const gradientToColor = getGradientToColor(bgColor);
 
   const [selected, setSelected] = useState("");
   const [mobileHeaderOpen, setMobileHeaderOpen] = useState(false);
 
   const location = useLocation();
-
   useEffect(() => {
     if (location.pathname.indexOf("overview") > -1) setSelected("overview");
     if (location.pathname.indexOf("components") > -1) setSelected("components");
   }, [location]);
 
-  const gradient = getGradientColor(bgColor);
-
   return (
     <div
       style={{
-        background: `linear-gradient(to right, ${bgColor}, ${gradient})`,
+        background: gradient,
         ["--text-color"]: textColor,
       }}
       className="pillow-nav"
@@ -38,7 +37,7 @@ const Header = () => {
       <svg id="display-none">
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="50%">
           <stop stopColor={`${bgColor}`} offset="0%" />
-          <stop stopColor={`${gradient}`} offset="100%" />
+          <stop stopColor={`${gradientToColor}`} offset="100%" />
         </linearGradient>
       </svg>
       <Link
@@ -69,6 +68,7 @@ const Header = () => {
         </li>
       </ul>
 
+      <span className="pillow-nav__version">v1.5.2</span>
       <a
         className="pillow-nav__link pillow-nav__link--gh"
         href="https://github.com/adivrskic/pillow"
@@ -76,7 +76,6 @@ const Header = () => {
         rel="noreferrer"
       >
         <IoLogoGithub />
-        Github
       </a>
 
       <ColorPicker />

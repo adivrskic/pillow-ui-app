@@ -4,16 +4,10 @@ import "./latestupdates.scss";
 import { StateContext } from "../../context/StateProvider";
 
 const LatestUpdates = () => {
-  const latestUpdatesSidebarItems = ["Installation", "Latest Updates"];
   const [{ sidebarOpen }] = React.useContext(StateContext);
 
   return (
     <div className="pillow-latest">
-      <Sidebar
-        header={"Overview"}
-        page={"overview"}
-        items={latestUpdatesSidebarItems}
-      />
       <div className={`pillow-latest__content ${sidebarOpen ? "open" : ""}`}>
         <div className="pillow-latest__content-item">
           <h2>Latest Updates</h2>

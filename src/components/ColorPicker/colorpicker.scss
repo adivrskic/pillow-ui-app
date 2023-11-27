@@ -1,23 +1,24 @@
+@import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
+
 .pillow-color-picker {
   display: flex;
   align-items: center;
-  gap: 10px;
-  border-left: 1px solid #feffff;
-  padding-left: 10px;
+  gap: $padding-regular;
 
   &__container {
     display: flex;
-    gap: 5px;
+    gap: $padding-small;
   }
 
   &__label {
-    color: #feffff;
-    font-size: 14px;
+    color: var(--text-color);
+    font-size: $text-regular;
   }
 
   &__input {
     display: flex;
-    border-radius: 50%;
+    border-radius: $border-radius-max;
     height: 20px;
     min-width: 20px;
     max-width: 20px;
@@ -29,9 +30,10 @@
     &::-webkit-color-swatch-wrapper {
       padding: 0;
     }
+
     &::-webkit-color-swatch {
       border: none;
-      border-radius: 50%;
+      border-radius: $border-radius-max;
     }
   }
 }

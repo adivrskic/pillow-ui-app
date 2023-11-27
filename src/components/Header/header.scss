@@ -1,52 +1,41 @@
 @import "../../styles/colors.scss";
-
-@font-face {
-  font-family: "roboto-medium";
-  src: local("Roboto-Medium"),
-    url("../../fonts/Roboto-Medium.ttf") format("truetype");
-}
+@import "../../styles/globals.scss";
+@import "../../styles/mixins.scss";
 
 .pillow-nav {
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
+  @include flex($ali: center);
+  @include pos(sticky, $top: 0);
   width: 100%;
-  padding: 10px;
-  background: var(--gradient);
-  font-size: 18px;
-  font-weight: bold;
-  z-index: 10;
+  padding: $padding-regular;
+  z-index: $z-top;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
   &__header {
-    display: flex;
+    @include flex($ali: center);
     min-width: calc(200px - 20px);
 
     svg {
-      margin-right: 5px;
+      margin-right: $padding-small;
       transform: rotate(-65deg);
       fill: var(--text-color);
     }
 
     h2 {
-      font-size: 24px;
-      // font-family: "roboto-medium";
+      font-size: 20px;
       color: var(--text-color);
     }
   }
 
   & svg {
-    width: 36px;
-    height: 36px;
-    // filter: opacity(0.75);
+    width: $icon-large;
+    height: $icon-large;
   }
 
   &__links {
     display: flex;
     width: calc(100% - 180px);
     list-style: none;
-    display: flex;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 $padding-regular;
   }
 
   &__link {
@@ -61,21 +50,23 @@
     }
 
     &:not(&--gh):not(:last-child) {
-      margin-right: 10px;
+      margin-right: $padding-regular;
     }
 
     &--gh {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      margin-right: 10px;
+      margin-right: $padding-regular;
       color: var(--text-color);
 
       svg {
-        margin-right: 5px;
         color: var(--text-color);
       }
     }
+  }
+
+  &__version {
+    font-size: $font-small;
+    color: var(--text-color);
+    margin-right: $padding-regular;
   }
 
   .pillow-nav__mobile,

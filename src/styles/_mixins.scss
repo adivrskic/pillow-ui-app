@@ -1,9 +1,10 @@
-@mixin flex($dir: null, $jus: null, $ali: null, $wrap: null) {
+@mixin flex($dir: null, $jus: null, $ali: null, $wrap: null, $gap: null) {
   display: flex;
   justify-content: $jus;
   align-items: $ali;
   flex-direction: $dir;
   flex-wrap: $wrap;
+  gap: $gap;
 }
 
 @mixin pos($type, $top: null, $right: null, $bottom: null, $left: null) {

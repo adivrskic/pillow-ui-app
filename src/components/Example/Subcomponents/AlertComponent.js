@@ -12,6 +12,10 @@ const AlertComponent = () => {
   return (
     <div className="component">
       <div className="component-container">
+        <p>
+          Alerts are used to communicate a state that affects a system, feature
+          or page.
+        </p>
         <h3>Examples</h3>
         <div
           style={{

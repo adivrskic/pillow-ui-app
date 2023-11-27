@@ -1,23 +1,77 @@
 @import "../../styles/colors";
+@import "../../styles/globals";
+@import "../../styles/mixins";
 
 .pillow-installation {
-  height: calc(100vh + 83px);
+  height: $content-height;
   width: 100%;
-  margin-left: 200px;
-  max-width: calc(100% - 220px);
+  margin-left: $content-left-margin;
+  max-width: $content-width;
 
   &__content {
-    padding: 10px;
+    padding: $padding-regular;
 
     &-item {
-      margin-bottom: 10px;
+      margin-bottom: $padding-regular;
+    }
 
-      p {
-        max-width: 600px;
+    &-text {
+      max-width: 600px;
+
+      &--highlight {
+        background-color: $background-darker;
+        padding: 0 3px;
+        border-radius: $border-radius;
+        margin: 0 2px;
+        border: 1px solid darken($background-darker, 15%);
       }
 
-      p:not(:last-child) {
-        margin-bottom: 10px;
+      &--code {
+        position: relative;
+        background-color: $background-darker;
+        color: $text;
+        padding: $padding-regular;
+        display: flex;
+        border-radius: $border-radius;
+        max-width: 600px;
+        border: 1px solid darken($background-darker, 15%);
+
+        &-copy {
+          @include pos(absolute, $top: 8px, $right: 8px);
+          cursor: pointer;
+          padding: 0 5px;
+          background-color: darken($background-darker, 10%);
+          border-radius: $border-radius;
+          border: 1px solid darken($background-darker, 20%);
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: $padding-regular;
+        }
+      }
+    }
+
+    &-link {
+      text-decoration: underline;
+      color: #323232;
+    }
+  }
+
+  &__tablist {
+    display: flex;
+    gap: $padding-regular;
+
+    &-button {
+      display: flex;
+      align-items: center;
+      gap: $padding-small;
+      background: none;
+      margin: $padding-regular 0;
+      padding: 0;
+      border-bottom: 1px solid transparent;
+
+      &--selected {
+        border-bottom: 1px solid #c3c7da;
       }
     }
   }
@@ -27,7 +81,7 @@
   .pillow-installation {
     overflow: hidden;
     margin-left: 60px;
-    max-width: calc(100% - 60px);
+    max-width: $content-width-mobile;
 
     &__content {
       transition: all 0.2s ease-in-out;
@@ -36,27 +90,5 @@
     &__content.open {
       transform: translateX(140px);
     }
-  }
-}
-
-.highlight {
-  background-color: $background-darker;
-  padding: 0 3px;
-  border-radius: 3px;
-  margin: 0 2px;
-  border: 1px solid darken($background-darker, 15%);
-}
-
-code {
-  background-color: $background-darker;
-  color: $text;
-  padding: 20px;
-  display: flex;
-  border-radius: 3px;
-  max-width: 600px;
-  border: 1px solid darken($background-darker, 15%);
-
-  &:not(:last-of-type) {
-    margin-bottom: 20px;
   }
 }
