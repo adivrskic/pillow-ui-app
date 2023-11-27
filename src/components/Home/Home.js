@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./home.scss";
 import { Link } from "react-router-dom";
 import { StateContext } from "../../context/StateProvider";
-
 import {
   IoCalendarOutline,
   IoArrowForwardCircleOutline,
@@ -60,7 +59,7 @@ const Home = () => {
 
       <div className="pillow-home__overview">
         <div>
-          <h3 className="pillow-home__header">Principles</h3>
+          <h3 className="pillow-home__header">Core Principles</h3>
           <div className="pillow-home__overview-items">
             <div className="pillow-home__overview-item">
               <IoBulbOutline style={{ stroke: "url(#gradient)" }} />
@@ -75,9 +74,9 @@ const Home = () => {
               <IoCodeSlashOutline style={{ stroke: "url(#gradient)" }} />
               <h4>Developer Friendly</h4>
               <p>
-                Easy to install, easy to import and easy to use. Whether on
-                desktop or mobile, our neumorphic components adapt flawlessly to
-                deliver a consistent and delightful user experience.
+                Easy to install, easy to import and easy to use. Responsive
+                neumorphic components adapt flawlessly to deliver a consistent
+                user experience.
               </p>
             </div>
             <div className="pillow-home__overview-item">
@@ -120,11 +119,17 @@ const Home = () => {
 
       <div className="pillow-home__recents">
         <div>
-          <h3 className="pillow-home__header">Recently Added</h3>
+          <h3 className="pillow-home__header">Recent Additions</h3>
           <div className="pillow-home__recents-items">
             <div className="pillow-home__recents-item">
               <h4>Alert</h4>
-              <div className="pillow-home__recents-body">
+              <div
+                style={{
+                  background: `${bgColor}`,
+                  color: `${textColor}`,
+                }}
+                className="pillow-home__recents-body"
+              >
                 <Alert
                   heading="Header"
                   severity={alertSeverity}
@@ -154,7 +159,13 @@ const Home = () => {
             </div>
             <div className="pillow-home__recents-item">
               <h4>Button</h4>
-              <div className="pillow-home__recents-body">
+              <div
+                style={{
+                  background: `${bgColor}`,
+                  color: `${textColor}`,
+                }}
+                className="pillow-home__recents-body"
+              >
                 <Button
                   label="Pillow UI Button"
                   variant="flat"
@@ -179,7 +190,13 @@ const Home = () => {
             </div>
             <div className="pillow-home__recents-item">
               <h4>Spinner</h4>
-              <div className="pillow-home__recents-body">
+              <div
+                style={{
+                  background: `${bgColor}`,
+                  color: `${textColor}`,
+                }}
+                className="pillow-home__recents-body"
+              >
                 <span>
                   <Spinner
                     variant={spinnerVariant}

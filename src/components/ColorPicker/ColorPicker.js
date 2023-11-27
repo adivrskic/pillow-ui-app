@@ -8,11 +8,7 @@ const ColorPicker = () => {
   return (
     <div className="pillow-color-picker">
       <div className="pillow-color-picker__container">
-        <label
-          style={{ [--text - color]: textColor }}
-          htmlFor="bgColor"
-          className="pillow-color-picker__label"
-        >
+        <label htmlFor="bgColor" className="pillow-color-picker__label">
           {bgColor}
         </label>
         <input

@@ -2,6 +2,7 @@ import React from "react";
 import { Chip } from "@adivrskic/pillow";
 import { IoCartOutline } from "react-icons/io5";
 import { StateContext } from "../../../context/StateProvider";
+import { IoLogoGithub } from "react-icons/io5";
 
 const ChipComponent = () => {
   const [{ bgColor, textColor }] = React.useContext(StateContext);
@@ -13,6 +14,16 @@ const ChipComponent = () => {
   return (
     <div className="component">
       <div className="component-container">
+        <p className="component-container__subheading">
+          Chips are used to help make selections or identify filtered content.
+        </p>
+        <a
+          className="link__global"
+          href="https://github.com/adivrskic/pillow/tree/main/src/components/Chip"
+        >
+          <IoLogoGithub />
+          View Source Code
+        </a>
         <h3>Examples</h3>
         <div
           style={{

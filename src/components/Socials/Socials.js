@@ -5,15 +5,21 @@ import { IoLogoGithub, IoLogoLinkedin, IoMail } from "react-icons/io5";
 const Socials = () => {
   return (
     <div className="pillow-socials">
-      <button className="pillow-socials__link">
+      <a
+        href="https://github.com/adivrskic/pillow"
+        className="pillow-socials__link"
+      >
         <IoLogoGithub />
-      </button>
-      <button className="pillow-socials__link">
+      </a>
+      <a
+        href="https://www.linkedin.com/in/adi-vrskic-48758213b/"
+        className="pillow-socials__link"
+      >
         <IoLogoLinkedin />
-      </button>
-      <button className="pillow-socials__link">
+      </a>
+      <a href="mailto:adivrskic123@gmail.com" className="pillow-socials__link">
         <IoMail />
-      </button>
+      </a>
     </div>
   );
 };

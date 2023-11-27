@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "@adivrskic/pillow";
 import { StateContext } from "../../../context/StateProvider";
+import { IoLogoGithub } from "react-icons/io5";
 
 const CardComponent = () => {
   const [{ bgColor, textColor }] = React.useContext(StateContext);
@@ -12,6 +13,16 @@ const CardComponent = () => {
   return (
     <div className="component">
       <div className="component-container">
+        <p className="component-container__subheading">
+          Cards are used to group and display content.
+        </p>
+        <a
+          className="link__global"
+          href="https://github.com/adivrskic/pillow/tree/main/src/components/Card"
+        >
+          <IoLogoGithub />
+          View Source Code
+        </a>
         <h3>Examples</h3>
         <div
           style={{

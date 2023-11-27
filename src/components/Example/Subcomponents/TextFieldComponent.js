@@ -1,6 +1,7 @@
 import React from "react";
 import { TextField } from "@adivrskic/pillow";
 import { StateContext } from "../../../context/StateProvider";
+import { IoLogoGithub } from "react-icons/io5";
 
 const TextFieldComponent = () => {
   const [{ bgColor, textColor }] = React.useContext(StateContext);
@@ -12,6 +13,16 @@ const TextFieldComponent = () => {
   return (
     <div className="component">
       <div className="component-container">
+        <p className="component-container__subheading">
+          Textareas are used to create multi-line text inputs.
+        </p>
+        <a
+          className="link__global"
+          href="https://github.com/adivrskic/pillow/tree/main/src/components/TextField"
+        >
+          <IoLogoGithub />
+          View Source Code
+        </a>
         <h3>Examples</h3>
         <div
           style={{

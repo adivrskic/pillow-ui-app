@@ -1,18 +1,24 @@
 @import "../../styles/colors.scss";
 @import "../../styles/globals.scss";
+@import "../../styles/mixins.scss";
 
 .pillow-color-picker {
   display: flex;
   align-items: center;
   gap: $padding-regular;
+  padding: $padding-small;
+  border: 1px solid $border;
+  border-radius: $border-radius;
+  min-width: 190px;
 
   &__container {
-    display: flex;
+    @include flex($jus: flex-end);
     gap: $padding-small;
+    width: 50%;
   }
 
   &__label {
-    color: var(--text-color);
+    color: $text-color;
     font-size: $text-regular;
   }
 

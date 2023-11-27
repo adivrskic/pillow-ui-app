@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./installation.scss";
 import { StateContext } from "../../context/StateProvider";
 import { FaNpm, FaYarn } from "react-icons/fa6";
-
+import { IoLogoGithub } from "react-icons/io5";
 const Installation = () => {
   const [selectedTab, setSelectedTab] = useState("npm");
   const [{ sidebarOpen }] = React.useContext(StateContext);
@@ -68,14 +68,24 @@ const Installation = () => {
             {selectedTab === "npm" ? (
               <code className="pillow-installation__content-text--code">
                 $ npm i @adivrskic/pillow
-                <span className="pillow-installation__content-text--code-copy">
+                <span
+                  className="pillow-installation__content-text--code-copy"
+                  onClick={navigator.clipboard.writeText(
+                    "$ npm i @adivrskic/pillow"
+                  )}
+                >
                   Copy
                 </span>
               </code>
             ) : (
               <code className="pillow-installation__content-text--code">
                 $ yarn add @adivrskic/pillow
-                <span className="pillow-installation__content-text--code-copy">
+                <span
+                  className="pillow-installation__content-text--code-copy"
+                  onClick={navigator.clipboard.writeText(
+                    "$ yarn add @adivrskic/pillow"
+                  )}
+                >
                   Copy
                 </span>
               </code>
@@ -93,19 +103,29 @@ const Installation = () => {
           </p>
 
           <code className="pillow-installation__content-text--code">
-            {`import { Button } from '@adivrskic/pillow'`}{" "}
-            <span className="pillow-installation__content-text--code-copy">
+            {`import { Button } from '@adivrskic/pillow'`}
+            <span
+              className="pillow-installation__content-text--code-copy"
+              onClick={navigator.clipboard.writeText(
+                "import { Button } from '@adivrskic/pillow'"
+              )}
+            >
               Copy
             </span>
           </code>
 
           <p>
-            Once a component has been imported, use it in your code by doing:{" "}
+            Once a component has been imported, use it in your code by doing:
           </p>
 
           <code className="pillow-installation__content-text--code">
-            {`<Button role="button" label="Click me!" size="medium" variant="flat" />`}{" "}
-            <span className="pillow-installation__content-text--code-copy">
+            {`<Button role="button" label="Click me!" size="medium" variant="flat" />`}
+            <span
+              className="pillow-installation__content-text--code-copy"
+              onClick={navigator.clipboard.writeText(
+                '<Button role="button" label="Click me!" size="medium" variant="flat" />'
+              )}
+            >
               Copy
             </span>
           </code>
@@ -118,10 +138,10 @@ const Installation = () => {
           </p>
 
           <a
-            className="pillow-installation__content-link"
+            className="pillow-installation__content-link link__global"
             href="https://github.com/adivrskic/pillow/pulls"
           >
-            Open a Pull Request
+            <IoLogoGithub /> Open a Pull Request
           </a>
         </div>
       </div>

@@ -7,7 +7,7 @@
   @include pos(fixed, $left: 0);
   top: $header-height;
   width: $sidebar-width;
-  min-height: calc(100vh - $header-height);
+  min-height: $content-height;
   padding: $padding-regular;
   background-color: $background;
 
@@ -17,8 +17,20 @@
     font-size: $text-large;
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: $padding-regular;
+  &__item {
+    color: $text;
+    padding: $padding-small;
+    border: 1px solid transparent;
+    transition: $transition-regular;
+
+    &--active {
+      border: 1px solid $border;
+      border-radius: 8px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $padding-regular;
+    }
   }
 
   &__toggle {

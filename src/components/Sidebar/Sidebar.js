@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./sidebar.scss";
 import {
   IoArrowBackCircleOutline,
@@ -6,17 +7,23 @@ import {
 } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { StateContext } from "../../context/StateProvider";
+import { toKebabCase } from "../../helpers";
 
 const Sidebar = ({ header, page, items }) => {
-  const [active] = useState("");
+  const [active, setActive] = useState("");
   const [{ sidebarOpen }, dispatch] = React.useContext(StateContext);
+  const location = useLocation();
 
-  const toKebabCase = (string) => {
-    return string
-      .replace(/([a-z])([A-Z])/g, "$1-$2")
-      .replace(/[\s_]+/g, "-")
-      .toLowerCase();
-  };
+  useEffect(() => {
+    if (location.pathname) {
+      setActive(
+        location.pathname.slice(
+          location.pathname.lastIndexOf("/") + 1,
+          location.pathname.length
+        )
+      );
+    }
+  }, [location]);
 
   return (
     <div className={`pillow-sidebar ${sidebarOpen ? "open" : ""}`}>
@@ -24,7 +31,9 @@ const Sidebar = ({ header, page, items }) => {
       {items?.map((item) => (
         <Link
           key={item}
-          className={`pillow-sidebar__item ${active ? "active" : ""}`}
+          className={`pillow-sidebar__item ${
+            toKebabCase(item) === active ? "pillow-sidebar__item--active" : ""
+          }`}
           to={`/${page}/${toKebabCase(item)}`}
           onClick={() => dispatch({ type: "TOGGLE_SIDEBAR" })}
         >

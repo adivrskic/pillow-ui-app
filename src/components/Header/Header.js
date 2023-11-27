@@ -30,7 +30,8 @@ const Header = () => {
     <div
       style={{
         background: gradient,
-        ["--text-color"]: textColor,
+        "--text-color": textColor,
+        "--bg-color": bgColor,
       }}
       className="pillow-nav"
     >

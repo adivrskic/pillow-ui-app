@@ -50,11 +50,6 @@
         }
       }
     }
-
-    &-link {
-      text-decoration: underline;
-      color: #323232;
-    }
   }
 
   &__tablist {
@@ -69,6 +64,11 @@
       margin: $padding-regular 0;
       padding: 0;
       border-bottom: 1px solid transparent;
+
+      svg {
+        width: $icon-regular;
+        height: $icon-regular;
+      }
 
       &--selected {
         border-bottom: 1px solid #c3c7da;

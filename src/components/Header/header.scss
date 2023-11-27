@@ -54,17 +54,20 @@
     }
 
     &--gh {
+      min-width: $icon-regular;
+      height: $icon-regular;
       margin-right: $padding-regular;
-      color: var(--text-color);
 
       svg {
         color: var(--text-color);
+        width: $icon-regular;
+        height: $icon-regular;
       }
     }
   }
 
   &__version {
-    font-size: $font-small;
+    font-size: $text-small;
     color: var(--text-color);
     margin-right: $padding-regular;
   }

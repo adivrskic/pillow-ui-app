@@ -1,27 +1,33 @@
-$content-height: calc(100vh + 83px);
-$content-width: calc(100% - 220px);
+$header-height: 63px;
+
+$content-height: calc(100vh - $header-height);
+$content-width: calc(100% - 200px);
 $content-width-max: 1200px;
 $content-width-mobile: calc(100% - 60px);
 $content-left-margin: 195px;
 
 $sidebar-width: 200px;
 
-$header-height: 62px;
-
 $hero-height: 700px;
 
+$text-small: 12px;
 $text-regular: 14px;
 $text-large: 18px;
 
-$padding-small: 8px;
+$padding-small: 5px;
 $padding-regular: 15px;
+$padding-large: 20px;
 
 $transition-regular: all 0.25s ease-in-out;
 
 $border-radius: 8px;
 $border-radius-max: 999px;
 
+$icon-small: 16px;
 $icon-regular: 20px;
 $icon-large: 26px;
 
 $z-top: 10;
+
+$bg-color: var(--bg-color);
+$text-color: var(--text-color);

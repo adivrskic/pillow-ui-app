@@ -1,4 +1,6 @@
 @import "./colors.scss";
+@import "./globals.scss";
+@import "./mixins.scss";
 
 @font-face {
   font-family: "roboto-italic";
@@ -113,4 +115,20 @@ h3,
 h4,
 a {
   font-size: 14px;
+}
+
+.link__global {
+  @include flex($ali: center);
+  border: 1px solid $border;
+  color: #323232;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: $padding-regular 0;
+
+  svg {
+    width: $icon-small;
+    height: $icon-small;
+    margin-right: $padding-small;
+  }
 }

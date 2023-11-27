@@ -7,10 +7,6 @@
   margin-left: $sidebar-width;
   max-width: calc(100% - $sidebar-width);
 
-  h2 {
-    margin-bottom: $padding-regular;
-  }
-
   &__content {
     padding: $padding-regular;
     max-width: $content-width-max;
@@ -28,6 +24,7 @@
 
       h4 {
         padding: $padding-regular;
+        color: $text;
       }
     }
 
@@ -49,6 +46,10 @@
 
 .component-container {
   overflow-y: scroll;
+
+  &__subheading {
+    margin-bottom: $padding-regular;
+  }
 
   &__example {
     display: flex;
@@ -84,7 +85,7 @@
     }
 
     tr {
-      padding: 10px;
+      padding: $padding-regular;
       border-top: 1px solid $border;
       border-radius: 5px;
     }
@@ -92,23 +93,20 @@
 
   &__api {
     &:not(:last-of-type) {
-      margin-bottom: 10px;
+      margin-bottom: $padding-regular;
     }
 
-    p {
-      margin-bottom: 10px;
-    }
     ul {
       padding: 0;
-      margin-bottom: 10px;
+      margin-bottom: $padding-regular;
 
       li {
         list-style: none;
-        padding: 5px;
+        padding: $padding-small;
       }
 
       code {
-        padding: 5px;
+        padding: $padding-small;
         display: inline;
         border: 1px solid darken($background-darker, 15%);
       }

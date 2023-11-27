@@ -46,7 +46,7 @@ const ComponentList = () => {
       <div
         className={`pillow-components__content ${sidebarOpen ? "open" : ""}`}
       >
-        <h2>Components</h2>
+        <h2>All Components</h2>
         <div className="pillow-components__content-items">
           {Object.keys(components).map((component, index) => (
             <Link
