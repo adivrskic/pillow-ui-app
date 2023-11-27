@@ -1,14 +1,17 @@
+@import "../../styles/colors";
+@import "../../styles/globals";
+
 .pillow-latest {
-  height: 100vh;
+  height: $content-height;
   width: 100%;
-  max-width: calc(100% - 220px);
-  margin-left: 200px;
+  margin-left: $content-left-margin;
+  max-width: $content-width;
 
   &__content {
-    padding: 10px;
+    padding: $padding-regular;
 
     &-item {
-      margin-bottom: 10px;
+      margin-bottom: $padding-regular;
     }
   }
 }

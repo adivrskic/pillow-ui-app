@@ -1,23 +1,16 @@
 @import "./colors.scss";
 
 @font-face {
-  font-family: "roboto-black";
-  src: local("Roboto-Black"),
-    url("../fonts/Roboto-Black.ttf") format("truetype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "roboto-bold";
-  src: local("Roboto-Bold"), url("../fonts/Roboto-Bold.ttf") format("truetype");
-  font-weight: bold;
-}
-
-@font-face {
   font-family: "roboto-italic";
   src: local("Roboto-Italic"),
     url("../fonts/Roboto-Italic.ttf") format("truetype");
   font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto-regular";
+  src: local("Roboto-Regular"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -26,19 +19,13 @@
     url("../fonts/Roboto-Light.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: "roboto-thin";
-  src: local("Roboto-Thin"), url("../fonts/Roboto-Thin.ttf") format("truetype");
-}
-
 body {
   margin: 0;
   font-family: "roboto-light";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #feffff;
-  color: $text;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 code {
@@ -118,7 +105,6 @@ h6 {
 
 a {
   text-decoration: none;
-  color: $text;
 }
 
 p,
@@ -126,5 +112,5 @@ button,
 h3,
 h4,
 a {
-  font-size: 18px;
+  font-size: 14px;
 }

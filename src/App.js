@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header.js";
-import MainLayout from "./layouts/MainLayout/MainLayout.js";
+import Layout from "./layouts/Layout/Layout.js";
 import ComponentList from "./components/ComponentList/ComponentList.js";
 import Example from "./components/Example/Example.js";
 import Home from "./components/Home/Home.js";
@@ -18,12 +18,14 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/overview" element={<MainLayout />}>
+          <Route path="/overview" element={<Layout />}>
             <Route path="installation" element={<Installation />} />
             <Route path="latest-updates" element={<LatestUpdates />} />
           </Route>
-          <Route path="/components" element={<ComponentList />} />
-          <Route path="/components/:id" element={<Example />} />
+          <Route path="/components" element={<Layout />}>
+            <Route path="/components" element={<ComponentList />} />
+            <Route path="/components/:id" element={<Example />} />
+          </Route>
 
           <Route path="*" element={<NotFound />} />
         </Routes>

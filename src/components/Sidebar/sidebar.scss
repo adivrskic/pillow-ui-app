@@ -1,22 +1,24 @@
 @import "../../styles/colors";
+@import "../../styles/globals";
+@import "../../styles/mixins";
 
 .pillow-sidebar {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 56px;
-  left: 0;
-  width: 200px;
-  min-height: calc(100vh - 56px);
-  padding: 10px;
+  @include flex($dir: column);
+  @include pos(fixed, $left: 0);
+  top: $header-height;
+  width: $sidebar-width;
+  min-height: calc(100vh - $header-height);
+  padding: $padding-regular;
   background-color: $background;
 
   &__header {
-    margin-bottom: 10px;
+    text-transform: capitalize;
+    margin-bottom: $padding-regular;
+    font-size: $text-large;
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: $padding-regular;
   }
 
   &__toggle {

@@ -1,13 +1,20 @@
 @import "../../styles/colors.scss";
+@import "../../styles/globals.scss";
 
 .pillow-footer {
   position: relative;
-  z-index: 10;
+  z-index: $z-top;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  font-size: 18px;
+  padding: $padding-regular;
+  font-size: $font-regular;
   background-color: $background;
+
+  &__links {
+    display: flex;
+    gap: $padding-regular;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 680px) {

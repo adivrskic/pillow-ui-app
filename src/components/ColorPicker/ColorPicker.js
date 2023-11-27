@@ -1,6 +1,5 @@
 import React from "react";
 import { StateContext } from "../../context/StateProvider";
-
 import "./colorpicker.scss";
 
 const ColorPicker = () => {
@@ -9,7 +8,11 @@ const ColorPicker = () => {
   return (
     <div className="pillow-color-picker">
       <div className="pillow-color-picker__container">
-        <label for="bgColor" className="pillow-color-picker__label">
+        <label
+          style={{ [--text - color]: textColor }}
+          htmlFor="bgColor"
+          className="pillow-color-picker__label"
+        >
           {bgColor}
         </label>
         <input
@@ -23,7 +26,7 @@ const ColorPicker = () => {
         />
       </div>
       <div className="pillow-color-picker__container">
-        <label for="textColor" className="pillow-color-picker__label">
+        <label htmlFor="textColor" className="pillow-color-picker__label">
           {textColor}
         </label>
         <input

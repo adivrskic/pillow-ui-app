@@ -9,15 +9,19 @@ import {
   IoLogoNpm,
   IoLogoGithub,
   IoBulbOutline,
-  IoAppsOutline,
+  IoCodeSlashOutline,
   IoLogoReact,
 } from "react-icons/io5";
 import { Alert, Button, Spinner } from "@adivrskic/pillow";
-import { getGradientColor } from "../../helpers";
+import { getGradient } from "../../helpers";
 
 const Home = () => {
-  const [{ bgColor }] = React.useContext(StateContext);
-  const gradient = getGradientColor(bgColor);
+  const [{ bgColor, textColor }] = React.useContext(StateContext);
+  const gradient = getGradient(bgColor);
+  const colorProps = {
+    bgColor,
+    textColor,
+  };
 
   const [buttonSize, setButtonSize] = useState("small");
   const [alertSeverity, setAlertSeverity] = useState("info");
@@ -33,13 +37,15 @@ const Home = () => {
               <br />A Neumorphic Design UI Component Library
             </h1>
             <p>
-              Pillow is a React UI Component Library for quickly and easily
-              creating websites and applications in soft, neumorphic design.
+              Elevate your projects with a seamlessly integrated collection of
+              sleek, soft UI elements, meticulously crafted to bring a tactile
+              and modern feel to your applications.
             </p>
             <Link to="/overview/installation">
               <button
                 style={{
-                  background: `linear-gradient(to right, ${bgColor}, ${gradient})`,
+                  background: `${gradient}`,
+                  color: `${textColor}`,
                 }}
                 type="button"
               >
@@ -54,26 +60,33 @@ const Home = () => {
 
       <div className="pillow-home__overview">
         <div>
-          <h3>Principles</h3>
+          <h3 className="pillow-home__header">Principles</h3>
           <div className="pillow-home__overview-items">
             <div className="pillow-home__overview-item">
               <IoBulbOutline style={{ stroke: "url(#gradient)" }} />
               <h4>Easy Installation</h4>
               <p>
-                Cut to the chase and get started on your dream projects quickly
-                with our components
+                Streamline your workflow with components designed for easy
+                integration, ensuring a smooth and efficient development
+                process.
               </p>
             </div>
             <div className="pillow-home__overview-item">
-              <IoAppsOutline style={{ stroke: "url(#gradient)" }} />
-              <h4>Multiple Components</h4>
-              <p>Easy to install, easy to import and easy to use</p>
+              <IoCodeSlashOutline style={{ stroke: "url(#gradient)" }} />
+              <h4>Developer Friendly</h4>
+              <p>
+                Easy to install, easy to import and easy to use. Whether on
+                desktop or mobile, our neumorphic components adapt flawlessly to
+                deliver a consistent and delightful user experience.
+              </p>
             </div>
             <div className="pillow-home__overview-item">
               <IoLogoReact style={{ fill: "url(#gradient)" }} />
               <h4>Created with React</h4>
               <p>
-                Lightweight, built with and for use with the React framework
+                Lightweight, built with and for use with the React framework.
+                Start building interfaces that stand out and leave a lasting
+                impression.
               </p>
             </div>
           </div>
@@ -82,7 +95,7 @@ const Home = () => {
 
       <div className="pillow-home__getting-started">
         <div>
-          <h3>Getting Started</h3>
+          <h3 className="pillow-home__header">Getting Started</h3>
 
           <div className="pillow-home__getting-started-items">
             <div className="pillow-home__getting-started-item">
@@ -107,7 +120,7 @@ const Home = () => {
 
       <div className="pillow-home__recents">
         <div>
-          <h3>Recently Added</h3>
+          <h3 className="pillow-home__header">Recently Added</h3>
           <div className="pillow-home__recents-items">
             <div className="pillow-home__recents-item">
               <h4>Alert</h4>
@@ -118,8 +131,7 @@ const Home = () => {
                   label="Pillow UI Alert Body"
                   variant="flat"
                   role="button"
-                  bgColor="#f2f3f7"
-                  textColor="#323232"
+                  {...colorProps}
                 />
               </div>
               <div className="pillow-home__recents-options">
@@ -134,7 +146,7 @@ const Home = () => {
               <Link
                 to="/components/alert"
                 style={{
-                  background: `linear-gradient(to right, ${bgColor}, ${gradient})`,
+                  background: `${gradient}`,
                 }}
               >
                 View Component
@@ -148,8 +160,7 @@ const Home = () => {
                   variant="flat"
                   size={buttonSize}
                   role="button"
-                  bgColor="#f2f3f7"
-                  textColor="#323232"
+                  {...colorProps}
                 />
               </div>
               <div className="pillow-home__recents-options">
@@ -160,7 +171,7 @@ const Home = () => {
               <Link
                 to="/components/button"
                 style={{
-                  background: `linear-gradient(to right, ${bgColor}, ${gradient})`,
+                  background: `${gradient}`,
                 }}
               >
                 View Component
@@ -170,7 +181,10 @@ const Home = () => {
               <h4>Spinner</h4>
               <div className="pillow-home__recents-body">
                 <span>
-                  <Spinner variant={spinnerVariant} bgColor="#f2f3f7" />
+                  <Spinner
+                    variant={spinnerVariant}
+                    bgColor={colorProps.bgColor}
+                  />
                 </span>
               </div>
               <div className="pillow-home__recents-options">
@@ -182,7 +196,7 @@ const Home = () => {
               <Link
                 to="/components/spinner"
                 style={{
-                  background: `linear-gradient(to right, ${bgColor}, ${gradient})`,
+                  background: `${gradient}`,
                 }}
               >
                 View Component
@@ -194,7 +208,7 @@ const Home = () => {
 
       <div className="pillow-home__external-links">
         <div>
-          <h3>Resources and External Links</h3>
+          <h3 className="pillow-home__header">Resources and External Links</h3>
           <p>
             Check out these resources to view the code and learn more about the
             library

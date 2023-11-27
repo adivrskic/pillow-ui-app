@@ -34,8 +34,6 @@ const ComponentList = () => {
     TextField,
   };
 
-  console.log(colorProps);
-
   const toKebabCase = (string) => {
     return string
       .replace(/([a-z])([A-Z])/g, "$1-$2")
@@ -45,18 +43,14 @@ const ComponentList = () => {
 
   return (
     <div className="pillow-components">
-      <Sidebar
-        header={"Components"}
-        page={"components"}
-        items={Object.keys(components)}
-      />
       <div
         className={`pillow-components__content ${sidebarOpen ? "open" : ""}`}
       >
         <h2>Components</h2>
         <div className="pillow-components__content-items">
-          {Object.keys(components).map((component) => (
+          {Object.keys(components).map((component, index) => (
             <Link
+              key={component + index}
               className="pillow-components__content-item"
               to={{
                 pathname: `/components/${toKebabCase(component)}`,
@@ -137,7 +131,11 @@ const ComponentList = () => {
                   />
                 )}
                 {component === "Spinner" && (
-                  <Spinner complete={false} variant="flat" bgColor="#f2f3f7" />
+                  <Spinner
+                    complete={false}
+                    variant="flat"
+                    bgColor={colorProps.bgColor}
+                  />
                 )}
                 {component === "TextField" && (
                   <TextField
