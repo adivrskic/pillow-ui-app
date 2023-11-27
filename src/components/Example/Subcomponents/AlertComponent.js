@@ -17,13 +17,13 @@ const AlertComponent = () => {
           or page.
         </p>
         <a
-          className="link__global"
+          className="component-container__link link__global"
           href="https://github.com/adivrskic/pillow/tree/main/src/components/Alert"
         >
           <IoLogoGithub />
           View Source Code
         </a>
-        <h3>Examples</h3>
+        <h3 className="component-container__heading">Examples</h3>
         <div
           style={{
             ["--bg-color"]: `${bgColor}`,
@@ -31,7 +31,7 @@ const AlertComponent = () => {
           }}
           className="component-container__example"
         >
-          <h4>Error Alert</h4>
+          <h4 className="component-container__example-heading">Error Alert</h4>
           <Alert
             heading="Error"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -78,7 +78,7 @@ const AlertComponent = () => {
           }}
           className="component-container__example"
         >
-          <h4>Info Alert</h4>
+          <h4 className="component-container__example-heading">Info Alert</h4>
           <Alert
             heading="Info"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -102,7 +102,9 @@ const AlertComponent = () => {
           }}
           className="component-container__example"
         >
-          <h4>Success Alert</h4>
+          <h4 className="component-container__example-heading">
+            Success Alert
+          </h4>
           <Alert
             heading="Success"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -122,112 +124,148 @@ const AlertComponent = () => {
 
       <div className="component-container">
         <div className="component-container__api">
-          <h3>Severity API</h3>
-          <p>
+          <h3 className="component-container__heading">Severity API</h3>
+          <p className="component-container__text">
             The Alert component implements the severity prop. The severity has
             the following options:
           </p>
-          <table>
-            <tr>
-              <th>Option</th>
-              <th>Example</th>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Option</th>
+              <th className="component-container__table-header">Example</th>
             </tr>
-            <tr>
-              <td>error</td>
-              <td>
-                <code>severity="error"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">error</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  severity="error"
+                </code>
               </td>
             </tr>
-            <tr>
-              <td>warning</td>
-              <td>
-                <code>severity="warning"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">warning</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  severity="warning"
+                </code>
               </td>
             </tr>
-            <tr>
-              <td>info</td>
-              <td>
-                <code>severity="info"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">info</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  severity="info"
+                </code>
               </td>
             </tr>
-            <tr>
-              <td>success</td>
-              <td>
-                <code>severity="success"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">success</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  severity="success"
+                </code>
               </td>
             </tr>
           </table>
         </div>
 
         <div className="component-container__api">
-          <h3>Variant API</h3>
-          <p>
+          <h3 className="component-container__heading">Variant API</h3>
+          <p className="component-container__text">
             The Alert component implements the variant prop. The variant is a
             global prop and has the following options:
           </p>
-          <table>
-            <tr>
-              <th>Option</th>
-              <th>Example</th>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Option</th>
+              <th className="component-container__table-header">Example</th>
             </tr>
-            <tr>
-              <td>flat</td>
-              <td>
-                <code>variant="flat"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">flat</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant="flat"
+                </code>
               </td>
             </tr>
-            <tr>
-              <td>pressed</td>
-              <td>
-                <code>variant="pressed"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">pressed</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant="pressed"
+                </code>
               </td>
             </tr>
           </table>
         </div>
 
         <div className="component-container__api">
-          <h3>All Properties</h3>
-          <table>
-            <tr>
-              <th>Property</th>
-              <th>Type</th>
-              <th>Description</th>
+          <h3 className="component-container__heading">All Properties</h3>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Property</th>
+              <th className="component-container__table-header">Type</th>
+              <th className="component-container__table-header">Description</th>
             </tr>
-            <tr>
-              <td>
-                <code>heading</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  heading
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The title of the alert.</td>
+              <td className="component-container__table-data">
+                The title of the alert.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>label</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  label
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The label or information of the alert.</td>
+              <td className="component-container__table-data">
+                The label or information of the alert.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>severity</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  severity
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The level of severity of the alert.</td>
+              <td className="component-container__table-data">
+                The level of severity of the alert.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>variant</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The neumorphic variant of the alert.</td>
+              <td className="component-container__table-data">
+                The neumorphic variant of the alert.
+              </td>
             </tr>
           </table>
         </div>

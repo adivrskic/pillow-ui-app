@@ -38,7 +38,7 @@ const Example = () => {
       <Sidebar header={"Components"} page={"components"} items={components} />
       <div className="pillow-example">
         <div className={`pillow-example__content ${sidebarOpen ? "open" : ""}`}>
-          <h2>{Component}</h2>
+          <h2 className="pillow-example__content-header">{Component}</h2>
           {Component === "Alert" && <AlertComponent />}
           {Component === "Badge" && <BadgeComponent />}
           {Component === "Button" && <ButtonComponent />}

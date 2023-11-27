@@ -44,9 +44,11 @@ const ComponentList = () => {
   return (
     <div className="pillow-components">
       <div
-        className={`pillow-components__content ${sidebarOpen ? "open" : ""}`}
+        className={`pillow-components__content ${
+          sidebarOpen ? "pillow-components__content--open" : ""
+        }`}
       >
-        <h2>All Components</h2>
+        <h2 className="pillow-components__content-header">All Components</h2>
         <div className="pillow-components__content-items">
           {Object.keys(components).map((component, index) => (
             <Link
@@ -57,7 +59,9 @@ const ComponentList = () => {
                 state: { component: component },
               }}
             >
-              <h4>{component}</h4>
+              <h4 className="pillow-components__content-item-header">
+                {component}
+              </h4>
               <div
                 style={{
                   ["--bg-color"]: `${bgColor}`,
@@ -90,8 +94,6 @@ const ComponentList = () => {
                 {component === "Card" && (
                   <Card
                     heading="Card Example"
-                    // imageAlt="Planet neumorphic image"
-                    // imageSrc="/images/hero-image.jpg"
                     text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
                     variant="flat"
                     {...colorProps}

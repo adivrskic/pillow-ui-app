@@ -1,5 +1,6 @@
 @import "../../styles/colors";
 @import "../../styles/globals";
+@import "../../styles/mixins";
 
 .pillow-components {
   min-height: calc(100vh - $header-height);
@@ -7,13 +8,13 @@
   margin-left: $sidebar-width;
   max-width: calc(100% - $sidebar-width);
 
-  h2 {
-    margin-bottom: $padding-regular;
-  }
-
   &__content {
     padding: $padding-regular;
     max-width: $content-width-max;
+
+    &-header {
+      margin-bottom: $padding-regular;
+    }
 
     &-items {
       display: grid;
@@ -23,12 +24,11 @@
     }
 
     &-item {
-      display: flex;
-      flex-direction: column;
+      @include flex($dir: column);
       border: 1px solid $border;
       border-radius: $border-radius;
 
-      h4 {
+      &-header {
         padding: $padding-regular;
         color: $text;
       }
@@ -42,11 +42,6 @@
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
 
-      * {
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-
       &::-webkit-scrollbar {
         display: none;
       }
@@ -57,7 +52,7 @@
 @media screen and (max-width: 1080px) {
   .pillow-components {
     &__content {
-      transition: all 0.2s ease-in-out;
+      transition: $transition-regular;
 
       &-items {
         grid-template-columns: repeat(2, 1fr);

@@ -1,5 +1,6 @@
 @import "../../styles/colors";
 @import "../../styles/globals";
+@import "../../styles/mixins";
 
 .pillow-example {
   min-height: calc(100vh - $header-height);
@@ -14,25 +15,18 @@
     &-items {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
+      grid-gap: $padding-small;
       grid-auto-rows: 1fr;
     }
 
     &-item {
       border: 1px solid $border;
       border-radius: $border-radius;
-
-      h4 {
-        padding: $padding-regular;
-        color: $text;
-      }
     }
 
     &-item-body {
+      @include flex($jus: center, $ali: center);
       padding: $padding-regular;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100%;
       width: 100%;
       background-color: $background-darker;
@@ -52,8 +46,7 @@
   }
 
   &__example {
-    display: flex;
-    flex-direction: column;
+    @include flex($dir: column);
     margin-bottom: $padding-regular;
     background-color: var(--bg-color);
     padding: $padding-regular;
@@ -62,32 +55,33 @@
     color: var(--text-color);
   }
 
-  table {
+  &__table {
     width: 100%;
     border: 1px solid $border;
     border-radius: $border-radius;
     border-collapse: collapse;
     overflow-y: scroll;
 
-    th {
+    &-header {
       text-align: left;
       padding: $padding-regular;
     }
 
-    td {
+    &-data {
       padding: $padding-regular;
 
-      code {
+      &--code {
         padding: $padding-small;
         display: inline;
         border: 1px solid darken($background-darker, 15%);
+        border-radius: $border-radius;
+        background-color: $background-darker;
       }
     }
 
-    tr {
+    &-row {
       padding: $padding-regular;
       border-top: 1px solid $border;
-      border-radius: 5px;
     }
   }
 
