@@ -20,11 +20,16 @@ const Header = () => {
   const [selected, setSelected] = useState("");
   const [mobileHeaderOpen, setMobileHeaderOpen] = useState(false);
 
-  const location = useLocation();
+  const { location, pathname } = useLocation();
   useEffect(() => {
-    if (location.pathname.indexOf("overview") > -1) setSelected("overview");
-    if (location.pathname.indexOf("components") > -1) setSelected("components");
+    if (location?.pathname.indexOf("overview") > -1) setSelected("overview");
+    if (location?.pathname.indexOf("components") > -1)
+      setSelected("components");
   }, [location]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div

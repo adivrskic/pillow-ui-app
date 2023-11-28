@@ -15,11 +15,11 @@
     height: $hero-height;
     background-color: $background-darker;
     overflow: hidden;
-    padding: 100px;
+    // padding: 100px;
 
     & > div {
       width: $content-width;
-      max-width: 100%;
+      max-width: $content-width-max;
       height: 100%;
       margin: auto;
     }
@@ -64,11 +64,11 @@
   }
 
   &__overview {
-    padding: 100px 100px 0 100px;
+    padding-top: 100px;
 
     & > div {
       width: $content-width;
-      max-width: 100%;
+      max-width: $content-width-max;
       margin: auto;
     }
 
@@ -99,11 +99,11 @@
   }
 
   &__getting-started {
-    padding: 100px;
+    padding-top: 100px;
 
     & > div {
       width: $content-width;
-      max-width: 100%;
+      max-width: $content-width-max;
       margin: auto;
     }
 
@@ -150,11 +150,11 @@
   }
 
   &__recents {
-    padding: 0 100px 100px 100px;
+    padding-top: 100px;
 
     & > div {
       width: $content-width;
-      max-width: 100%;
+      max-width: $content-width-max;
       margin: auto;
     }
 
@@ -229,12 +229,13 @@
   }
 
   &__external-links {
-    padding: 100px;
+    margin-top: 100px;
+    padding: 100px 0;
     background-color: $background-darker;
 
     & > div {
       width: $content-width;
-      max-width: 100%;
+      max-width: $content-width-max;
       margin: auto;
     }
 
