@@ -17,32 +17,36 @@ const BadgeComponent = () => {
           Badges are used to give a quick highlight of an item's status.
         </p>
         <a
-          className="link__global"
+          className="component-container__link link__global"
           href="https://github.com/adivrskic/pillow/tree/main/src/components/Badge"
         >
           <IoLogoGithub />
           View Source Code
         </a>
-        <h3>Examples</h3>
+        <h3 className="component-container__heading">Examples</h3>
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
-          <h4>Badge w/ Number</h4>
+          <h4 className="component-container__example-heading">
+            Badge w/ Number
+          </h4>
           <Badge label="9+" variant="flat" {...colorProps} />
           <Badge label="9+" variant="pressed" {...colorProps} />
         </div>
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
-          <h4>Badge w/ Text</h4>
+          <h4 className="component-container__example-heading">
+            Badge w/ Text
+          </h4>
           <Badge label="New!" variant="flat" {...colorProps} />
           <Badge label="New!" variant="pressed" {...colorProps} />
         </div>
@@ -50,56 +54,72 @@ const BadgeComponent = () => {
 
       <div className="component-container">
         <div className="component-container__api">
-          <h3>Variant API</h3>
-          <p>
+          <h3 className="component-container__heading">Variant API</h3>
+          <p className="component-container__text">
             The Badge component implements the variant prop. The variant is a
             global prop and has the following options:
           </p>
-          <table>
-            <tr>
-              <th>Option</th>
-              <th>Example</th>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Option</th>
+              <th className="component-container__table-header">Example</th>
             </tr>
-            <tr>
-              <td>flat</td>
-              <td>
-                <code>variant="flat"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">flat</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant="flat"
+                </code>
               </td>
             </tr>
-            <tr>
-              <td>pressed</td>
-              <td>
-                <code>variant="pressed"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">pressed</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant="pressed"
+                </code>
               </td>
             </tr>
           </table>
         </div>
 
         <div className="component-container__api">
-          <h3>All Properties</h3>
-          <table>
-            <tr>
-              <th>Property</th>
-              <th>Type</th>
-              <th>Description</th>
+          <h3 className="component-container__heading">All Properties</h3>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Property</th>
+              <th className="component-container__table-header">Type</th>
+              <th className="component-container__table-header">Description</th>
             </tr>
-            <tr>
-              <td>
-                <code>label</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  label
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The label or information of the badge.</td>
+              <td className="component-container__table-data">
+                The label or information of the badge.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>variant</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The neumorphic variant of the badge.</td>
+              <td className="component-container__table-data">
+                The neumorphic variant of the badge.
+              </td>
             </tr>
           </table>
         </div>

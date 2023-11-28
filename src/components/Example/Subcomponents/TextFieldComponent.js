@@ -23,15 +23,17 @@ const TextFieldComponent = () => {
           <IoLogoGithub />
           View Source Code
         </a>
-        <h3>Examples</h3>
+        <h3 className="component-container__heading">Examples</h3>
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
-          <h4>Text Field Variants</h4>
+          <h4 className="component-container__example-heading">
+            Text Field Variants
+          </h4>
           <TextField
             title="Example"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -49,77 +51,103 @@ const TextFieldComponent = () => {
 
       <div className="component-container">
         <div className="component-container__api">
-          <h3>Variant API</h3>
-          <p>
+          <h3 className="component-container__heading">Variant API</h3>
+          <p className="component-container__text">
             The TextField component implements the variant prop. The variant is
             a global prop and has the following options:
           </p>
-          <table>
-            <tr>
-              <th>Option</th>
-              <th>Example</th>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Option</th>
+              <th className="component-container__table-header">Example</th>
             </tr>
-            <tr>
-              <td>flat</td>
-              <td>
-                <code>variant="flat"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">flat</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant="flat"
+                </code>
               </td>
             </tr>
-            <tr>
-              <td>pressed</td>
-              <td>
-                <code>variant="pressed"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">pressed</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant="pressed"
+                </code>
               </td>
             </tr>
           </table>
         </div>
 
         <div className="component-container__api">
-          <h3>All Properties</h3>
-          <table>
-            <tr>
-              <th>Property</th>
-              <th>Type</th>
-              <th>Description</th>
+          <h3 className="component-container__heading">All Properties</h3>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Property</th>
+              <th className="component-container__table-header">Type</th>
+              <th className="component-container__table-header">Description</th>
             </tr>
-            <tr>
-              <td>
-                <code>title</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  title
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The title of the text field.</td>
+              <td className="component-container__table-data">
+                The title of the text field.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>content</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  content
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The optional content of the text field.</td>
+              <td className="component-container__table-data">
+                The optional content of the text field.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>onTextChange</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  onTextChange
+                </code>
               </td>
-              <td>
-                <code>function</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  function
+                </code>
               </td>
-              <td>
+              <td className="component-container__table-data">
                 Callback function that fires when text changes in the text
                 field.
               </td>
             </tr>
-            <tr>
-              <td>
-                <code>variant</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The neumorphic variant of the text field.</td>
+              <td className="component-container__table-data">
+                The neumorphic variant of the text field.
+              </td>
             </tr>
           </table>
         </div>

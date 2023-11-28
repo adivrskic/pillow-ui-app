@@ -23,15 +23,17 @@ const ButtonComponent = () => {
           <IoLogoGithub />
           View Source Code
         </a>
-        <h3>Examples</h3>
+        <h3 className="component-container__heading">Examples</h3>
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
-          <h4>Button Variants</h4>
+          <h4 className="component-container__example-heading">
+            Button Variants
+          </h4>
           <Button
             role="button"
             label="Click me!"
@@ -48,12 +50,12 @@ const ButtonComponent = () => {
 
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
-          <h4>Button Sizes</h4>
+          <h4 className="component-container__example-heading">Button Sizes</h4>
           <Button
             role="button"
             label="Click me!"
@@ -79,12 +81,14 @@ const ButtonComponent = () => {
 
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
-          <h4>Button w/ Icon</h4>
+          <h4 className="component-container__example-heading">
+            Button w/ Icon
+          </h4>
           <Button
             role="button"
             label="Click me!"
@@ -96,12 +100,14 @@ const ButtonComponent = () => {
 
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
-          <h4>Disabled Button</h4>
+          <h4 className="component-container__example-heading">
+            Disabled Button
+          </h4>
           <Button
             role="button"
             label="Click me!"
@@ -114,141 +120,199 @@ const ButtonComponent = () => {
 
       <div className="component-container">
         <div className="component-container__api">
-          <h3>Size API</h3>
-          <p>
+          <h3 className="component-container__heading">Size API</h3>
+          <p className="component-container__text">
             The Button component implements the size prop. The size has the
             following options:
           </p>
-          <table>
-            <tr>
-              <th>Option</th>
-              <th>Example</th>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Option</th>
+              <th className="component-container__table-header">Example</th>
             </tr>
-            <tr>
-              <td>small</td>
-              <td>
-                <code>size="small"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">small</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  size="small"
+                </code>
               </td>
             </tr>
-            <tr>
-              <td>medium</td>
-              <td>
-                <code>size="medium"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">medium</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  size="medium"
+                </code>
               </td>
             </tr>
-            <tr>
-              <td>large</td>
-              <td>
-                <code>size="large"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">large</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  size="large"
+                </code>
               </td>
             </tr>
           </table>
         </div>
         <div className="component-container__api">
-          <h3>Variant API</h3>
-          <p>
+          <h3 className="component-container__heading">Variant API</h3>
+          <p className="component-container__text">
             The Button component implements the variant prop. The variant is a
             global prop and has the following options:
           </p>
-          <table>
-            <tr>
-              <th>Option</th>
-              <th>Example</th>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Option</th>
+              <th className="component-container__table-header">Example</th>
             </tr>
-            <tr>
-              <td>flat</td>
-              <td>
-                <code>variant="flat"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">flat</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant="flat"
+                </code>
               </td>
             </tr>
-            <tr>
-              <td>pressed</td>
-              <td>
-                <code>variant="pressed"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">pressed</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant="pressed"
+                </code>
               </td>
             </tr>
           </table>
         </div>
 
         <div className="component-container__api">
-          <h3>All Properties</h3>
-          <table>
-            <tr>
-              <th>Property</th>
-              <th>Type</th>
-              <th>Description</th>
+          <h3 className="component-container__heading">All Properties</h3>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Property</th>
+              <th className="component-container__table-header">Type</th>
+              <th className="component-container__table-header">Description</th>
             </tr>
-            <tr>
-              <td>
-                <code>disabled</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  disabled
+                </code>
               </td>
-              <td>
-                <code>bool</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  bool
+                </code>
               </td>
-              <td>Disables the button.</td>
+              <td className="component-container__table-data">
+                Disables the button.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>href</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  href
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>Turns the button into a link.</td>
+              <td className="component-container__table-data">
+                Turns the button into a link.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>icon</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  icon
+                </code>
               </td>
-              <td>
-                <code>React.ReactNode</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  React.ReactNode
+                </code>
               </td>
-              <td>Adds an icon to the left of the button text.</td>
+              <td className="component-container__table-data">
+                Adds an icon to the left of the button text.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>label</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  label
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The label of the button.</td>
+              <td className="component-container__table-data">
+                The label of the button.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>onClick</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  onClick
+                </code>
               </td>
-              <td>
-                <code>function</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  function
+                </code>
               </td>
-              <td>Callback function that fires when the button is clicked.</td>
+              <td className="component-container__table-data">
+                Callback function that fires when the button is clicked.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>role</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  role
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The role of the button.</td>
+              <td className="component-container__table-data">
+                The role of the button.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>size</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  size
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The size of the button.</td>
+              <td className="component-container__table-data">
+                The size of the button.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>variant</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The neumorphic variant of the button.</td>
+              <td className="component-container__table-data">
+                The neumorphic variant of the button.
+              </td>
             </tr>
           </table>
         </div>

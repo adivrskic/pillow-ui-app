@@ -23,15 +23,17 @@ const CardComponent = () => {
           <IoLogoGithub />
           View Source Code
         </a>
-        <h3>Examples</h3>
+        <h3 className="component-container__heading">Examples</h3>
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
-          <h4>Card Variants</h4>
+          <h4 className="component-container__example-heading">
+            Card Variants
+          </h4>
           <Card
             heading="Example"
             imageAlt="Image alt example"
@@ -54,83 +56,117 @@ const CardComponent = () => {
 
       <div className="component-container">
         <div className="component-container__api">
-          <h3>Variant API</h3>
-          <p>
+          <h3 className="component-container__heading">Variant API</h3>
+          <p className="component-container__text">
             The Card component implements the variant prop. The variant is a
             global prop and has the following options:
           </p>
-          <table>
-            <tr>
-              <th>Option</th>
-              <th>Example</th>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Option</th>
+              <th className="component-container__table-header">Example</th>
             </tr>
-            <tr>
-              <td>flat</td>
-              <td>
-                <code>variant="flat"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">flat</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant="flat"
+                </code>
               </td>
             </tr>
-            <tr>
-              <td>pressed</td>
-              <td>
-                <code>variant="pressed"</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">pressed</td>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant="pressed"
+                </code>
               </td>
             </tr>
           </table>
         </div>
 
         <div className="component-container__api">
-          <h3>All Properties</h3>
-          <table>
-            <tr>
-              <th>Property</th>
-              <th>Type</th>
-              <th>Description</th>
+          <h3 className="component-container__heading">All Properties</h3>
+          <table className="component-container__table">
+            <tr className="component-container__table-row">
+              <th className="component-container__table-header">Property</th>
+              <th className="component-container__table-header">Type</th>
+              <th className="component-container__table-header">Description</th>
             </tr>
-            <tr>
-              <td>
-                <code>heading</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  heading
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The heading of the card.</td>
+              <td className="component-container__table-data">
+                The heading of the card.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>imageAlt</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  imageAlt
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The alt text of the image.</td>
+              <td className="component-container__table-data">
+                The alt text of the image.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>imageSrc</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  imageSrc
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The path to the image.</td>
+              <td className="component-container__table-data">
+                The path to the image.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>text</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  text
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The text of the card.</td>
+              <td className="component-container__table-data">
+                The text of the card.
+              </td>
             </tr>
-            <tr>
-              <td>
-                <code>variant</code>
+            <tr className="component-container__table-row">
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  variant
+                </code>
               </td>
-              <td>
-                <code>string</code>
+              <td className="component-container__table-data">
+                <code className="component-container__table-data--code">
+                  string
+                </code>
               </td>
-              <td>The neumorphic variant of the card.</td>
+              <td className="component-container__table-data">
+                The neumorphic variant of the card.
+              </td>
             </tr>
           </table>
         </div>

@@ -89,22 +89,6 @@
     &:not(:last-of-type) {
       margin-bottom: $padding-regular;
     }
-
-    ul {
-      padding: 0;
-      margin-bottom: $padding-regular;
-
-      li {
-        list-style: none;
-        padding: $padding-small;
-      }
-
-      code {
-        padding: $padding-small;
-        display: inline;
-        border: 1px solid darken($background-darker, 15%);
-      }
-    }
   }
 }
 

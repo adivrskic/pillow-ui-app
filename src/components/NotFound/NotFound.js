@@ -5,13 +5,15 @@ import "./notfound.scss";
 const NotFound = () => {
   return (
     <div className="pillow-notfound">
-      <h2>
+      <h2 className="pillow-notfound__heading">
         404
         <div className="pillow-notfound__divider"></div>
-        <span>Not Found</span>
+        <span className="pillow-notfound__text">Not Found</span>
       </h2>
       <Link to="/">
-        <button type="button">Home Page</button>
+        <button type="button" className="pillow-notfound__button">
+          Home Page
+        </button>
       </Link>
     </div>
   );
