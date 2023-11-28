@@ -26,8 +26,8 @@ const AlertComponent = () => {
         <h3 className="component-container__heading">Examples</h3>
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
@@ -49,8 +49,8 @@ const AlertComponent = () => {
         </div>
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
@@ -73,8 +73,8 @@ const AlertComponent = () => {
 
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >
@@ -97,8 +97,8 @@ const AlertComponent = () => {
 
         <div
           style={{
-            ["--bg-color"]: `${bgColor}`,
-            ["--text-color"]: `${textColor}`,
+            "--bg-color": `${bgColor}`,
+            "--text-color": `${textColor}`,
           }}
           className="component-container__example"
         >

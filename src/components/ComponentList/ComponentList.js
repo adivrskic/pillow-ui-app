@@ -1,7 +1,6 @@
 import React from "react";
 import "./componentlist.scss";
 import { Link } from "react-router-dom";
-import Sidebar from "../Sidebar/Sidebar";
 import { StateContext } from "../../context/StateProvider";
 import {
   Alert,
@@ -64,8 +63,8 @@ const ComponentList = () => {
               </h4>
               <div
                 style={{
-                  ["--bg-color"]: `${bgColor}`,
-                  ["--text-color"]: `${textColor}`,
+                  "--bg-color": `${bgColor}`,
+                  "--text-color": `${textColor}`,
                 }}
                 className="pillow-components__content-item-body"
               >
