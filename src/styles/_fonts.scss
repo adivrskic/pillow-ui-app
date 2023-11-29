@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "roboto-italic";
+  src: local("Roboto-Italic"),
+    url("../fonts/Roboto-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto-regular";
+  src: local("Roboto-Regular"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "roboto-light";
+  src: local("Roboto-Light"),
+    url("../fonts/Roboto-Light.ttf") format("truetype");
+}

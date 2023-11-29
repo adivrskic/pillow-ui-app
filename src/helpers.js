@@ -5,7 +5,7 @@ export const getGradient = (fromColor) => {
     fromColor.substring(5, 7),
   ];
   const toColor = `rgb(${rgb.map((c) => parseInt(c, 16) * 1.5).join()})`;
-  return `linear-gradient(to right, ${fromColor}, ${toColor})`;
+  return `linear-gradient(to top, ${fromColor}, ${toColor})`;
 };
 
 export const getGradientToColor = (fromColor) => {

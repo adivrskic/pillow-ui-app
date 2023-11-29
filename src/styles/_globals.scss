@@ -1,3 +1,4 @@
+// Global variables
 $header-height: 63px;
 $header-height-mobile: 60px;
 
@@ -8,6 +9,7 @@ $content-width-mobile: calc(100% - 60px);
 $content-left-margin: 195px;
 
 $sidebar-width: 200px;
+$sidebar-button-width: 60px;
 
 $hero-height: 700px;
 
@@ -28,9 +30,38 @@ $border-radius-max: 999px;
 
 $icon-small: 16px;
 $icon-regular: 20px;
-$icon-large: 26px;
+$icon-large: 32px;
 
 $z-top: 10;
 
 $tablet-breakpoint: 960px;
 $mobile-breakpoint: 680px;
+
+// Global Styles
+@import "./mixins";
+
+.pillow-ui-app {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+
+.link__global {
+  @include flex($ali: center);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  width: fit-content;
+  padding: $padding-button;
+  border-radius: $border-radius;
+  margin: $padding-regular 0;
+
+  svg {
+    width: $icon-small;
+    height: $icon-small;
+    margin-right: $padding-small;
+  }
+}
+
+svg {
+  stroke: var(--text-color);
+  fill: var(--text-color);
+}

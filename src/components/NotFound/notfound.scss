@@ -14,7 +14,7 @@
 
   &__divider {
     width: 1px;
-    background: $text;
+    background: var(--text-color);
     height: 100%;
     height: 20px;
     margin: 0 $padding-regular;

@@ -218,7 +218,7 @@
         background: none;
         text-decoration: underline;
         cursor: pointer;
-        color: $text;
+        color: var(--text-color);
 
         &:not(:last-child) {
           margin-right: $padding-regular;
@@ -288,7 +288,6 @@
     height: 500px;
 
     &-content {
-      // left: 20px;
       max-width: calc(100% - 40px);
     }
   }
@@ -316,5 +315,9 @@
 
   .pillow-home__recents {
     padding: 0 20px 60px 20px;
+  }
+
+  .pillow-home__external-links {
+    margin-top: 0;
   }
 }

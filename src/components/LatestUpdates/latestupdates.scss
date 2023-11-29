@@ -16,13 +16,14 @@
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: $mobile-breakpoint) {
   .pillow-latest {
     overflow: hidden;
     margin-left: 60px;
     max-width: calc(100% - 60px);
 
     &__content {
+      padding-left: 0;
       transition: $transition-regular;
     }
 

@@ -23,7 +23,7 @@ const Layout = () => {
   const page =
     location.pathname.indexOf("overview") > -1 ? "overview" : "components";
   return (
-    <div>
+    <div className="pillow__layout">
       <Sidebar header={page} page={page} items={sidebarOptions} />
       <Outlet />
     </div>

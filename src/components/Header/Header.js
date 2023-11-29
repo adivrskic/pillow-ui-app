@@ -8,15 +8,10 @@ import {
   IoCloseOutline,
 } from "react-icons/io5";
 import ColorPicker from "../ColorPicker/ColorPicker";
-import { StateContext } from "../../context/StateProvider";
 import { Link } from "react-router-dom";
-import { getGradient, getGradientToColor } from "../../helpers";
+import { default as json } from "../../../package.json";
 
 const Header = () => {
-  const [{ bgColor, textColor }] = React.useContext(StateContext);
-  const gradient = getGradient(bgColor);
-  const gradientToColor = getGradientToColor(bgColor);
-
   const [selected, setSelected] = useState("");
   const [mobileHeaderOpen, setMobileHeaderOpen] = useState(false);
 
@@ -63,7 +58,7 @@ const Header = () => {
 
       <div className="pillow-nav__dt">
         <span className="pillow-nav__version pillow-nav__version--dt">
-          v1.5.2
+          {json.dependencies["@adivrskic/pillow"].slice(1)}
         </span>
         <a
           className="pillow-nav__link pillow-nav__link--gh"
@@ -117,7 +112,9 @@ const Header = () => {
               </a>
             </li>
             <li className="pillow-nav__mobile-link ">
-              <span className="pillow-nav__version">v1.5.2</span>
+              <span className="pillow-nav__version">
+                {json.dependencies["@adivrskic/pillow"].slice(1)}
+              </span>
             </li>
             <li className="pillow-nav__mobile-link ">
               <ColorPicker />

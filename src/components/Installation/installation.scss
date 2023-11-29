@@ -24,7 +24,7 @@
         border-radius: $border-radius;
         margin: 0 2px;
         border: 1px solid darken($background-darker, 15%);
-        text-wrap: nowrap;
+        white-space: nowrap;
       }
 
       &--code {
@@ -32,6 +32,7 @@
         background-color: $background-darker;
         color: var(--text-color);
         padding: $padding-regular;
+        padding-right: 50px;
         display: flex;
         border-radius: $border-radius;
         max-width: 600px;
@@ -78,13 +79,14 @@
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: $mobile-breakpoint) {
   .pillow-installation {
     overflow: hidden;
     margin-left: 60px;
     max-width: $content-width-mobile;
 
     &__content {
+      padding-left: 0;
       transition: $transition-regular;
     }
 

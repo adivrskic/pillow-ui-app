@@ -20,7 +20,7 @@
     }
 
     &-item {
-      border: 1px solid $border;
+      border: 1px solid var(--border-color);
       border-radius: $border-radius;
     }
 
@@ -57,7 +57,7 @@
 
   &__table {
     width: 100%;
-    border: 1px solid $border;
+    border: 1px solid var(--border-color);
     border-radius: $border-radius;
     border-collapse: collapse;
     overflow-y: scroll;
@@ -81,7 +81,7 @@
 
     &-row {
       padding: $padding-regular;
-      border-top: 1px solid $border;
+      border-top: 1px solid var(--border-color);
     }
   }
 
@@ -92,7 +92,7 @@
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: $tablet-breakpoint) {
   .component-container {
     &__example {
       > button:not(:last-child) {
@@ -102,31 +102,22 @@
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: $mobile-breakpoint) {
   .pillow-example {
     overflow: hidden;
     margin-left: 60px;
     max-width: calc(100% - 60px);
 
     &__content {
+      padding-left: 0;
       transition: $transition-regular;
 
       &-items {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
 
       &--open {
         transform: translateX(200px);
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .pillow-example {
-    &__content {
-      &-items {
-        grid-template-columns: 1fr;
       }
     }
   }

@@ -1,23 +1,26 @@
 @import "../../styles/colors.scss";
 @import "../../styles/globals.scss";
-
+@import "../../styles/mixins.scss";
 .pillow-footer {
+  @include flex($jus: space-between);
   position: relative;
   z-index: $z-top;
-  display: flex;
-  justify-content: space-between;
   padding: $padding-regular;
   font-size: $text-regular;
 
   &__links {
-    display: flex;
+    @include flex($ali: center);
     gap: $padding-regular;
-    align-items: center;
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: $mobile-breakpoint) {
   .pillow-footer {
     flex-direction: column;
+
+    &__links {
+      @include flex($dir: column, $ali: flex-start);
+      margin-top: $padding-regular;
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header.js";
 import Layout from "./layouts/Layout/Layout.js";
 import ComponentList from "./components/ComponentList/ComponentList.js";
@@ -8,12 +8,11 @@ import Footer from "./components/Footer/Footer.js";
 import Installation from "./components/Installation/Installation.js";
 import NotFound from "./components/NotFound/NotFound";
 import LatestUpdates from "./components/LatestUpdates/LatestUpdates";
-import { Route, Routes } from "react-router-dom";
 import "./styles/index.scss";
 
 function App() {
   return (
-    <div className="pillow-ui-app">
+    <div id="pillow-ui-app">
       <Header />
 
       <Routes>
