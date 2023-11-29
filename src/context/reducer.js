@@ -22,6 +22,6 @@ export const reducer = (state, action) => {
 
 export const initialState = {
   textColor: "#323232",
-  bgColor: "#f2f3f7",
+  bgColor: "#e6e7eb",
   sidebarOpen: false,
 };

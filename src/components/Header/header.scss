@@ -8,6 +8,7 @@
   width: 100%;
   padding: $padding-regular;
   z-index: $z-top;
+  background: var(--gradient);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
   &__header {
@@ -38,6 +39,11 @@
     padding: 0 0 0 $padding-regular;
   }
 
+  &__dt {
+    @include flex($ali: center);
+    gap: $padding-regular;
+  }
+
   &__link {
     & a {
       text-decoration: none;
@@ -56,7 +62,6 @@
     &--gh {
       min-width: $icon-regular;
       height: $icon-regular;
-      margin-right: $padding-regular;
 
       svg {
         color: var(--text-color);
@@ -69,7 +74,6 @@
   &__version {
     font-size: $text-small;
     color: var(--text-color);
-    margin-right: $padding-regular;
   }
 
   .pillow-nav__mobile,
@@ -79,38 +83,30 @@
 
   .pillow-nav__mobile-content {
     position: absolute;
-    top: 56px;
+    top: $header-height-mobile;
     left: 0;
     width: 100%;
-    height: calc(100vh - 56px);
+    height: calc(100vh - $header-height-mobile);
     background-color: $background;
   }
 
   .pillow-nav__mobile-links {
+    @include flex($dir: column, $jus: center, $ali: center);
     width: 100%;
     height: 100%;
     list-style: none;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
   }
 
   .pillow-nav__mobile-link {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: $padding-regular;
   }
 }
 
-#display-none {
-  width: 0 !important;
-  height: 0 !important;
-  position: absolute;
-}
-
-@media screen and (max-width: 680px) {
+@media screen and (max-width: $mobile-breakpoint) {
   .pillow-nav__links,
+  .pillow-nav__dt,
   .pillow-nav__link--gh {
     display: none;
   }
@@ -118,6 +114,7 @@
   .pillow-nav {
     justify-content: space-between;
   }
+
   .pillow-nav .pillow-nav__mobile {
     display: flex;
   }

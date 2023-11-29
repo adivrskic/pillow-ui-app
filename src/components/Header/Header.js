@@ -32,20 +32,7 @@ const Header = () => {
   }, [pathname]);
 
   return (
-    <div
-      style={{
-        background: gradient,
-        "--text-color": textColor,
-        "--bg-color": bgColor,
-      }}
-      className="pillow-nav"
-    >
-      <svg id="display-none">
-        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="50%">
-          <stop stopColor={`${bgColor}`} offset="0%" />
-          <stop stopColor={`${gradientToColor}`} offset="100%" />
-        </linearGradient>
-      </svg>
+    <div className="pillow-nav">
       <Link
         className="pillow-nav__header"
         to="/"
@@ -74,27 +61,27 @@ const Header = () => {
         </li>
       </ul>
 
-      <span className="pillow-nav__version">v1.5.2</span>
-      <a
-        className="pillow-nav__link pillow-nav__link--gh"
-        href="https://github.com/adivrskic/pillow"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <IoLogoGithub />
-      </a>
+      <div className="pillow-nav__dt">
+        <span className="pillow-nav__version pillow-nav__version--dt">
+          v1.5.2
+        </span>
+        <a
+          className="pillow-nav__link pillow-nav__link--gh"
+          href="https://github.com/adivrskic/pillow"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <IoLogoGithub />
+        </a>
 
-      <ColorPicker />
+        <ColorPicker />
+      </div>
 
       <div
         className="pillow-nav__mobile"
         onClick={() => setMobileHeaderOpen(!mobileHeaderOpen)}
       >
-        {mobileHeaderOpen ? (
-          <IoCloseOutline style={{ stroke: "url(#gradient)" }} />
-        ) : (
-          <IoMenuOutline style={{ stroke: "url(#gradient)" }} />
-        )}
+        {mobileHeaderOpen ? <IoCloseOutline /> : <IoMenuOutline />}
       </div>
 
       {mobileHeaderOpen && (
@@ -120,14 +107,21 @@ const Header = () => {
             >
               <Link to="/components">Components</Link>
             </li>
-            <a
-              className="pillow-nav__mobile-link"
-              href="https://github.com/adivrskic/pillow"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github
-            </a>
+            <li className="pillow-nav__mobile-link ">
+              <a
+                href="https://github.com/adivrskic/pillow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Github
+              </a>
+            </li>
+            <li className="pillow-nav__mobile-link ">
+              <span className="pillow-nav__version">v1.5.2</span>
+            </li>
+            <li className="pillow-nav__mobile-link ">
+              <ColorPicker />
+            </li>
           </ul>
         </div>
       )}

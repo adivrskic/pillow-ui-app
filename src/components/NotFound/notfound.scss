@@ -26,12 +26,11 @@
 
   button {
     cursor: pointer;
-    border: none;
     border-radius: $border-radius;
-    color: #fff;
-    background: $highlight;
-    filter: opacity(0.75);
-    padding: 5px 15px;
-    transition: all 0.2s ease-in-out;
+    color: var(--text-color);
+    background: var(--gradient);
+    border: 1px solid var(--border-color);
+    padding: $padding-button;
+    transition: $transition-regular;
   }
 }

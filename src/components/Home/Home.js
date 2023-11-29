@@ -12,11 +12,9 @@ import {
   IoLogoReact,
 } from "react-icons/io5";
 import { Alert, Button, Spinner } from "@adivrskic/pillow";
-import { getGradient } from "../../helpers";
 
 const Home = () => {
   const [{ bgColor, textColor }] = React.useContext(StateContext);
-  const gradient = getGradient(bgColor);
   const colorProps = {
     bgColor,
     textColor,
@@ -28,6 +26,7 @@ const Home = () => {
 
   return (
     <div className="pillow-home">
+      <div className="pillow-ui-app__colors"></div>
       <div className="pillow-home__hero">
         <div>
           <div className="pillow-home__hero-content">
@@ -41,14 +40,7 @@ const Home = () => {
               and modern feel to your applications.
             </p>
             <Link to="/overview/installation">
-              <button
-                style={{
-                  background: `${gradient}`,
-                  color: `${textColor}`,
-                }}
-                type="button"
-                className="pillow-home__hero-link"
-              >
+              <button type="button" className="pillow-home__hero-link">
                 Get Started
               </button>
             </Link>
@@ -63,7 +55,7 @@ const Home = () => {
           <h3 className="pillow-home__header">Core Principles</h3>
           <div className="pillow-home__overview-items">
             <div className="pillow-home__overview-item">
-              <IoBulbOutline style={{ stroke: "url(#gradient)" }} />
+              <IoBulbOutline />
               <h4 className="pillow-home__overview-item__heading">
                 Easy Installation
               </h4>
@@ -74,7 +66,7 @@ const Home = () => {
               </p>
             </div>
             <div className="pillow-home__overview-item">
-              <IoCodeSlashOutline style={{ stroke: "url(#gradient)" }} />
+              <IoCodeSlashOutline />
               <h4 className="pillow-home__overview-item__heading">
                 Developer Friendly
               </h4>
@@ -85,7 +77,7 @@ const Home = () => {
               </p>
             </div>
             <div className="pillow-home__overview-item">
-              <IoLogoReact style={{ fill: "url(#gradient)" }} />
+              <IoLogoReact />
               <h4 className="pillow-home__overview-item__heading">
                 Created with React
               </h4>
@@ -117,9 +109,7 @@ const Home = () => {
               >
                 View Installation Page
               </Link>
-              <IoArrowForwardCircleOutline
-                style={{ stroke: "url(#gradient)" }}
-              />
+              <IoArrowForwardCircleOutline />
             </div>
             <div className="pillow-home__getting-started-item">
               <h4 className="pillow-home__getting-started-item__heading">
@@ -134,9 +124,7 @@ const Home = () => {
               >
                 View Updates Page
               </Link>
-              <IoCalendarOutline
-                style={{ fill: "url(#gradient)", stroke: "url(#gradient)" }}
-              />
+              <IoCalendarOutline />
             </div>
           </div>
         </div>
@@ -148,13 +136,7 @@ const Home = () => {
           <div className="pillow-home__recents-items">
             <div className="pillow-home__recents-item">
               <h4 className="pillow-home__recents-item__heading">Alert</h4>
-              <div
-                style={{
-                  background: `${bgColor}`,
-                  color: `${textColor}`,
-                }}
-                className="pillow-home__recents-body"
-              >
+              <div className="pillow-home__recents-body">
                 <Alert
                   heading="Header"
                   severity={alertSeverity}
@@ -184,24 +166,11 @@ const Home = () => {
                   Success
                 </button>
               </div>
-              <Link
-                to="/components/alert"
-                style={{
-                  background: `${gradient}`,
-                }}
-              >
-                View Component
-              </Link>
+              <Link to="/components/alert">View Component</Link>
             </div>
             <div className="pillow-home__recents-item">
               <h4>Button</h4>
-              <div
-                style={{
-                  background: `${bgColor}`,
-                  color: `${textColor}`,
-                }}
-                className="pillow-home__recents-body"
-              >
+              <div className="pillow-home__recents-body">
                 <Button
                   label="Pillow UI Button"
                   variant="flat"
@@ -233,22 +202,13 @@ const Home = () => {
               <Link
                 className="pillow-home__recents-item-link"
                 to="/components/button"
-                style={{
-                  background: `${gradient}`,
-                }}
               >
                 View Component
               </Link>
             </div>
             <div className="pillow-home__recents-item">
               <h4 className="pillow-home__recents-item-heading">Spinner</h4>
-              <div
-                style={{
-                  background: `${bgColor}`,
-                  color: `${textColor}`,
-                }}
-                className="pillow-home__recents-body"
-              >
+              <div className="pillow-home__recents-body">
                 <span>
                   <Spinner
                     variant={spinnerVariant}
@@ -273,9 +233,6 @@ const Home = () => {
               <Link
                 className="pillow-home__recents-item-link"
                 to="/components/spinner"
-                style={{
-                  background: `${gradient}`,
-                }}
               >
                 View Component
               </Link>
@@ -301,7 +258,7 @@ const Home = () => {
               <h4 className="pillow-home__external-links-item-heading">
                 View Github Repository
               </h4>
-              <IoLogoGithub style={{ fill: "url(#gradient)" }} />
+              <IoLogoGithub />
             </Link>
 
             <Link
@@ -313,7 +270,7 @@ const Home = () => {
               <h4 className="pillow-home__external-links-item-heading">
                 View Npm Package
               </h4>
-              <IoLogoNpm style={{ fill: "url(#gradient)" }} />
+              <IoLogoNpm />
             </Link>
           </div>
         </div>

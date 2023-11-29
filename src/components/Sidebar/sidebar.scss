@@ -9,7 +9,6 @@
   width: $sidebar-width;
   min-height: $content-height;
   padding: $padding-regular;
-  background-color: $background;
 
   &__header {
     text-transform: capitalize;
@@ -41,12 +40,12 @@
 @media screen and (max-width: 680px) {
   .pillow-sidebar {
     transform: translateX(-$sidebar-width);
-    transition: all 0.2s ease-in-out;
+    transition: $transition-regular;
 
     &__toggle {
       @include flex($jus: center, $ali: center);
       @include pos(absolute, $top: 0, $right: -60px);
-      height: calc(100vh - 65px);
+      height: calc(100vh - $header-height-mobile);
       width: 60px;
     }
 

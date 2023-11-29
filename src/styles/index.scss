@@ -26,8 +26,7 @@ body {
   font-family: "roboto-light";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #feffff;
-  font-size: 12px;
+  font-size: $text-regular;
 }
 
 code {
@@ -114,16 +113,21 @@ button,
 h3,
 h4,
 a {
-  font-size: 14px;
+  font-size: $text-regular;
+}
+
+.pillow-ui-app {
+  background-color: var(--page-bg);
+  color: var(--text-color);
 }
 
 .link__global {
   @include flex($ali: center);
   border: 1px solid $border;
-  color: #323232;
+  color: var(--text-color);
   width: fit-content;
-  padding: 5px 10px;
-  border-radius: 8px;
+  padding: $padding-button;
+  border-radius: $border-radius;
   margin: $padding-regular 0;
 
   svg {
@@ -131,4 +135,9 @@ a {
     height: $icon-small;
     margin-right: $padding-small;
   }
+}
+
+svg {
+  stroke: var(--text-color);
+  fill: var(--text-color);
 }

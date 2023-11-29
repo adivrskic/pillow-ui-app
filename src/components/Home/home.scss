@@ -15,7 +15,6 @@
     height: $hero-height;
     background-color: $background-darker;
     overflow: hidden;
-    // padding: 100px;
 
     & > div {
       width: $content-width;
@@ -41,12 +40,12 @@
       margin-bottom: $padding-regular;
     }
 
-    button {
+    &-link {
       cursor: pointer;
       border: none;
       border-radius: $border-radius;
       color: #fff;
-      // background: $highlight;
+      border: 1px solid var(--bg-color);
       filter: opacity(0.75);
       padding: 5px 15px;
       transition: all 0.2s ease-in-out;
@@ -86,7 +85,7 @@
       flex-direction: column;
       width: 100%;
       padding: $padding-regular;
-      border: 1px solid $border;
+      border: 1px solid var(--border-color);
       border-radius: $border-radius;
 
       svg {
@@ -122,8 +121,8 @@
       width: 50%;
       position: relative;
       overflow: hidden;
-      transition: all 0.2s ease-in-out;
-      border: 1px solid $border;
+      transition: $transition-regular;
+      border: 1px solid var(--border-color);
 
       &:hover {
         svg {
@@ -144,7 +143,7 @@
         height: 50px;
         width: 50px;
         color: darken($background-darker, 10%);
-        transition: all 0.2s ease-in-out;
+        transition: $transition-regular;
       }
     }
   }
@@ -171,7 +170,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      border: 1px solid $border;
+      border: 1px solid var(--border-color);
       border-radius: $border-radius;
 
       > h4 {
@@ -182,7 +181,7 @@
     &-body {
       @include flex($jus: center, $ali: center);
       width: 100%;
-      background-color: $background-darker;
+      background-color: var(--bg-color);
       height: 100%;
       padding: $padding-regular;
 
@@ -201,11 +200,11 @@
       display: inline-block;
       cursor: pointer;
       border: none;
-      border-radius: 5px;
-      color: #fff;
-      background: $highlight;
-      padding: 5px 15px;
-      transition: all 0.2s ease-in-out;
+      border-radius: $border-radius;
+      background: var(--gradient);
+      color: var(--text-color);
+      padding: $padding-button;
+      transition: $transition-regular;
       width: fit-content;
       text-align: center;
       margin: 0 0 $padding-regular $padding-regular;
@@ -271,7 +270,9 @@
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: $tablet-breakpoint) {
+  .pillow-home__overview-items,
+  .pillow-home__recents-items,
   .pillow-home__getting-started-items,
   .pillow-home__external-links-items {
     flex-direction: column;
@@ -282,15 +283,23 @@
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: $mobile-breakpoint) {
   .pillow-home__hero {
     height: 500px;
 
     &-content {
-      left: 20px;
+      // left: 20px;
       max-width: calc(100% - 40px);
     }
   }
+  .pillow-home__hero > div,
+  .pillow-home__overview > div,
+  .pillow-home__getting-started > div,
+  .pillow-home__recents > div,
+  .pillow-home__external-links > div {
+    width: 100%;
+  }
+
   .pillow-home__hero,
   .pillow-home__getting-started,
   .pillow-home__external-links {
@@ -307,10 +316,5 @@
 
   .pillow-home__recents {
     padding: 0 20px 60px 20px;
-  }
-
-  .pillow-home__overview-items,
-  .pillow-home__recents-items {
-    flex-direction: column;
   }
 }

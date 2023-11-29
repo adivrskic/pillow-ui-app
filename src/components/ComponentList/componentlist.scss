@@ -25,8 +25,9 @@
 
     &-item {
       @include flex($dir: column);
-      border: 1px solid $border;
+      border: 1px solid var(--bg-color);
       border-radius: $border-radius;
+      overflow: hidden;
 
       &-header {
         padding: $padding-regular;
@@ -39,8 +40,6 @@
       height: 100%;
       width: 100%;
       background-color: var(--bg-color);
-      border-bottom-left-radius: $border-radius;
-      border-bottom-right-radius: $border-radius;
 
       &::-webkit-scrollbar {
         display: none;
@@ -57,10 +56,10 @@
       &-items {
         grid-template-columns: repeat(2, 1fr);
       }
-    }
 
-    &__content.open {
-      transform: translateX(140px);
+      &--open {
+        transform: translateX(200px);
+      }
     }
   }
 }

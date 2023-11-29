@@ -3,11 +3,10 @@
 @import "../../styles/mixins.scss";
 
 .pillow-color-picker {
-  display: flex;
-  align-items: center;
+  @include flex($ali: center);
   gap: $padding-regular;
   padding: $padding-small;
-  border: 1px solid $border;
+  border: 1px solid var(--bg-color);
   border-radius: $border-radius;
   min-width: 190px;
 
@@ -18,7 +17,7 @@
   }
 
   &__label {
-    color: $text-color;
+    color: var(--text-color);
     font-size: $text-regular;
   }
 
@@ -28,7 +27,7 @@
     height: 20px;
     min-width: 20px;
     max-width: 20px;
-    border: 1px solid $border;
+    border: 1px solid var(--bg-color);
     padding: 1px;
     outline: none;
     -webkit-appearance: none;

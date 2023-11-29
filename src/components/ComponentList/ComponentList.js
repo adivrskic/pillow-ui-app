@@ -53,6 +53,9 @@ const ComponentList = () => {
             <Link
               key={component + index}
               className="pillow-components__content-item"
+              style={{
+                "--bg-color": `${bgColor}`,
+              }}
               to={{
                 pathname: `/components/${toKebabCase(component)}`,
                 state: { component: component },

@@ -24,12 +24,13 @@
         border-radius: $border-radius;
         margin: 0 2px;
         border: 1px solid darken($background-darker, 15%);
+        text-wrap: nowrap;
       }
 
       &--code {
         position: relative;
         background-color: $background-darker;
-        color: $text;
+        color: var(--text-color);
         padding: $padding-regular;
         display: flex;
         border-radius: $border-radius;
@@ -84,11 +85,11 @@
     max-width: $content-width-mobile;
 
     &__content {
-      transition: all 0.2s ease-in-out;
+      transition: $transition-regular;
     }
 
     &__content.open {
-      transform: translateX(140px);
+      transform: translateX(200px);
     }
   }
 }

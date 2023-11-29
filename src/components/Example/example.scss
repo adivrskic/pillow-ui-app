@@ -109,15 +109,15 @@
     max-width: calc(100% - 60px);
 
     &__content {
-      transition: all 0.2s ease-in-out;
+      transition: $transition-regular;
 
       &-items {
         grid-template-columns: repeat(2, 1fr);
       }
-    }
 
-    &__content.open {
-      transform: translateX(140px);
+      &--open {
+        transform: translateX(200px);
+      }
     }
   }
 }

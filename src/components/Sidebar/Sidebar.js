@@ -46,14 +46,14 @@ const Sidebar = ({ header, page, items }) => {
           className="pillow-sidebar__toggle"
           onClick={() => dispatch({ type: "TOGGLE_SIDEBAR" })}
         >
-          <IoArrowBackCircleOutline style={{ stroke: "url(#gradient)" }} />
+          <IoArrowBackCircleOutline />
         </div>
       ) : (
         <div
           className="pillow-sidebar__toggle"
           onClick={() => dispatch({ type: "TOGGLE_SIDEBAR" })}
         >
-          <IoArrowForwardCircleOutline style={{ stroke: "url(#gradient)" }} />
+          <IoArrowForwardCircleOutline />
         </div>
       )}
     </div>
