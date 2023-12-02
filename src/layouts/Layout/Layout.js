@@ -15,9 +15,13 @@ const Layout = () => {
           "Card",
           "Chip",
           "Container",
+          "IconButton",
           "List",
+          "Shape",
           "Spinner",
+          "Switch",
           "TextField",
+          "Toast",
         ];
 
   const page =

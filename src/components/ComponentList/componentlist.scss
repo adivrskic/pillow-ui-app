@@ -25,21 +25,25 @@
 
     &-item {
       @include flex($dir: column);
-      border: 1px solid var(--bg-color);
+      border: 1px solid var(--site-border-color);
       border-radius: $border-radius;
       overflow: hidden;
 
       &-header {
         padding: $padding-regular;
-        color: var(--text-color);
+        color: var(--site-text-color);
       }
     }
 
     &-item-body {
+      margin: $padding-regular;
+      margin-top: 0;
       padding: $padding-regular;
       height: 100%;
-      width: 100%;
+      width: calc(100% - (2 * $padding-regular));
+      border-radius: $border-radius;
       background-color: var(--bg-color);
+      color: var(--site-accent-color);
 
       &::-webkit-scrollbar {
         display: none;

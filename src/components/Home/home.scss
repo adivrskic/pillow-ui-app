@@ -13,7 +13,7 @@
     position: relative;
     width: 100%;
     height: $hero-height;
-    background-color: $background-darker;
+    background-color: var(--site-bg-color);
     overflow: hidden;
 
     & > div {
@@ -32,23 +32,12 @@
     }
 
     h1 {
-      font-size: 26px;
+      font-size: $text-extralarge;
       margin-bottom: $padding-regular;
     }
 
     p {
       margin-bottom: $padding-regular;
-    }
-
-    &-link {
-      cursor: pointer;
-      border: none;
-      border-radius: $border-radius;
-      color: #fff;
-      border: 1px solid var(--bg-color);
-      filter: opacity(0.75);
-      padding: 5px 15px;
-      transition: all 0.2s ease-in-out;
     }
 
     img {
@@ -85,14 +74,14 @@
       flex-direction: column;
       width: 100%;
       padding: $padding-regular;
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--site-border-color);
       border-radius: $border-radius;
 
       svg {
-        height: 50px;
-        width: 50px;
+        height: $icon-large;
+        width: $icon-large;
         margin-bottom: $padding-regular;
-        transition: all 0.2s ease-in-out;
+        transition: $transition-regular;
       }
     }
   }
@@ -122,13 +111,7 @@
       position: relative;
       overflow: hidden;
       transition: $transition-regular;
-      border: 1px solid var(--border-color);
-
-      &:hover {
-        svg {
-          color: $highlight;
-        }
-      }
+      border: 1px solid var(--site-border-color);
 
       a {
         text-decoration: underline;
@@ -140,9 +123,8 @@
 
       svg {
         @include pos(absolute, $top: 10px, $right: 10px);
-        height: 50px;
-        width: 50px;
-        color: darken($background-darker, 10%);
+        height: $icon-large;
+        width: $icon-large;
         transition: $transition-regular;
       }
     }
@@ -170,7 +152,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--site-border-color);
       border-radius: $border-radius;
 
       > h4 {
@@ -180,19 +162,16 @@
 
     &-body {
       @include flex($jus: center, $ali: center);
-      width: 100%;
+      width: calc(100% - (2 * $padding-regular));
       background-color: var(--bg-color);
+      border-radius: $border-radius;
       height: 100%;
       padding: $padding-regular;
+      margin: 0 $padding-regular;
 
       span {
         display: flex;
         position: relative;
-
-        svg {
-          width: $icon-regular;
-          height: $icon-regular;
-        }
       }
     }
 
@@ -201,8 +180,8 @@
       cursor: pointer;
       border: none;
       border-radius: $border-radius;
-      background: var(--gradient);
-      color: var(--text-color);
+      background: var(--site-accent-color);
+      color: #fff;
       padding: $padding-button;
       transition: $transition-regular;
       width: fit-content;
@@ -218,7 +197,7 @@
         background: none;
         text-decoration: underline;
         cursor: pointer;
-        color: var(--text-color);
+        color: var(--site-text-color);
 
         &:not(:last-child) {
           margin-right: $padding-regular;
@@ -230,7 +209,7 @@
   &__external-links {
     margin-top: 100px;
     padding: 100px 0;
-    background-color: $background-darker;
+    background-color: var(--site-bg-alt-color);
 
     & > div {
       width: $content-width;
@@ -248,23 +227,16 @@
     }
 
     &-item {
+      @include flex($jus: space-between, $ali: center);
       width: 100%;
-      background-color: $background;
+      background-color: var(--site-bg-color);
       border-radius: $border-radius;
-      padding: 20px 10px;
+      padding: $padding-regular;
       position: relative;
 
-      &:hover svg {
-        color: $highlight;
-      }
-
       svg {
-        @include pos(absolute, $top: 50%, $right: $padding-regular);
-        transform: translate(0, -50%);
-        height: 50px;
-        width: 50px;
-        color: darken($background-darker, 10%);
-        transition: all 0.2s ease-in-out;
+        height: $icon-large;
+        width: $icon-large;
       }
     }
   }

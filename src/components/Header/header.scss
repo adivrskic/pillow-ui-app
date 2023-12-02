@@ -8,8 +8,9 @@
   width: 100%;
   padding: $padding-regular;
   z-index: $z-top;
-  background: var(--gradient);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--site-bg-color);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  color: var(--site-text-color);
 
   &__header {
     @include flex($ali: center);
@@ -18,12 +19,12 @@
     svg {
       margin-right: $padding-small;
       transform: rotate(-65deg);
-      fill: var(--text-color);
+      fill: var(--site-accent-color);
     }
 
     h2 {
       font-size: 20px;
-      color: var(--text-color);
+      color: var(--site-header-color);
     }
   }
 
@@ -47,7 +48,6 @@
   &__link {
     & a {
       text-decoration: none;
-      color: var(--text-color);
       font-weight: 100;
     }
 
@@ -64,7 +64,7 @@
       height: $icon-regular;
 
       svg {
-        color: var(--text-color);
+        fill: var(--site-text-color);
         width: $icon-regular;
         height: $icon-regular;
       }
@@ -73,7 +73,7 @@
 
   &__version {
     font-size: $text-small;
-    color: var(--text-color);
+    color: var(--site-text-color);
   }
 
   .pillow-nav__mobile,
@@ -87,7 +87,7 @@
     left: 0;
     width: 100%;
     height: calc(100vh - $header-height-mobile);
-    background-color: $background;
+    background-color: var(--site-bg-color);
   }
 
   .pillow-nav__mobile-links {
@@ -115,10 +115,7 @@
     justify-content: space-between;
   }
 
-  .pillow-nav .pillow-nav__mobile {
-    display: flex;
-  }
-
+  .pillow-nav .pillow-nav__mobile,
   .pillow-nav .pillow-nav__mobile-content {
     display: flex;
   }

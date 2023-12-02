@@ -23,28 +23,33 @@
         padding: 0 3px;
         border-radius: $border-radius;
         margin: 0 2px;
-        border: 1px solid darken($background-darker, 15%);
+        border: 1px solid var(--site-border-color);
         white-space: nowrap;
       }
 
       &--code {
         position: relative;
-        background-color: $background-darker;
-        color: var(--text-color);
+        background-color: var(--site-bg-alt-color);
+        color: var(--site-text-color);
         padding: $padding-regular;
         padding-right: 50px;
         display: flex;
         border-radius: $border-radius;
         max-width: 600px;
-        border: 1px solid darken($background-darker, 15%);
+        border: 1px solid var(--site-border-color);
 
         &-copy {
           @include pos(absolute, $top: 8px, $right: 8px);
           cursor: pointer;
           padding: 0 5px;
-          background-color: darken($background-darker, 10%);
+          background-color: var(--site-bg-alt-color);
           border-radius: $border-radius;
-          border: 1px solid darken($background-darker, 20%);
+          border: 1px solid var(--site-border-color);
+          transition: $transition-regular;
+
+          &:hover {
+            filter: brightness(0.975);
+          }
         }
 
         &:not(:last-of-type) {

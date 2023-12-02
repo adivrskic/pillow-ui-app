@@ -1,3 +1,5 @@
+import { INITIAL_BG_COLOR, INITIAL_TEXT_COLOR } from "../constants";
+
 export const reducer = (state, action) => {
   switch (action.type) {
     case "TOGGLE_SIDEBAR":
@@ -21,7 +23,7 @@ export const reducer = (state, action) => {
 };
 
 export const initialState = {
-  textColor: "#323232",
-  bgColor: "#e6e7eb",
+  textColor: INITIAL_TEXT_COLOR,
+  bgColor: INITIAL_BG_COLOR,
   sidebarOpen: false,
 };

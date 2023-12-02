@@ -2,16 +2,9 @@ import React from "react";
 import "./example.scss";
 import { useLocation } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
-import AlertComponent from "./Subcomponents/AlertComponent";
-import BadgeComponent from "./Subcomponents/BadgeComponent";
-import ButtonComponent from "./Subcomponents/ButtonComponent";
-import CardComponent from "./Subcomponents/CardComponent";
-import ChipComponent from "./Subcomponents/ChipComponent";
-import ContainerComponent from "./Subcomponents/ContainerComponent";
-import ListComponent from "./Subcomponents/ListComponent";
-import SpinnerComponent from "./Subcomponents/SpinnerComponent";
-import TextFieldComponent from "./Subcomponents/TextFieldComponent";
 import { StateContext } from "../../context/StateProvider";
+import { config } from "./config";
+import Component from "./Component";
 
 const Example = () => {
   const components = [
@@ -21,16 +14,21 @@ const Example = () => {
     "Card",
     "Chip",
     "Container",
+    "IconButton",
     "List",
+    "Shape",
     "Spinner",
+    "Switch",
     "TextField",
+    "Toast",
   ];
   const location = useLocation();
-  const Component = (
+  const component = (
     location.pathname.split("/").pop()[0].toUpperCase() +
     location.pathname.split("/").pop().slice(1)
   ).replace("-", " ");
 
+  console.log(component);
   const [{ sidebarOpen }] = React.useContext(StateContext);
 
   return (
@@ -42,16 +40,7 @@ const Example = () => {
             sidebarOpen ? "pillow-example__content--open" : ""
           }`}
         >
-          <h2 className="pillow-example__content-header">{Component}</h2>
-          {Component === "Alert" && <AlertComponent />}
-          {Component === "Badge" && <BadgeComponent />}
-          {Component === "Button" && <ButtonComponent />}
-          {Component === "Card" && <CardComponent />}
-          {Component === "Chip" && <ChipComponent />}
-          {Component === "Container" && <ContainerComponent />}
-          {Component === "List" && <ListComponent />}
-          {Component === "Spinner" && <SpinnerComponent />}
-          {Component === "Text field" && <TextFieldComponent />}
+          <Component config={config[component]} />
         </div>
       </div>
     </div>

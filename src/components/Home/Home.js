@@ -40,7 +40,10 @@ const Home = () => {
               and modern feel to your applications.
             </p>
             <Link to="/overview/installation">
-              <button type="button" className="pillow-home__hero-link">
+              <button
+                type="button"
+                className="pillow-home__hero-link link__global"
+              >
                 Get Started
               </button>
             </Link>

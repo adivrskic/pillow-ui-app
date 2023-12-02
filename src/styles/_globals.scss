@@ -1,5 +1,5 @@
 // Global variables
-$header-height: 63px;
+$header-height: 70px;
 $header-height-mobile: 60px;
 
 $content-height: calc(100vh - $header-height);
@@ -16,6 +16,7 @@ $hero-height: 700px;
 $text-small: 12px;
 $text-regular: 14px;
 $text-large: 18px;
+$text-extralarge: 28px;
 
 $padding-small: 5px;
 $padding-regular: 15px;
@@ -29,13 +30,15 @@ $border-radius: 8px;
 $border-radius-max: 999px;
 
 $icon-small: 16px;
-$icon-regular: 20px;
-$icon-large: 32px;
+$icon-regular: 24px;
+$icon-large: 40px;
 
 $z-top: 10;
 
 $tablet-breakpoint: 960px;
 $mobile-breakpoint: 680px;
+
+$letter-spacing: 0.5px;
 
 // Global Styles
 @import "./mixins";
@@ -47,21 +50,31 @@ $mobile-breakpoint: 680px;
 
 .link__global {
   @include flex($ali: center);
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
+  border: 1px solid var(--site-border-color);
+  background-color: var(--site-accent-color);
+  color: #fff;
   width: fit-content;
   padding: $padding-button;
   border-radius: $border-radius;
   margin: $padding-regular 0;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+  transition: $transition-regular;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
 
   svg {
     width: $icon-small;
     height: $icon-small;
     margin-right: $padding-small;
+    fill: var(--site-bg-color);
+    stroke: var(--site-bg-color);
   }
 }
 
 svg {
-  stroke: var(--text-color);
-  fill: var(--text-color);
+  stroke: var(--site-text-color);
+  fill: var(--site-text-color);
 }

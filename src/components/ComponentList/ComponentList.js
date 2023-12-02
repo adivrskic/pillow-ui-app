@@ -9,10 +9,15 @@ import {
   Card,
   Chip,
   Container,
+  IconButton,
   List,
+  Shape,
   Spinner,
+  Switch,
   TextField,
+  Toast,
 } from "@adivrskic/pillow";
+import { IoCartOutline } from "react-icons/io5";
 
 const ComponentList = () => {
   const [{ sidebarOpen, bgColor, textColor }] = React.useContext(StateContext);
@@ -28,9 +33,13 @@ const ComponentList = () => {
     Card,
     Chip,
     Container,
+    IconButton,
     List,
+    Shape,
     Spinner,
+    Switch,
     TextField,
+    Toast,
   };
 
   const toKebabCase = (string) => {
@@ -121,6 +130,13 @@ const ComponentList = () => {
                     <button>Container button</button>
                   </Container>
                 )}
+                {component === "IconButton" && (
+                  <IconButton
+                    icon={<IoCartOutline />}
+                    variant="flat"
+                    size="small"
+                  />
+                )}
                 {component === "List" && (
                   <List
                     header="List"
@@ -134,6 +150,14 @@ const ComponentList = () => {
                     {...colorProps}
                   />
                 )}
+                {component === "Shape" && (
+                  <Shape
+                    width={150}
+                    height={150}
+                    variant="flat"
+                    {...colorProps}
+                  />
+                )}
                 {component === "Spinner" && (
                   <Spinner
                     complete={false}
@@ -141,11 +165,29 @@ const ComponentList = () => {
                     bgColor={colorProps.bgColor}
                   />
                 )}
+                {component === "Switch" && (
+                  <Switch
+                    checked={true}
+                    required={true}
+                    onChange={() => console.log("Changed!")}
+                    variant="flat"
+                    {...colorProps}
+                  />
+                )}
                 {component === "TextField" && (
                   <TextField
                     title="Text Field Example"
                     content=""
                     onTextChange={() => console.log("change")}
+                    variant="flat"
+                    {...colorProps}
+                  />
+                )}
+                {component === "Toast" && (
+                  <Toast
+                    title="This is a Toast example"
+                    duration={30}
+                    onClose={() => console.log("Closed")}
                     variant="flat"
                     {...colorProps}
                   />

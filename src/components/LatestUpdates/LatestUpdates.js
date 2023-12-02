@@ -39,6 +39,13 @@ const LatestUpdates = () => {
             Neumorphic styles now work on any background color.
           </p>
         </div>
+        <div className="pillow-latest__content-item">
+          <h2 className="pillow-latest__content-item-heading">December 2023</h2>
+          <p className="pillow-latest__content-item-text">v1.6.0 launched.</p>
+          <p className="pillow-latest__content-item-text">
+            Adds Icon Button, Shape, Switch and Toast components.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -87,11 +87,9 @@ a {
 
 p,
 button,
-h3,
-h4,
 a {
   font-size: $text-regular;
-  color: var(--text-color);
+  color: var(--site-text-color);
 }
 
 button {
