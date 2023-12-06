@@ -14,6 +14,7 @@ import {
   Toast,
 } from "@adivrskic/pillow";
 import { IoCartOutline } from "react-icons/io5";
+import { INITIAL_BG_COLOR, INITIAL_TEXT_COLOR } from "../../constants";
 
 export const config = {
   Alert: {
@@ -31,12 +32,16 @@ export const config = {
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="error"
             variant="flat"
+            bgColor={INITIAL_BG_COLOR}
+            textColor={INITIAL_TEXT_COLOR}
           />,
           <Alert
             heading="Error"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="error"
             variant="pressed"
+            bgColor={INITIAL_BG_COLOR}
+            textColor={INITIAL_TEXT_COLOR}
           />,
         ],
         heading: "Error Alert",
@@ -48,12 +53,16 @@ export const config = {
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="warning"
             variant="flat"
+            bgColor={INITIAL_BG_COLOR}
+            textColor={INITIAL_TEXT_COLOR}
           />,
           <Alert
             heading="Warning"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="warning"
             variant="pressed"
+            bgColor={INITIAL_BG_COLOR}
+            textColor={INITIAL_TEXT_COLOR}
           />,
         ],
         heading: "Warning Alert",
@@ -65,12 +74,16 @@ export const config = {
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="info"
             variant="flat"
+            bgColor={INITIAL_BG_COLOR}
+            textColor={INITIAL_TEXT_COLOR}
           />,
           <Alert
             heading="Info"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="info"
             variant="pressed"
+            bgColor={INITIAL_BG_COLOR}
+            textColor={INITIAL_TEXT_COLOR}
           />,
         ],
         heading: "Warning Alert",
@@ -82,12 +95,16 @@ export const config = {
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="success"
             variant="flat"
+            bgColor={INITIAL_BG_COLOR}
+            textColor={INITIAL_TEXT_COLOR}
           />,
           <Alert
             heading="Success"
             label="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             severity="success"
             variant="pressed"
+            bgColor={INITIAL_BG_COLOR}
+            textColor={INITIAL_TEXT_COLOR}
           />,
         ],
         heading: "Success Alert",

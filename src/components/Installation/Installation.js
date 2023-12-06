@@ -119,7 +119,15 @@ const Installation = () => {
           </p>
 
           <code className="pillow-installation__content-text--code">
-            {`<Button role="button" label="Click me!" size="medium" variant="flat" />`}
+            <pre>
+              {`<Button 
+  role="button" 
+  label="Click me!" 
+  size="medium" 
+  variant="flat" 
+/>`}
+            </pre>
+
             <span
               className="pillow-installation__content-text--code-copy"
               onClick={navigator.clipboard.writeText(

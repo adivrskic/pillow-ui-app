@@ -3,7 +3,7 @@
 @import "../../styles/mixins";
 
 .pillow-installation {
-  height: $content-height;
+  min-height: $content-height;
   width: 100%;
   margin-left: $content-left-margin;
   max-width: $content-width;

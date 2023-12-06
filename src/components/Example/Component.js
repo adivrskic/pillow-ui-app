@@ -5,11 +5,6 @@ import { IoLogoGithub } from "react-icons/io5";
 const Component = ({ config }) => {
   const [{ bgColor, textColor }] = React.useContext(StateContext);
 
-  // const colorProps = {
-  //   bgColor,
-  //   textColor,
-  // };
-
   return (
     <div className="component">
       <h2 className="pillow-example__content-header">{config?.component}</h2>
@@ -34,7 +29,9 @@ const Component = ({ config }) => {
             <h4 className="component-container__example-heading">
               {component.heading}
             </h4>
-            {component.components}
+            {component.components.map((c) => {
+              return c;
+            })}
           </div>
         ))}
       </div>
@@ -52,18 +49,22 @@ const Component = ({ config }) => {
               </tr>
               {api.trs.map((tr, i) => (
                 <tr className="component-container__table-row">
-                  <td className="component-container__table-data">{tr.c1}</td>
+                  <td className="component-container__table-data">
+                    {tr.c3 ? (
+                      <code className="component-container__table-data--code">
+                        {tr.c1}
+                      </code>
+                    ) : (
+                      tr.c1
+                    )}
+                  </td>
                   <td className="component-container__table-data">
                     <code className="component-container__table-data--code">
                       {tr.c2}
                     </code>
                   </td>
                   {tr.c3 && (
-                    <td className="component-container__table-data">
-                      <code className="component-container__table-data--code">
-                        {tr.c3}
-                      </code>
-                    </td>
+                    <td className="component-container__table-data">{tr.c3}</td>
                   )}
                 </tr>
               ))}

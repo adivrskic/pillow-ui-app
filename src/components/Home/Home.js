@@ -11,7 +11,7 @@ import {
   IoCodeSlashOutline,
   IoLogoReact,
 } from "react-icons/io5";
-import { Alert, Button, Spinner } from "@adivrskic/pillow";
+import { Alert, Button, Shape, Spinner } from "@adivrskic/pillow";
 
 const Home = () => {
   const [{ bgColor, textColor }] = React.useContext(StateContext);
@@ -50,7 +50,9 @@ const Home = () => {
           </div>
         </div>
 
-        <img src="/images/hero-image.jpg" alt="Neumorphic planet" />
+        <Shape width="300" height="300" round {...colorProps} />
+
+        {/* <img src="/images/hero-image.jpg" alt="Neumorphic planet" /> */}
       </div>
 
       <div className="pillow-home__overview">

@@ -8,7 +8,7 @@ const Footer = () => {
       <p className="pillow-footer__text">© Adi Vrskic 2023,2024</p>
       <div className="pillow-footer__links">
         <Socials />
-        <p className="pillow-footer__text">Made with ❤ with React </p>
+        <p className="pillow-footer__text">Made with React </p>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 @import "../../styles/globals.scss";
 @import "../../styles/mixins.scss";
 .pillow-footer {
-  @include flex($jus: space-between);
+  @include flex($jus: space-between, $ali: center);
   position: relative;
   z-index: $z-top;
   padding: $padding-regular;

@@ -36,6 +36,7 @@
     }
 
     &-item-body {
+      @include flex($jus: center, $ali: center);
       margin: $padding-regular;
       margin-top: 0;
       padding: $padding-regular;
