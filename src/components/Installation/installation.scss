@@ -70,6 +70,7 @@
       background: none;
       margin: $padding-regular 0;
       padding: 0;
+      border: none;
       border-bottom: 1px solid transparent;
 
       svg {
@@ -88,7 +89,7 @@
   .pillow-installation {
     overflow: hidden;
     margin-left: 60px;
-    max-width: $content-width-mobile;
+    max-width: calc(100% - $sidebar-button-width);
 
     &__content {
       padding-left: 0;
@@ -96,7 +97,7 @@
     }
 
     &__content.open {
-      transform: translateX(200px);
+      transform: translateX($sidebar-width - $sidebar-button-width);
     }
   }
 }

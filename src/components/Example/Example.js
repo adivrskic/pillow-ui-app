@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./example.scss";
 import { useLocation } from "react-router-dom";
 import { StateContext } from "../../context/StateProvider";
-import { config } from "./config";
+import { useConfig } from "./useConfig";
 import Component from "./Component";
 
 const Example = () => {
@@ -11,8 +11,9 @@ const Example = () => {
     location.pathname.split("/").pop()[0].toUpperCase() +
     location.pathname.split("/").pop().slice(1)
   ).replace("-", " ");
+  const [{ sidebarOpen, bgColor, textColor }] = useContext(StateContext);
 
-  const [{ sidebarOpen }] = React.useContext(StateContext);
+  const config = useConfig(bgColor, textColor);
 
   return (
     <div>

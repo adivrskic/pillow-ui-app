@@ -35,6 +35,10 @@
     color: var(--text-color);
   }
 
+  &__text {
+    margin: $padding-small 0;
+  }
+
   &__table {
     width: 100%;
     border: 1px solid var(--site-border-color);

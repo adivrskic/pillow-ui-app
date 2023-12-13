@@ -20,7 +20,7 @@
   .pillow-latest {
     overflow: hidden;
     margin-left: 60px;
-    max-width: calc(100% - 60px);
+    max-width: calc(100% - $sidebar-button-width);
 
     &__content {
       padding-left: 0;
@@ -28,7 +28,7 @@
     }
 
     &__content.open {
-      transform: translateX(200px);
+      transform: translateX($sidebar-width - $sidebar-button-width);
     }
   }
 }

@@ -6,7 +6,7 @@
   @include flex($dir: column);
   @include pos(fixed, $left: 0);
   top: $header-height;
-  width: calc($sidebar-width + $sidebar-button-width);
+  width: calc($sidebar-width);
   height: $content-height;
   padding: $padding-regular;
   overflow: hidden;
@@ -51,7 +51,7 @@
 
 @media screen and (max-width: $mobile-breakpoint) {
   .pillow-sidebar {
-    transform: translateX(-$sidebar-width);
+    transform: translateX(-$sidebar-width + $sidebar-button-width);
     transition: $transition-regular;
 
     &__toggle {
