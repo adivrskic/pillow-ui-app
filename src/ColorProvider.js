@@ -20,6 +20,7 @@ const ColorProvider = ({ children }) => {
         "--site-header-color": "#323232",
         "--site-text-color": "#4c4c4d",
         "--site-bg-color": "#FCFCFE",
+        "--site-highlight-color": "#f2f3f7",
         "--site-bg-alt-color": bgColor,
         "--site-accent-color": textColor,
         "--site-border-color": border,

@@ -1,4 +1,3 @@
-@import "../../styles/colors";
 @import "../../styles/globals";
 @import "../../styles/mixins";
 
@@ -19,7 +18,7 @@
       max-width: 600px;
 
       &--highlight {
-        background-color: $background-darker;
+        background-color: var(--site-highlight-color);
         padding: 0 3px;
         border-radius: $border-radius;
         margin: 0 2px;

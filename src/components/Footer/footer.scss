@@ -1,6 +1,6 @@
-@import "../../styles/colors.scss";
 @import "../../styles/globals.scss";
 @import "../../styles/mixins.scss";
+
 .pillow-footer {
   @include flex($jus: space-between, $ali: center);
   position: relative;
