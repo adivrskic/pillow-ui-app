@@ -11,7 +11,7 @@ const NotFound = () => {
         <span className="pillow-notfound__text">Not Found</span>
       </h2>
       <Link to="/">
-        <button type="button" className="pillow-notfound__button">
+        <button type="button" className="link__global">
           Home Page
         </button>
       </Link>

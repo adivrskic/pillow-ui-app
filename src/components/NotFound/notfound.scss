@@ -7,7 +7,7 @@
   height: calc(100vh - $header-height);
   width: 100%;
 
-  h2 {
+  &__heading {
     @include flex($ali: center);
     margin-bottom: $padding-regular;
   }
@@ -20,17 +20,7 @@
     margin: 0 $padding-regular;
   }
 
-  h2 span {
-    font-size: $text-regular;
-  }
-
-  button {
-    cursor: pointer;
-    border-radius: $border-radius;
-    color: var(--text-color);
-    background: var(--gradient);
-    border: 1px solid var(--border-color);
-    padding: $padding-button;
-    transition: $transition-regular;
+  &__text {
+    font-size: $text-large;
   }
 }

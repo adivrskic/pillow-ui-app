@@ -8,12 +8,18 @@
   &__header {
     font-size: $text-large;
   }
+  &__shape-container {
+    @include flex($jus: flex-end, $ali: center);
+    @include pos(absolute, $top: 0, $right: -200px);
+    width: 100%;
+    height: 100%;
+  }
 
   &__hero {
     position: relative;
     width: 100%;
     height: $hero-height;
-    background-color: var(--site-bg-color);
+    background-color: var(--bg-color);
     overflow: hidden;
 
     & > div {

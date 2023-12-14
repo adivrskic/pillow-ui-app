@@ -50,9 +50,16 @@ const Home = () => {
           </div>
         </div>
 
-        <Shape width="300" height="300" round {...colorProps} />
-
-        {/* <img src="/images/hero-image.jpg" alt="Neumorphic planet" /> */}
+        <div className="pillow-home__shape-container">
+          <Shape
+            width={window.innerWidth < 768 ? "400" : "800"}
+            height={window.innerWidth < 768 ? "400" : "800"}
+            variant="pressed"
+            round
+            {...colorProps}
+            animate
+          />
+        </div>
       </div>
 
       <div className="pillow-home__overview">
