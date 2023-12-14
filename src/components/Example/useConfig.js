@@ -1001,11 +1001,13 @@ export const useConfig = (bgColor, textColor) => {
             <Spinner
               complete={false}
               variant="flat"
+              spinColor={colorProps.textColor}
               bgColor={colorProps.bgColor}
             />,
             <Spinner
               complete={false}
               variant="pressed"
+              spinColor={colorProps.textColor}
               bgColor={colorProps.bgColor}
             />,
           ],

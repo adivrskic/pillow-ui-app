@@ -45,6 +45,11 @@ const LatestUpdates = () => {
           <p className="pillow-latest__content-item-text">
             Adds Icon Button, Shape, Switch and Toast components.
           </p>
+          <br />
+          <p className="pillow-latest__content-item-text">v1.7.0 launched.</p>
+          <p className="pillow-latest__content-item-text">
+            Uses css modules for styling.
+          </p>
         </div>
       </div>
     </div>

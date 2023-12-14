@@ -162,6 +162,7 @@ const ComponentList = () => {
                   <Spinner
                     complete={false}
                     variant="flat"
+                    spinColor={colorProps.textColor}
                     bgColor={colorProps.bgColor}
                   />
                 )}

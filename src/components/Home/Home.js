@@ -217,6 +217,7 @@ const Home = () => {
                 <span>
                   <Spinner
                     variant={spinnerVariant}
+                    spinColor={colorProps.textColor}
                     bgColor={colorProps.bgColor}
                   />
                 </span>
